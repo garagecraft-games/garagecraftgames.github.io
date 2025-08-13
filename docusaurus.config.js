@@ -82,6 +82,11 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
       },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       footer: {
         style: 'dark',
         links: [
