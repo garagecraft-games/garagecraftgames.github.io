@@ -30,7 +30,7 @@ const socialLinks = [
         ),
     }, {
         name: "BlueSky",
-        url: "https://bsky.app/profile/garagecraft-games.bsky.social",
+        url: "https://bsky.app/profile/garagecraft.games",
         svg: (
             <svg  viewBox="0 0 511.999 452.266">
                 <title>BlueSky</title>
