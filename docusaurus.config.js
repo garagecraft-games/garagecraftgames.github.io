@@ -75,6 +75,27 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'devlog',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'devlog',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './devlog',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -86,7 +107,7 @@ const config = {
           src: 'img/home.svg',
         },
         items: [
-          {to: '/blog', label: 'Devlog', position: 'left'},
+          {to: '/devlog', label: 'Devlog', position: 'left'},
           {
             href: 'https://github.com/garagecraft-games',
             className: "header-github-link",
