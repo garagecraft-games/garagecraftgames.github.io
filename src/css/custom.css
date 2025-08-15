@@ -99,11 +99,14 @@
 }
 
 
+[data-theme='dark'] .navbar {
+  --ifm-navbar-background-color: #0d0d27;
+}
 
 [data-theme='dark'] .footer--dark {
   --ifm-footer-link-color:#888888;
   --ifm-footer-title-color:#888888;
-  --ifm-footer-background-color: #141414;
+  --ifm-footer-background-color: #0d0d27;
 }
 
 .header-github-link::before {

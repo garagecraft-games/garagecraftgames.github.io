@@ -81,6 +81,18 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
+        logo: {
+          alt: 'Home',
+          src: 'img/home.svg',
+        },
+        items: [
+          {to: '/blog', label: 'Devlog', position: 'left'},
+          {
+            href: 'https://github.com/garagecraft-games',
+            className: "header-github-link",
+            position: 'right',
+          },
+        ],
       },
       colorMode: {
         defaultMode: 'dark',
