@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgaragecraft_games=self.webpackChunkgaragecraft_games||[]).push([[947],{6600:e=>{e.exports=JSON.parse('{"authors":[{"name":"Thorsten Suckow-Homberg","url":"https://thorsten.suckow-homberg.de","imageURL":"https://avatars.githubusercontent.com/u/823135","key":"thorstensuckow","page":null,"count":0}]}')}}]);

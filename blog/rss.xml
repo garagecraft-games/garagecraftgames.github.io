@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>garagecraft.games Blog</title>
+        <link>https://garagecraft.games/blog</link>
+        <description>garagecraft.games Blog</description>
+        <lastBuildDate>Fri, 15 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Hello World]]></title>
+            <link>https://garagecraft.games/blog/Hello World</link>
+            <guid>https://garagecraft.games/blog/Hello World</guid>
+            <pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hi everyone!]]></description>
+            <content:encoded><![CDATA[<p>Hi everyone!</p>
+<p>For years, my world has been one of <a href="https://www.linkedin.com/in/thorstensuckow/" target="_blank" rel="noopener noreferrer">software architecture and senior-level development</a>, mainly focusing on integration of frontend systems into large scale web applications. I’ve designed systems, worked with teams of various sizes, and treated software development as a true <a href="https://thorsten.suckow-homberg.de/docs/articles/software-craftsmanship" target="_blank" rel="noopener noreferrer">craft</a>. But sometimes, a single problem can change your entire perspective. For me, that was <a href="https://adventofcode.com/2024/day/15" target="_blank" rel="noopener noreferrer">Day 15 of Advent of Code in 2024</a>.</p>
+<center><p><img decoding="async" loading="lazy" src="https://garagecraft.games/assets/images/adventofcode2415-12371302e32c08ac194da8ed8cc06891.gif" width="297" height="339" class="img_ev3q"></p></center>
+<p>That little warehouse robot navigating a 2D grid wasn’t just another puzzle. It was the final push, the moment that solidified a long-brewing passion: It made me decide to dive into the world of game development.</p>
+<p>As a software developer, I'm captivated by the interplay of design, modular components, optimization, and the final polish that turns code into a seamless experience. Game development feels like a very special expression of this craft: It’s a field where the formal elegance of linear algebra directly creates the visual magic of computer graphics, where every line of code contributes to an interactive world.</p>
+<p>It’s the perfect fusion of technical challenge and creative artistry. This is why I'm starting <a href="https://garagecraft.games/">garagecraft games</a>.</p>
+<p>garagecraft games is more than just a label: It’s a philosophy. It’s about embracing the hobbyist spirit, the joy of building something from the ground up, and celebrating the art of software craftsmanship in a different medium. A creative space to explore, learn, and share game development.</p>
+<p>I hope you’ll follow along, and even more so, I look forward to the day we can all jump into a game session together.</p>
+<p>Let the journey begin,</p>
+<p>Thorsten.</p>]]></content:encoded>
+            <category>devlog</category>
+        </item>
+    </channel>
+</rss>
