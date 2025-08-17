@@ -18,7 +18,7 @@ From the beginning, I decided to build Helios on a modern footing, which meant e
 ### The `vec3` Story: More Than Just Three Floats
 The first real piece of the engine was the humble `vec3`. It seems simple, but it became the perfect canvas for exploring modern C++ features. The goal wasn't just to make it work, but to make it perfect and efficient, so that hundreds of simultaneous operation can be run in the shortest time possible.
 
-Amongst others, I wrapped my head around [`constexpr`](https://en.cppreference.com/w/cpp/language/constexpr.html) and used it where applicable: constructors, the `operator[]`, and other accessors were all designed to be usable at compile time, which allows for defining constant vectors like world axes or colors that are baked directly into the program, with zero runtime cost[^static_assert]. It also enables compile-time validation with `static_assert`, catching bugs before the code even runs.
+Amongst others, I wrapped my head around [`constexpr`](https://en.cppreference.com/w/cpp/language/constexpr.html) and used it where applicable: constructors, the `operator[]`, and other accessors were all designed to be usable at compile time, which allows for defining constant vectors like world axes or colors that are baked directly into the program, with zero runtime cost[^static_assert].
 
 [^static_assert]: It also enables compile-time validation with [`static_assert`](https://en.cppreference.com/w/cpp/language/static_assert.html), catching bugs before the code even runs.
 
