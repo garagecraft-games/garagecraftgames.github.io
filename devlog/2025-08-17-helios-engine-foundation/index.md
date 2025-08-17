@@ -37,8 +37,8 @@ I scrapped the Pimpl and rebuilt Guid as a simple, efficient class wrapping a `u
 </center>
 
 ### What's Next?
-The foundation is now in place. I have built a small, robust, and incredibly efficient math and utility library built on a modern module-based architecture. The process has been a deep dive into not just how C++ features work, but why they are designed the way they are.
+The foundation is now in place. I'm striving for a small math and utility library before I go back to rendering and OpenGL. The process has been a deep dive into not just how C++ features work, but why they are designed the way they are.
 
-The next step is to build on these bricks - to create a scene graph, a Node class, and begin tackling the renderer itself. But I'll do so with the confidence that the code it all rests is solid - and, more important - maintanable.
+The next step is to build on these bricks - to create a scene graph, a Node class, and begin tackling the renderer itself. But I'll do so with the confidence that the code it all rests is solid - and, more important - maintainable.
 
 ----------------
