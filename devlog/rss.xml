@@ -26,8 +26,8 @@
 <p>I scrapped the Pimpl and rebuilt Guid as a simple, efficient class wrapping a <code>uint64_t</code>. It should be now as cheap to use as an <code>int</code>, which is exactly what it should be.</p>
 <center><p><img decoding="async" loading="lazy" src="https://garagecraft.games/assets/images/guid-57a8bca5c9f4b9e50921249418f7cc2f.png" width="1262" height="1048" class="img_ev3q"></p></center>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="whats-next">What's Next?<a href="https://garagecraft.games/devlog/helios-engine-foundation#whats-next" class="hash-link" aria-label="Direct link to What's Next?" title="Direct link to What's Next?">​</a></h3>
-<p>The foundation is now in place. I have built a small, robust, and incredibly efficient math and utility library built on a modern module-based architecture. The process has been a deep dive into not just how C++ features work, but why they are designed the way they are.</p>
-<p>The next step is to build on these bricks - to create a scene graph, a Node class, and begin tackling the renderer itself. But I'll do so with the confidence that the code it all rests is solid - and, more important - maintanable.</p>
+<p>The foundation is now in place. I'm striving for a small math and utility library before I go back to rendering and OpenGL. The process has been a deep dive into not just how C++ features work, but why they are designed the way they are.</p>
+<p>The next step is to build on these bricks - to create a scene graph, a Node class, and begin tackling the renderer itself. But I'll do so with the confidence that the code it all rests is solid - and, more important - maintainable.</p>
 <hr>
 <!-- -->
 <section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_LWe7 sr-only" id="footnote-label">Footnotes<a href="https://garagecraft.games/devlog/helios-engine-foundation#footnote-label" class="hash-link" aria-label="Direct link to Footnotes" title="Direct link to Footnotes">​</a></h2>
