@@ -4,10 +4,55 @@
         <title>garagecraft.games Blog</title>
         <link>https://garagecraft.games/devlog</link>
         <description>garagecraft.games Blog</description>
-        <lastBuildDate>Fri, 15 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 17 Aug 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sundays are for constexpr]]></title>
+            <link>https://garagecraft.games/devlog/helios-engine-foundation</link>
+            <guid>https://garagecraft.games/devlog/helios-engine-foundation</guid>
+            <pubDate>Sun, 17 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[For a game engine, the first step isn’t rendering a scene or simulating complex physics; it’s laying the foundational bricks. This weekend, I dove headfirst into that foundation for my personal C++ engine project, Helios, and it was a fantastic journey through the nuances of modern C++ design.]]></description>
+            <content:encoded><![CDATA[<p>For a game engine, the first step isn’t rendering a scene or simulating complex physics; it’s laying the foundational bricks. This weekend, I dove headfirst into that foundation for my personal C++ engine project, <em>Helios</em>, and it was a fantastic journey through the nuances of modern C++ design.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="starting-with-a-clean-slate-c20-modules">Starting with a Clean Slate: C++20 Modules<a href="https://garagecraft.games/devlog/helios-engine-foundation#starting-with-a-clean-slate-c20-modules" class="hash-link" aria-label="Direct link to Starting with a Clean Slate: C++20 Modules" title="Direct link to Starting with a Clean Slate: C++20 Modules">​</a></h3>
+<p>From the beginning, I decided to build Helios on a modern footing, which meant embracing C++20 modules. Leaving the legacy of <code>#include</code> behind, explicit dependency graphs with <code>import</code> and <code>export</code> are the goal. Solving a few issues solidified a key lesson: with modules, build scripts are as much a part of your architecture as your C++ code.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-vec3-story-more-than-just-three-floats">The <code>vec3</code> Story: More Than Just Three Floats<a href="https://garagecraft.games/devlog/helios-engine-foundation#the-vec3-story-more-than-just-three-floats" class="hash-link" aria-label="Direct link to the-vec3-story-more-than-just-three-floats" title="Direct link to the-vec3-story-more-than-just-three-floats">​</a></h3>
+<p>The first real piece of the engine was the humble <code>vec3</code>. It seems simple, but it became the perfect canvas for exploring modern C++ features. The goal wasn't just to make it work, but to make it perfect and efficient, so that hundreds of simultaneous operation can be run in the shortest time possible.</p>
+<p>Amongst others, I wrapped my head around <a href="https://en.cppreference.com/w/cpp/language/constexpr.html" target="_blank" rel="noopener noreferrer"><code>constexpr</code></a> and used it where applicable: constructors, the <code>operator[]</code>, and other accessors were all designed to be usable at compile time, which allows for defining constant vectors like world axes or colors that are baked directly into the program, with zero runtime cost<sup><a href="https://garagecraft.games/devlog/helios-engine-foundation#user-content-fn-static_assert-008eb3" id="user-content-fnref-static_assert-008eb3" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup>. It also enables compile-time validation with <code>static_assert</code>, catching bugs before the code even runs.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-guid-lesson-choosing-the-right-tool">The Guid Lesson: Choosing the Right Tool<a href="https://garagecraft.games/devlog/helios-engine-foundation#the-guid-lesson-choosing-the-right-tool" class="hash-link" aria-label="Direct link to The Guid Lesson: Choosing the Right Tool" title="Direct link to The Guid Lesson: Choosing the Right Tool">​</a></h3>
+<p>Next up was a system for unique object identification. My first instinct for the <a href="https://github.com/garagecraft-games/helios/blob/main/src/helios/util/Guid.cpp" target="_blank" rel="noopener noreferrer"><code>Guid</code> class</a> was to hide the implementation details using the <strong>Pimpl idiom</strong> (<em>Pointer to Implementation</em>)<sup><a href="https://garagecraft.games/devlog/helios-engine-foundation#user-content-fn-pimpl-008eb3" id="user-content-fnref-pimpl-008eb3" data-footnote-ref="true" aria-describedby="footnote-label">2</a></sup>. It’s a classic pattern for reducing compile-time dependencies.</p>
+<p>Well, as much as I like the concept behind the <a href="https://en.wikipedia.org/wiki/Bridge_pattern" target="_blank" rel="noopener noreferrer">Bridge Pattern</a> and its usage in C++, it was completely the wrong tool for this job: Due to the way the memory is allocated for the referenced data structure (heap-allocation for every <code>Guid</code>) and due to the fact that a <a href="https://www.it.uc3m.es/pbasanta/asng/course_notes/pointers_indirection_with_pointers_en.html" target="_blank" rel="noopener noreferrer">pointer indirection</a> for every single <code>Guid</code> would be incurred, with a lot of number of nodes in a scene graph this would mean an unnecessary performance cost.</p>
+<p>I scrapped the Pimpl and rebuilt Guid as a simple, efficient class wrapping a <code>uint64_t</code>. It should be now as cheap to use as an <code>int</code>, which is exactly what it should be.</p>
+<center><p><img decoding="async" loading="lazy" src="https://garagecraft.games/assets/images/guid-57a8bca5c9f4b9e50921249418f7cc2f.png" width="1262" height="1048" class="img_ev3q"></p></center>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="whats-next">What's Next?<a href="https://garagecraft.games/devlog/helios-engine-foundation#whats-next" class="hash-link" aria-label="Direct link to What's Next?" title="Direct link to What's Next?">​</a></h3>
+<p>The foundation is now in place. I have built a small, robust, and incredibly efficient math and utility library built on a modern module-based architecture. The process has been a deep dive into not just how C++ features work, but why they are designed the way they are.</p>
+<p>The next step is to build on these bricks - to create a scene graph, a Node class, and begin tackling the renderer itself. But I'll do so with the confidence that the code it all rests is solid - and, more important - maintanable.</p>
+<hr>
+<!-- -->
+<section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_LWe7 sr-only" id="footnote-label">Footnotes<a href="https://garagecraft.games/devlog/helios-engine-foundation#footnote-label" class="hash-link" aria-label="Direct link to Footnotes" title="Direct link to Footnotes">​</a></h2>
+<ol>
+<li id="user-content-fn-static_assert-008eb3">
+<p>It also enables compile-time validation with <a href="https://en.cppreference.com/w/cpp/language/static_assert.html" target="_blank" rel="noopener noreferrer"><code>static_assert</code></a>, catching bugs before the code even runs. <a href="https://garagecraft.games/devlog/helios-engine-foundation#user-content-fnref-static_assert-008eb3" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-pimpl-008eb3">
+<p>See <a href="https://en.wikipedia.org/wiki/Opaque_pointer" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Opaque_pointer</a> (retrieved 17.08.2025) <a href="https://garagecraft.games/devlog/helios-engine-foundation#user-content-fnref-pimpl-008eb3" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>]]></content:encoded>
+            <category>devlog</category>
+        </item>
+        <item>
+            <title><![CDATA[Lost in Translation]]></title>
+            <link>https://garagecraft.games/devlog/lost-in-translation</link>
+            <guid>https://garagecraft.games/devlog/lost-in-translation</guid>
+            <pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[My background is firmly in the web world. I've spent years wrangling Java, JavaScript, PHP, and the closest I ever got to the metal was writing C, of which I thought it would give me a head start for a game engine project. In a way, it did: I wasn't scared of pointers. But it also gave me a false sense of security.]]></description>
+            <content:encoded><![CDATA[<p>My background is firmly in the web world. I've spent years wrangling Java, JavaScript, PHP, and the closest I ever got to the metal was writing C, of which I thought it would give me a head start for a game engine project. In a way, it did: I wasn't scared of pointers. But it also gave me a false sense of security.</p>
+<p>Moving to C++ is a profound culture shock. The language demands a completely different level of discipline. Suddenly, it's not just about memory, it's about ownership. The concept of smart pointers, and the critical role of a destructor is a universe away from the cozy safety of a <a href="https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html" target="_blank" rel="noopener noreferrer">garbage collector ❤️</a>.</p>
+<p>And that's before you even get to the build process: No more hot reloads or save and refresh. Here, you enter a three-act play with the compiler, the linker, and a mysterious director named VisualStudio 2022 and its ever so confusing tree menus and option dialogs.</p>]]></content:encoded>
+            <category>devlog</category>
+        </item>
         <item>
             <title><![CDATA[Hello World]]></title>
             <link>https://garagecraft.games/devlog/Hello World</link>
