@@ -34,7 +34,7 @@ export default function Home() {
             <HomepageHeader />
             <main style={{  display:"flex",flex:1,flexDirection:"column"}}>
                 <div className="hey">
-                    <h1>garagecraft<sup>games</sup></h1>
+                    <img src={"/img/title.png"}  style={{maxWidth:"25%",marginLeft:"auto"}} />
                     <div style={{display:"flex"}}>
                         <img src={"/img/logo-full.png"} style={{marginLeft:"auto"}} />
                     </div>
