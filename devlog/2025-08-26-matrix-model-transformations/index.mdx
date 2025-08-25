@@ -1,0 +1,16 @@
+---
+slug: matrix-model-transformations
+title: "Matrix Model Transformations"
+tags: [devlog]
+keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+As I was working on porting the rotation matrices for the `helios.math.transform` library, I took a detour to formalize the underlying linear algebra. My goal was to move beyond treating the rotational part of the model matrix as just a black box and instead understand it from a coordinate system perspective.
+
+ <!--truncate-->
+
+ This led me to writing an article that derives the model matrix as a change-of-coordinates transformation and proves the equivalence between pre-rotating the matrix and post-rotating the transformed vector. If you're interested in the mathematical foundations of these essential transformations, you can [read the full derivation here](https://thorsten.suckow-homberg.de/docs/articles/model-matrix-transformations-a-change-of-coordinates-perspective).
+
+<SocialLinks />
