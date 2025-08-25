@@ -7,15 +7,15 @@ keywords: [indiedev, gamedev, solodev, cpp, programming, benchmarking, cmake, ba
 
 import {SocialLinks} from "../../src/components/SocialLinks";
 
-Today was all about strengthening the core of Helios: First, a deep dive into refactoring `mat4` and `vec3`, and second, a shift in the tools I use to build it.
+Over the weekend, I focused on refactoring mat4 and vec3. Additionally, I've made some adjustments to my toolset.
 
 <!--truncate-->
 
 ## Refactoring and Benchmarking: helios.math.core
-Until now, types like `vec3` and `mat4` were part of a broader module. Today, I took the time to refactor them into `helios.math.core`.
+I took the time to refactor  `vec3` and `mat4` into `helios.math.core`.
 
-By isolating these core components, I hope to ensure a more fine grained soc right from the beginning. And speaking of optimization, I dep now on [Google Benchmark](https://github.com/google/benchmark) and put `mat4` to the test.
-The power house surely is [GLM](https://github.com/g-truc/glm) (OpenGL Mathematics  library), which I frequently used. However, to get a hang of C++ I decided to implement some of the (basic) requirements myself.
+By isolating these (and some more) core components, I hope to ensure a more fine grained _separation of concerns_ right from the beginning. I also depend now on [Google Benchmark](https://github.com/google/benchmark) and put `mat4` to the test:
+Surely, the power house in OpenGL mathematics is [GLM](https://github.com/g-truc/glm) (OpenGL Mathematics  library), which I frequently use. However, to get a hang of C++ I decided to implement some of the (basic) requirements myself.
 
 Here's a look at the numbers:
 
@@ -23,7 +23,7 @@ Here's a look at the numbers:
 ![](img/benchmark_mat4.png)
 </center>
 
-In both constructor and multiplication tests, the helios implementation shows a promising performance - granted, I'm nowhere close to the optimizations of glm which sports much, much more functionality than my basic implementations, but its nonetheless nice to see how the two compare.
+In both constructor and multiplication tests, the helios implementation shows a promising performance. Of course I'm nowhere close to the optimizations of glm which sports much, much more functionality than my basic implementations, but its nonetheless nice to see how the two compare.
 
 ### Benchmarking Guid Pointer To Implementation
 
@@ -37,7 +37,7 @@ Remember my bold claim about the[performance drawbacks of pointer-to-implementat
 
 
 ## A New Workflow: CLion and CMake
-I’m parting ways with MSVS (for now) and embracing a more automated, cross-platform workflow with CLion and CMake. The goal is to let modern tooling take care of the heavy lifting, especially with dependency management: It turned out that incorporating Google Benchmark was too much of a hassle (for me at last), but CMake did the trick in no time. I also feel pretty much right at home coming from [composer](https://getcomposer.org), [packagist](https://packagist.org) and [npm](https://www.npmjs.com).
+I’m parting ways with MSVS (for now) in favor of a more automated, cross-platform workflow with [CLion](https://www.jetbrains.com/clion/) and [CMake](https://cmake.org). The goal is to let modern tooling take care of the heavy lifting, especially with dependency management: It turned out that incorporating Google Benchmark was too much of a hassle (for me at last), but CMake did the trick in no time. I also feel pretty much right at home coming from [composer](https://getcomposer.org), [packagist](https://packagist.org) and [npm](https://www.npmjs.com).
 
 
 <center>
