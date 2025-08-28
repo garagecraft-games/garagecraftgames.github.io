@@ -107,7 +107,8 @@ const config = {
           src: 'img/home.svg',
         },
         items: [
-          {to: '/devlog', label: 'Devlog', position: 'left'},
+          {to: '/helios', label: 'helios', position: 'left'},
+          {to: '/devlog', label: 'devlog', position: 'left'},
           {
             href: 'https://github.com/garagecraft-games',
             className: "header-github-link",
