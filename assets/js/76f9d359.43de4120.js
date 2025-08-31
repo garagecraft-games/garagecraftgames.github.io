@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgaragecraft_games=self.webpackChunkgaragecraft_games||[]).push([[266],{7847:e=>{e.exports=JSON.parse('{"tags":[{"label":"devlog","permalink":"/devlog/tags/devlog","count":5}]}')}}]);
