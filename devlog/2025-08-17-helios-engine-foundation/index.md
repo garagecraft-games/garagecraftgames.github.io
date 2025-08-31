@@ -1,7 +1,7 @@
 ---
 slug: helios-engine-foundation
 title: "Sundays are for constexpr"
-tags: [devlog]
+tags: [devlog, helios]
 ---
 
 import {SocialLinks} from "../../src/components/SocialLinks";
