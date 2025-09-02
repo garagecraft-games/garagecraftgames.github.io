@@ -1,5 +1,4 @@
 ---
-slug: CMake-has-entered-the-chat
 title: "CMake has entered the chat"
 tags: [devlog, helios]
 keywords: [indiedev, gamedev, solodev, cpp, programming, benchmarking, cmake, backseatcoding, indiegames]
@@ -27,7 +26,7 @@ In both constructor and multiplication tests, the helios implementation shows a 
 
 ### Benchmarking Guid Pointer To Implementation
 
-Remember my bold claim about the[performance drawbacks of pointer-to-implementation and heap allocation](/devlog/helios-engine-foundation)? I’ve put together a benchmark [here](https://github.com/garagecraft-games/helios/blob/main/benchmarks/helios/util/Guid.benchmark.cpp), comparing the regular and PIMPL versions. As expected, the latter comes with a noticeable performance hit:
+Remember my bold claim about the[performance drawbacks of pointer-to-implementation and heap allocation](/devlog/2025/08/17/helios-engine-foundation)? I’ve put together a benchmark [here](https://github.com/garagecraft-games/helios/blob/main/benchmarks/helios/util/Guid.benchmark.cpp), comparing the regular and PIMPL versions. As expected, the latter comes with a noticeable performance hit:
 
 
 | Benchmark                        | Time| Time (CPU) | Iterations |
