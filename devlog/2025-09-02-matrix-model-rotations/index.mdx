@@ -1,0 +1,22 @@
+---
+title: "Matrix Model Rotation"
+tags: [devlog, helios]
+keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+---
+
+import RotationComposition from "./img/rotationcomposition.gif";
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+<center>
+<img style={{mixBlendMode:"screen",filter:"invert(1)"}} src={RotationComposition} />
+</center>
+As a follow-up to [my article on Model Matrices](/devlog/2025/08/26/matrix-model-transformations), which describes the connection to change-of-coordinates matrices, I've found the time to revisit the topic. I've written a [new article](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/model-matrix-rotation-world-vs-local-origin) about matrix composition in the context of the Model and Rotation matrices to highlight the algebraic foundations.
+
+ <!--truncate-->
+
+In the article, I explore the crucial difference between rotating an object around its own center (local space) and rotating it around an external point in the game world (world space). I show why the order of matrix multiplication is so important and how you can significantly improve performance by pre-calculating the transformation matrix. And since I use glm as a reference for my own implementation, I also cover how rotations are handled in that library (and in Unity).
+
+You can read the article [here](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/model-matrix-rotation-world-vs-local-origin).
+
+
+<SocialLinks />
