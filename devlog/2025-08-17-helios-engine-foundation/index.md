@@ -1,5 +1,4 @@
 ---
-slug: helios-engine-foundation
 title: "Sundays are for constexpr"
 tags: [devlog, helios]
 ---
