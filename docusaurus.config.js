@@ -85,6 +85,8 @@ const config = {
          * Required for any multi-instance plugin
          */
         id: 'devlog',
+        blogSidebarTitle: 'All posts',
+        blogSidebarCount: 'ALL',
         /**
          * URL route for the blog section of your site.
          * *DO NOT* include a trailing slash.
