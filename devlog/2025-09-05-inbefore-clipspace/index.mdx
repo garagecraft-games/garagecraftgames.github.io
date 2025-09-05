@@ -1,0 +1,32 @@
+---
+title: "Inb4 Clip Space "
+tags: [devlog, helios]
+keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+### Updates from the commit log
+
+`helios` now implements core vector operations, including subtraction for directional calculations, dot product for scalar projections, and cross product for normal vector computation and creating orthonormal bases, respectively. The cross product implementation utilizes `constexpr` specifications for compile-time evaluation when operands are constant expressions.
+The `lookAt` function constructs view matrices for camera-space transformations following [standard computer graphics methodology](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/change-of-coordinates-and-applications-to-view-matrices). The implementation creates an orthonormal basis from `eye`, `target`, and `up` vectors, then formulates the change-of-basis matrix with integrated translation components for camera positioning to the origin.
+
+<!--truncate-->
+
+### Performance and Technical Considerations
+Benchmarking was implemented for the cross product and `lookAt` functions due to their frequent invocation in rendering contexts.
+The results validate the effectiveness of `constexpr` optimizations, but I'm not close to `glm` in this regard, as their optimizations go several steps further than helios' userland code implementation.
+
+| Benchmark | Time | CPU | Iterations |
+|-----------|------|-----|------------|
+| BM_vec3Constructor/real_time | 5.04 ns | 4.89 ns | 127,890,789 |
+| BM_glm_vec3Constructor/real_time | 4.25 ns | 4.07 ns | 161,100,528 |
+| BM_vec3Cross/real_time | 20.1 ns | 19.7 ns | 34,872,072 |
+| BM_glm_vec3Cross/real_time | 7.28 ns | 7.29 ns | 94,326,910 |
+| BM_vec3Dot/real_time | 12.2 ns | 11.8 ns | 57,045,623 |
+| BM_glm_vec3Dot/real_time | 10.1 ns | 9.81 ns | 70,071,613 |
+
+### Static
+Some symbol collisions from duplicate test function definitions happened during compilation. I remembered from C that `static` limits symbol scope to file level, which resolved the issue without further changes - it's always nice when simple concepts provide quick solutions without requiring the introduction of new namespaces.
+
+<SocialLinks />
