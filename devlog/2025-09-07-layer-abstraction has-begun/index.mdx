@@ -1,0 +1,25 @@
+---
+title: "Layer Abstraction initiated"
+tags: [devlog, helios]
+keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+### This time, there will be no Feature Creep - I promise!
+
+From `Vertex` to `MeshData` to device-specific `Meshes` - over the weekend, I took a sidestep from the math lib to focus on the architectural planning and development of the underlying rendering layer, accompanied by the scene layer that is responsible for abstracting scene graphs away from the actual rendering process.
+
+<!--truncate-->
+
+### Testing and Examples Subsystem
+One of the more important tasks was to establish a proper testing infrastructure. `glm` integration provides both robust math functionality and reference implementations for testing. Additionally, I've added an examples subsystem, complete with `GLFW` windowing and `glad` OpenGL context management.
+
+### Game Programming as Enterprise Software Development?
+I'm well aware that the true test isn't whether `helios` can render a perfect triangle in isolation, but whether these early architectural decisions will hold up when handling the complex and dynamic scenes that real applications demand. In software architecture, a well-laid-out plan is fundamental. And, as I know from my time as a senior full-stack dev, the deepest insights come not just from understanding the domain, but - from an engineering perspective - from refactoring.
+
+
+<SocialLinks />
+
+
+
