@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgaragecraft_games=self.webpackChunkgaragecraft_games||[]).push([[746],{5736:a=>{a.exports=JSON.parse('{"blogBasePath":"/devlog","blogTitle":"Blog","authorsListPath":"/devlog/authors"}')}}]);

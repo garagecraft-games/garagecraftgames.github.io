@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgaragecraft_games=self.webpackChunkgaragecraft_games||[]).push([[647],{7121:(e,a,r)=>{r.r(a),r.d(a,{default:()=>f});r(6540);var s=r(4164),c=r(7559),t=r(5500),u=r(2831),g=r(1656),n=r(4848);function f(e){return(0,n.jsx)(t.e3,{className:(0,s.A)(c.G.wrapper.docsPages),children:(0,n.jsx)(g.A,{children:(0,u.v)(e.route.routes)})})}}}]);
