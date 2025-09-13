@@ -1,0 +1,59 @@
+---
+title: "The Great Modular Restructuring"
+tags: [devlog, helios]
+keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+### Subsystems, subsystems, subsystems!
+
+The last few days have seen some restructuring in the [helios codebase](https://github.com/garagecraft-games/helios), with namespaces and modules being reorganized. This was mainly driven by a clearer definition of responsibilities for individual classes, which can now be better refined as the implementation progresses.
+
+<!--truncate-->
+
+ As requirements grow, the responsibilities of each module become more apparent, which also influences the abstractions. Encapsulating third-party libraries like [GLFW](https://www.glfw.org/) and providing low-level access to their functions focuses attention more sharply on the demands of a flexible architecture.
+
+Pointer and reference handling in C++ still feels a bit unfamiliar coming from higher-level languages. This is where you realize how much manual work Java('s garbage collector) saves you from. Every allocation in C++ becomes a conscious decision, every object lifetime a deliberate design choice.
+
+```cpp
+int main() {
+
+    const auto opengl = std::make_unique<heliosOpenGl::OpenGLDevice>();
+
+    const auto app = std::make_unique<heliosGlfw::GLFWApplication>(opengl.get());
+    auto cfg = heliosGlfw::GLFWWindowConfig{};
+    cfg.title = "helios - Simple Cube Renderer";
+    cfg.frameBufferSizeCallback = [](GLFWwindow* win, const int width, const int height) {
+        glViewport(0, 0, width, height);
+    };
+
+    heliosGlfw::GLFWWindow& win = app->createWindow(cfg);
+    app->init();
+
+    // move this to the application
+    auto glfwInput = std::make_unique<heliosInput::glfw::GLFWInput>();
+    std::unique_ptr<heliosInput::core::InputAdapter> input = std::move(glfwInput);
+    heliosInput::InputManager inputManager{std::move(input)};
+
+    while (!win.shouldClose()) {
+        if (inputManager.isKeyPressed(heliosInput::Key::ESC, win)) {
+            std::cout << "Key Pressed [ESC]" << std::endl;
+        }
+
+        win.swapBuffers().pollEvents();
+    }
+
+    return EXIT_SUCCESS;
+}
+```
+
+As I work more with this language, it becomes clear why it remains the industry standard for game development instead of Java or other managed languages. The control you get over memory layout, allocation patterns and performance characteristics is the difference between establishing stable frame times and dealing with unpredictable garbage collection pauses.
+
+
+
+
+<SocialLinks />
+
+
+
