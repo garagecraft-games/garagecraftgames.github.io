@@ -1,0 +1,59 @@
+---
+title: "Updates to main()"
+tags: [devlog, helios]
+keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+### In the spirit of yesterday's refactoring efforts...
+
+`main()` serves as a great example of [yesterday's](/devlog/2025/09/13/the-great-modular-restructuring) restructuring in practice: The `OpenGLDevice` is created, then passed to a `GLFWApplication` which manages window creation and the main loop. The ultimate goal is for the application to own and provide the input system, further simplifying the program's entry point and properly encapsulating platform-specific details within the appropriate module.
+
+<!--truncate-->
+
+
+```cpp
+int main() {
+    // 1. create the rendering device
+    const auto opengl = std::make_unique<heliosOpenGl::OpenGLDevice>();
+    // 2. create the config for the main window
+    auto cfg = heliosGLFWUtil::GLFWFactory::makeWindowCfg("helios - Simple Cube Renderer");
+
+    // 3. create the app.
+    const auto app = heliosGLFWUtil::GLFWFactory::makeApplication(opengl.get());
+
+    // 4. create the main window
+    heliosWinGlfw::GLFWWindow& win = app->createWindow(cfg);
+
+    // 5. initialize the app
+    app->init();
+    // ... and set focus to the window
+    app->focus(win);
+
+    // get the InputManager
+    auto& inputManager = app->inputManager();
+
+    while (!win.shouldClose()) {
+        inputManager.tick(0.0f);
+
+        if (inputManager.isKeyPressed(heliosInput::Key::ESC)) {
+            std::cout << "Key Pressed [ESC]" << std::endl;
+        }
+
+        win.swapBuffers();
+    }
+
+    return EXIT_SUCCESS;
+}
+```
+
+
+
+
+
+
+<SocialLinks />
+
+
+
