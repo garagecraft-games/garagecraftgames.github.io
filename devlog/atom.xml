@@ -8,7 +8,7 @@
     <subtitle>garagecraft.games Blog</subtitle>
     <icon>https://garagecraft.games/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[From Camera- to Clip-Space, to NDCs and z-Fighting.]]></title>
+        <title type="html"><![CDATA[From Camera- to Clip-Space, to NDCs and z-Fighting]]></title>
         <id>https://garagecraft.games/devlog/2025/09/17/orthographic-and-perspective-projection</id>
         <link href="https://garagecraft.games/devlog/2025/09/17/orthographic-and-perspective-projection"/>
         <updated>2025-09-17T00:00:00.000Z</updated>
