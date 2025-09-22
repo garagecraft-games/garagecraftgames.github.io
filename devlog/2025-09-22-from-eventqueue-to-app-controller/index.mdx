@@ -1,0 +1,27 @@
+---
+title: "Event Queue and Application Controllers"
+tags: [devlog, helios]
+keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+
+## The endless tale of yet-another-framework
+
+I feel that I've spent most of my recent time with refactoring, restructuring, and developing throwaway prototypes that get discarded every weekend - and that's a good thing. The time between development cycles is currently filled with the intense evaluation of algorithms in digital image processing and reading through [Game Engine Architecture](https://www.gameenginebook.com/) by [Jason Gregory](https://www.linkedin.com/in/jason-gregory-35669b1/), which repeatedly provides me with new perspectives.
+
+ <!--truncate-->
+
+### Event-driven before we even step into the game loop
+At the heart of the newest addition lies an event dispatching system that closes the gap between the application layer and the inner workings of the main loop. The implementation follows the usual design paradigms like [**Don't call us, we'll call you**](https://martinfowler.com/bliki/HollywoodPrinciple.html), as well as decoupling and extracting responsibilities so they become more maintainable and interchangeable. In short: based on my experience as a long-time GUI/frontend developer, I'm untangling dependencies before they even occur and letting the components broadcast their state changes as distinct Event objects through a central EventManager.
+
+In addition, I have provided a structured home for the logic embodied by those signals - `Controller` classes. This pattern ensures that behavior is neatly encapsulated, with initial implementations like a `WindowRenderingController` handling specific domains of logic and mediating between the Window subsystem and the rendering engine (`glViewport()` says _hello_).
+
+This foundational change was accompanied by other (minor) improvements and housekeeping: The GLFW-specific functionality was refactored into its own orthogonal module, public-facing APIs were simplified through the use of facades, and a new RAII guard was implemented to ensure deterministic resource lifecycle management.
+
+Right now, it's a pleasure to work with C++, and I can't wait until I step one layer deeper into the game engine's subsystems.
+
+
+
+<SocialLinks />
