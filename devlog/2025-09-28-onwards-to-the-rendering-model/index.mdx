@@ -13,6 +13,8 @@ The first abstractions for the rendering model have found their way into **helio
  <!--truncate-->
                                                                       I'm striving for a more loosely coupled (and hopefully maintainable) relationship between these entities. The goal is for Shaders to be reusable across multiple Material instances, which in turn can be applied to multiple Mesh instances, with each mesh being uniquely owned by a renderable node... it's (unintentionally) **think big** at this point: Here's hoping I don't end up shooting myself in the foot!
 
+
+Here's a look at the foundational data structure the rendering is built on:
 ```cpp
 module;
 
@@ -23,8 +25,8 @@ import helios.math.types;
 export namespace helios::rendering::core {
 
     /**
-     * Vertex data structure for maintaining
-     * position, normal and texture coordinates.
+     * Represents a standard vertex with position, normal,
+     * and texture coordinates.
      *
      * @see [Vri20, pp. 160]
      */
