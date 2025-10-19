@@ -1,0 +1,36 @@
+---
+title: "Just make it exist first"
+tags: [devlog, helios]
+keywords: [indiedev, gamedev, solodev, cpp, programming, computer graphics, indiegames]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+## Prototyping the Rendering Pipeline
+
+<center>
+![](img/justmakeitexistfirst.gif)
+</center>
+As [announced in a previous post](/devlog/2025/09/28/onwards-to-the-rendering-model), the past weeks were used to make significant progress in refining the architecture of the rendering pipeline. One of the key updates introduces the `Scene`Graph and the creation of `RenderPass` objects derived from the (culled) scene. The new architecture aims to enhance the explicit management of rendering commands, ensuring a clearer separation of concerns between scene graph traversal and the final graphics API calls.
+
+ <!--truncate-->
+
+The interaction between the scene graph and the rendering process has been clarified through the introduction of a `RenderPassFactory`, which is responsible for transforming high-level scene data - encapsulated in a `Snapshot` - into a sequence of low-level `RenderCommands`. This explicit factory ensures that the conversion from abstract scene descriptions to concrete rendering instructions is centralized and consistent, effectively decoupling geometric and material definitions within the scene from their specific rendering directives. There is, of course, still room for improvement, but to avoid feature creep and maintain focus on the next subsystem, I will leave it as is for now.
+
+Here's a quick abstract overview of the rendering pipeline:
+
+
+```
+create SceneGraph -> take Snapshot -> create RenderPass
+                                               ||
+                                               \/
+        process by RenderingDevice <- extract RenderQueue
+```
+
+As one of the final stages in the pipeline, the `RenderingDevice` is responsible for iterating over the `Renderables` of the `RenderQueues` provided by individual `RenderPass` objects, thus initiating the rendering hot path and finally creating something visually meaningful from all the abstractions!
+
+The next step will be generating the doxygen documentation to establish a solid, documented code base. This will serve as the foundation for integrating the input subsystem - i.e., controller input - before I move on to implementing the game main loop: I'm using `helios` to serve as the core framework for an upcoming university semester assignment focused on game development at the [Trier University of Applied Sciences](https://www.hochschule-trier.de).
+
+
+<SocialLinks />
+
