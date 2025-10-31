@@ -20,9 +20,9 @@ jobs:
 
       - name: Fetch Doxygen XML archive from helios Pages
         run: |
-          mkdir -p .docusaurus/xml
+          mkdir -p .doxygen/xml
           curl -fsSL "https://garagecraft-games.github.io/helios/api/xml.tgz" -o /tmp/xml.tgz
-          tar -xzf /tmp/xml.tgz -C .docusaurus/xml --strip-components=1
+          tar -xzf /tmp/xml.tgz -C .doxygen/xml --strip-components=1
 
       - name: Install dependencies
         run: npm ci
