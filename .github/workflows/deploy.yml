@@ -20,6 +20,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      - name: Build helios API docs
+        run: npx doxygen2docusaurus --id helios
       - name: Build website
         run: npm run build
 
