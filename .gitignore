@@ -19,3 +19,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /.idea/
+/.doxygen/xml/*
+/docs/helios/*
+/docusaurus-config-navbar-doxygen.json
+/sidebar-category-doxygen.json
+/docusaurus-config-navbar-doxygen-helios.json
+/sidebar-category-doxygen-helios.json
+/src/css/custom-doxygen2docusaurus.css
+/static/img/doxygen2docusaurus/document-svgrepo-com.svg
+/static/img/doxygen2docusaurus/folder-svgrepo-com.svg
