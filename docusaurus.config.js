@@ -107,10 +107,19 @@ const config = {
       },
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: "LK14YGETTG",
+        apiKey: "dbbc28aec6e30ac87f0e1c52f26d841d",
+        indexName: "garagecraft.games",
+        contextualSearch: true,
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        searchParameters: {},
+        searchPagePath: 'search',
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
