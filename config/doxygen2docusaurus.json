@@ -1,0 +1,13 @@
+{
+  "helios": {
+    "doxygenXmlInputFolderPath": ".doxygen/xml",
+    "apiFolderPath": "helios",
+    "baseUrl": "/",
+    "apiBaseUrl": "helios",
+    "sidebarCategoryLabel": "helios API",
+    "navbarLabel": "API Docs",
+    "mainPageTitle": "helios",
+    "renderProgramListing": false,
+    "renderProgramListingInline": true
+  }
+}

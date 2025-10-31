@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import doxygenApiNavbar from './docusaurus-config-navbar-doxygen-helios.json'
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -32,6 +33,10 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    format: "detect"
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -71,7 +76,10 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+              './src/css/custom-doxygen2docusaurus.css',
+              './src/css/custom.css'
+          ]
         },
       }),
     ],
@@ -112,6 +120,7 @@ const config = {
         },
         items: [
           {to: '/helios', label: 'helios', position: 'left'},
+          doxygenApiNavbar,
           {to: '/devlog', label: 'devlog', position: 'left'},
           {
             href: 'https://github.com/garagecraft-games',
