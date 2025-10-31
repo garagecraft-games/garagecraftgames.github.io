@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-helios/classes/helios-app-application" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">helios-app-application | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/app/application"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-app-application | garagecraft.games"><meta data-rh="true" name="description" content="Declaration"><meta data-rh="true" property="og:description" content="Declaration"><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/app/application"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/app/application" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/app/application" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"Application","item":"https://garagecraft.games/docs/helios/classes/helios/app/application"}]}</script><link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.1f024ded.css">
+<script src="/assets/js/runtime~main.d12d56f9.js" defer="defer"></script>
+<script src="/assets/js/main.0998f020.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="dark";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/home.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/home.svg" alt="Home" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/home.svg" alt="Home" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link" href="/helios">helios</a><div class="navbar__item dropdown dropdown--hoverable"><a aria-current="page" class="navbar__link active" aria-haspopup="true" aria-expanded="false" role="button" href="/docs/helios/">API Docs</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/docs/helios/namespaces/">Namespaces</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/docs/helios/classes/">Classes</a></li><li><a class="dropdown__link" href="/docs/helios/files/">Files</a></li></ul></div><a class="navbar__item navbar__link" href="/devlog">devlog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/garagecraft-games" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link"></a><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/docs/helios/">helios API</a><button aria-label="Collapse sidebar category &#x27;helios API&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/namespaces">Namespaces</a><button aria-label="Expand sidebar category &#x27;Namespaces&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" tabindex="0" href="/docs/helios/classes">Classes</a><button aria-label="Collapse sidebar category &#x27;Classes&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs/helios/classes/helios/app/application">Hierarchy</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item doxyEllipsis"><div class="menu__list-item-collapsible menu__list-item-collapsible--active"><a class="menu__link menu__link--sublist menu__link--active" aria-current="page" tabindex="0" href="/docs/helios/classes/helios/app/application">Application</a><button aria-label="Collapse sidebar category &#x27;Application&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-5 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/ext/glfw/app/glfwapplication">GLFWApplication</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/app/controller/controller">Controller</a><button aria-label="Expand sidebar category &#x27;Controller&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/event/dispatcher">Dispatcher</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/event/event">Event</a><button aria-label="Expand sidebar category &#x27;Event&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/event/eventmanager">EventManager</a><button aria-label="Expand sidebar category &#x27;EventManager&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/event/eventqueue">EventQueue</a><button aria-label="Expand sidebar category &#x27;EventQueue&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/scene/frustumcullingstrategy">FrustumCullingStrategy</a><button aria-label="Expand sidebar category &#x27;FrustumCullingStrategy&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/ext/glfw/app/glfwfactory">GLFWFactory</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/ext/glfw/app/glfwraiiguard">GLFWRAIIGuard</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/ext/glfw/window/glfwwindowuserpointer">GLFWWindowUserPointer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/util/guid">Guid</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/input/inputadapter">InputAdapter</a><button aria-label="Expand sidebar category &#x27;InputAdapter&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/input/inputmanager">InputManager</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/util/log/logger">Logger</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/util/log/logmanager">LogManager</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/math/mat4">mat4&lt;T&gt;</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/model/material">Material</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/model/materialdata">MaterialData</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/rendering/model/mesh">Mesh</a><button aria-label="Expand sidebar category &#x27;Mesh&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/model/meshdata">MeshData</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/ext/opengl/rendering/shader/opengluniformlocationmap">OpenGLUniformLocationMap</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/rendering/renderable">Renderable</a><button aria-label="Expand sidebar category &#x27;Renderable&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/rendercommand">RenderCommand</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/rendering/renderingdevice">RenderingDevice</a><button aria-label="Expand sidebar category &#x27;RenderingDevice&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/renderpassfactory">RenderPassFactory</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/renderqueue">RenderQueue</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/scene/scene">Scene</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/scene/scenegraphkey">SceneGraphKey</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a><button aria-label="Expand sidebar category &#x27;SceneNode&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/rendering/shader/shader">Shader</a><button aria-label="Expand sidebar category &#x27;Shader&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/structs/helios/rendering/asset/shape/shape">Shape</a><button aria-label="Expand sidebar category &#x27;Shape&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/scene/snapshot">Snapshot</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/util/io/stringfilereader">StringFileReader</a><button aria-label="Expand sidebar category &#x27;StringFileReader&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/engine/tickable">Tickable</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/scene/transform">Transform</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/classes/helios/rendering/shader/uniformvaluemap">UniformValueMap</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/math/vec2">vec2&lt;T&gt;</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/math/vec4">vec4&lt;T&gt;</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item doxyEllipsis"><a class="menu__link" tabindex="0" href="/docs/helios/structs/helios/rendering/vertex">Vertex</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/classes/helios/window/window">Window</a><button aria-label="Expand sidebar category &#x27;Window&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed doxyEllipsis"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/structs/helios/window/windowconfig">WindowConfig</a><button aria-label="Expand sidebar category &#x27;WindowConfig&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/helios/indices/classes/all">All</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/helios/indices/classes/classes">Classes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/helios/indices/classes/functions">Functions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/helios/indices/classes/variables">Variables</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/docs/helios/files">Files</a><button aria-label="Expand sidebar category &#x27;Files&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/helios/pages/todo">Pages</a></div></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/docs/helios/"><span>helios API</span></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/docs/helios/classes"><span>Classes</span></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Hierarchy</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Application</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><div class="doxyPage">
+<header><h1><code>Application</code> Class</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="declaration">Declaration<a href="#declaration" class="hash-link" aria-label="Direct link to Declaration" title="Direct link to Declaration">​</a></h2>
+<div class="doxyDeclaration">
+class helios::app::Application { ... }
+</div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="derived-classes">Derived Classes<a href="#derived-classes" class="hash-link" aria-label="Direct link to Derived Classes" title="Direct link to Derived Classes">​</a></h2>
+
+
+<table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">class</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/ext/glfw/app/glfwapplication">GLFWApplication</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors-index">Public Constructors Index<a href="#public-constructors-index" class="hash-link" aria-label="Direct link to Public Constructors Index" title="Direct link to Public Constructors Index">​</a></h2>
+
+
+<table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a770ed54a97c68d5ac40542f3a702121a">Application</a> (std::unique_ptr&lt; helios::rendering::RenderingDevice &gt; renderingDevice, std::unique_ptr&lt; helios::input::InputManager &gt; inputManager, std::unique_ptr&lt; helios::event::EventManager &gt; eventManager)</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-destructor-index">Public Destructor Index<a href="#public-destructor-index" class="hash-link" aria-label="Direct link to Public Destructor Index" title="Direct link to Public Destructor Index">​</a></h2>
+
+
+<table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aec579824c0704542d3f7d6c4f47851a1">~Application</a> ()=default</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-member-functions-index">Public Member Functions Index<a href="#public-member-functions-index" class="hash-link" aria-label="Direct link to Public Member Functions Index" title="Direct link to Public Member Functions Index">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+<table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#ac74fe7518d57fe0892b44f956e73f970">addController</a> (std::unique_ptr&lt; helios::app::controller::Controller &gt; controller)</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/window/window">helios::window::Window</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a91fa8a45e2a79d32dba31bc37deeb824">createWindow</a> (const helios::window::WindowConfig &amp;cfg)=0</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a94b89541520f5b9e6e8f21c3f7ee1aa9">init</a> ()</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#af98c4f879155bcbccf305b8018e7d884">setCurrent</a> (helios::window::Window &amp;win)=0</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">bool</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a3cd9e39b64d771f2bc795cbc8c255a33">hasWindow</a> (const helios::window::Window &amp;win) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/window/window">helios::window::Window</a> *</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a361bd11af60d329332662b5b5a940bb9">current</a> () const noexcept=0</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/input/inputmanager">helios::input::InputManager</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a11fe3ec9b45731268a0eff32ced9f06c">inputManager</a> () const</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/rendering/renderingdevice">helios::rendering::RenderingDevice</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a13d126308f1b5b61d9b87fc4dde57530">renderingDevice</a> () const</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/event/eventmanager">helios::event::EventManager</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a6ea14c8bd591020cbd5d2baef551a804">eventManager</a> () const</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="protected-member-attributes-index">Protected Member Attributes Index<a href="#protected-member-attributes-index" class="hash-link" aria-label="Direct link to Protected Member Attributes Index" title="Direct link to Protected Member Attributes Index">​</a></h2>
+
+
+
+
+
+
+
+
+<table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a91c2fa7bb451e75bfbed236e270f2207">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().registerLogger(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>)</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">bool</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a60c02bedd6f7ad8ab0c486aa73c1983f">initialized_</a> = false</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::unique_ptr&lt; <a href="/docs/helios/classes/helios/rendering/renderingdevice">helios::rendering::RenderingDevice</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aa04eb0a14f12afe4323122a4698c04f7">renderingDevice_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::unique_ptr&lt; <a href="/docs/helios/classes/helios/input/inputmanager">input::InputManager</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a1a784b65ca2b1ce428b90d1be0728b0b">inputManager_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::unique_ptr&lt; <a href="/docs/helios/classes/helios/event/eventmanager">event::EventManager</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a6cbbd642405f8815ec1b5a58b7d27137">eventManager_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::list&lt; std::unique_ptr&lt; <a href="/docs/helios/classes/helios/window/window">helios::window::Window</a> &gt; &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aedbc6395e86cec1e645d5fd093764fa0">windowList_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::vector&lt; std::unique_ptr&lt; <a href="/docs/helios/classes/helios/app/controller/controller">helios::app::controller::Controller</a> &gt; &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a2dfaeb4cd7c741b225bd968c827983d3">controllers_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Description<a href="#details" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
+<p>Class providing the entry point for a helios application.</p>
+<p><span class="doxyComputerOutput"><a href="/docs/helios/classes/helios/app/application">Application</a></span> serves as the central hub for the helios framework, offering convenient access and management for key subsystems such as the EventManager, the InputManager and the RenderingDevice.</p>
+<p>It also allows for the registration of <span class="doxyComputerOutput"><a href="/docs/helios/classes/helios/app/controller/controller">helios.app.controller.Controller</a></span>s, which can provide specialized logic and management for the various subsystems and related events.</p>
+<p>Definition at line 31 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxySectionDef">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a770ed54a97c68d5ac40542f3a702121a">Application()<a href="#a770ed54a97c68d5ac40542f3a702121a" class="hash-link" aria-label="Direct link to Application()" title="Direct link to Application()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">helios::app::Application::Application (std::unique_ptr&lt; <a href="/docs/helios/classes/helios/rendering/renderingdevice">helios::rendering::RenderingDevice</a> &gt; renderingDevice, std::unique_ptr&lt; <a href="/docs/helios/classes/helios/input/inputmanager">helios::input::InputManager</a> &gt; inputManager, std::unique_ptr&lt; <a href="/docs/helios/classes/helios/event/eventmanager">helios::event::EventManager</a> &gt; eventManager)</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel explicit">explicit</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Creates a new <a href="/docs/helios/classes/helios/app/application">Application</a> instance. The <a href="/docs/helios/classes/helios/app/application">Application</a> will take ownership of the specified constructor arguments.</p>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderingDevice</td><td class="doxyParamItemDescription"></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">inputManager</td><td class="doxyParamItemDescription"></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">eventManager</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+</dd>
+</dl>
+<p>Definition at line 69 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+</div>
+<div class="doxySectionDef">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-destructor">Public Destructor<a href="#public-destructor" class="hash-link" aria-label="Direct link to Public Destructor" title="Direct link to Public Destructor">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aec579824c0704542d3f7d6c4f47851a1">~Application()<a href="#aec579824c0704542d3f7d6c4f47851a1" class="hash-link" aria-label="Direct link to ~Application()" title="Direct link to ~Application()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">virtual helios::app::Application::~Application ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel virtual">virtual</span>
+<span class="doxyMemberLabel default">default</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<div class="doxyXrefSect">
+<dl class="doxyXrefSectList">
+<dt class="doxyXrefSectTitle"><a href="/docs/helios/pages/todo/#_todo000005">Todo</a></dt>
+<dd class="doxyXrefSectDescription">
+<p>free resource allocations from renderingDevice, window and InputManager</p>
+</dd>
+</dl>
+</div>
+<p>Definition at line 58 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+</div>
+<div class="doxySectionDef">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-member-functions">Public Member Functions<a href="#public-member-functions" class="hash-link" aria-label="Direct link to Public Member Functions" title="Direct link to Public Member Functions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ac74fe7518d57fe0892b44f956e73f970">addController()<a href="#ac74fe7518d57fe0892b44f956e73f970" class="hash-link" aria-label="Direct link to addController()" title="Direct link to addController()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">void helios::app::Application::addController (std::unique_ptr&lt; <a href="/docs/helios/classes/helios/app/controller/controller">helios::app::controller::Controller</a> &gt; controller)</td></tr></tbody></table>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Registers a new controller with this application. Makes sure that the controller subscribes to the EventManager&#x27;s Dispatcher of this <a href="/docs/helios/classes/helios/app/application">Application</a>. The <a href="/docs/helios/classes/helios/app/application">Application</a> receives ownership of the specified controller.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>This implementation assumes that controllers are added before initializing the app. If controllers are added after the <a href="/docs/helios/classes/helios/app/application">Application</a> was initialized, the current implementation will throw a runtime exception. Future-iterations should consider whether this constraint should be softened.</p></div></div>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">controller</td><td class="doxyParamItemDescription"><p>a unique_ptr to the controller to add.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Exceptions</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">std::runtime_error</td><td class="doxyParamItemDescription"><p>if the <a href="/docs/helios/classes/helios/app/application">Application</a> was already initialized.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<p>Definition at line 91 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a91fa8a45e2a79d32dba31bc37deeb824">createWindow()<a href="#a91fa8a45e2a79d32dba31bc37deeb824" class="hash-link" aria-label="Direct link to createWindow()" title="Direct link to createWindow()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">virtual helios::window::Window &amp; helios::app::Application::createWindow (const <a href="/docs/helios/structs/helios/window/windowconfig">helios::window::WindowConfig</a> &amp; cfg)</td></tr></tbody></table>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Creates the container for the native window and performs all necessary steps to properly initialize it.</p>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">cfg</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>Window</p></dd>
+</dl>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Exceptions</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">std::invalid_argument</td><td class="doxyParamItemDescription"><p>if the configuration was invalid</p></td></tr></tbody></table>
+</dd>
+</dl>
+<p>Definition at line 103 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a361bd11af60d329332662b5b5a940bb9">current()<a href="#a361bd11af60d329332662b5b5a940bb9" class="hash-link" aria-label="Direct link to current()" title="Direct link to current()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">virtual helios::window::Window * helios::app::Application::current ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel noexcept">noexcept</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Returns the currently focused window, or nullptr if none exists / no window is being treated as <a href="#a361bd11af60d329332662b5b5a940bb9">current()</a></p>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>Window</p></dd>
+</dl>
+<p>Definition at line 148 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a6ea14c8bd591020cbd5d2baef551a804">eventManager()<a href="#a6ea14c8bd591020cbd5d2baef551a804" class="hash-link" aria-label="Direct link to eventManager()" title="Direct link to eventManager()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">helios::event::EventManager &amp; helios::app::Application::eventManager ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel inline">inline</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Returns the EventManager owned by this application</p>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>EventManager</p></dd>
+</dl>
+<p>Definition at line 174 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a6ea14c8bd591020cbd5d2baef551a804">174</a></span><span class="doxyLineContent"><span class="doxyHighlight">        [[nodiscard]] <a href="/docs/helios/classes/helios/event/eventmanager">helios::event::EventManager</a>&amp; <a href="#a6ea14c8bd591020cbd5d2baef551a804">eventManager</a>()</span><span class="doxyHighlightKeyword"> const </span><span class="doxyHighlight">{</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">175</span><span class="doxyLineContent"><span class="doxyHighlight">            </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> *<a href="#a6cbbd642405f8815ec1b5a58b7d27137">eventManager_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">176</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
+</div>
+<p>Reference <a href="#a6cbbd642405f8815ec1b5a58b7d27137">eventManager_</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a3cd9e39b64d771f2bc795cbc8c255a33">hasWindow()<a href="#a3cd9e39b64d771f2bc795cbc8c255a33" class="hash-link" aria-label="Direct link to hasWindow()" title="Direct link to hasWindow()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">bool helios::app::Application::hasWindow (const <a href="/docs/helios/classes/helios/window/window">helios::window::Window</a> &amp; win)</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel noexcept">noexcept</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Returns true if the specified window is owned by this application, otherwise false.</p>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">win</td><td class="doxyParamItemDescription"><p>The window to look up in this <a href="/docs/helios/classes/helios/app/application">Application</a>&#x27;s windowList_.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>return true if the window is owned by this <a href="/docs/helios/classes/helios/app/application">Application</a>, otherwise false.</p></dd>
+</dl>
+<p>Definition at line 139 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a94b89541520f5b9e6e8f21c3f7ee1aa9">init()<a href="#a94b89541520f5b9e6e8f21c3f7ee1aa9" class="hash-link" aria-label="Direct link to init()" title="Direct link to init()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">virtual void helios::app::Application::init ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel virtual">virtual</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Inits the <a href="/docs/helios/classes/helios/app/application">Application</a>. Any bootstrapping necessary for this application should be done here and provide an idiomatic entry point for any API using this <a href="/docs/helios/classes/helios/app/application">Application</a>. This method makes sure that the controllers are initialized and subscribe to this <a href="/docs/helios/classes/helios/app/application">Application</a>&#x27;s EventManager&#x27;s dispatcher.</p>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>void</p></dd>
+</dl>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Exceptions</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">std::runtime_error</td><td class="doxyParamItemDescription"><p>if the <a href="/docs/helios/classes/helios/app/application">Application</a> was already initialized.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<p>Definition at line 116 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a11fe3ec9b45731268a0eff32ced9f06c">inputManager()<a href="#a11fe3ec9b45731268a0eff32ced9f06c" class="hash-link" aria-label="Direct link to inputManager()" title="Direct link to inputManager()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">helios::input::InputManager &amp; helios::app::Application::inputManager ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel inline">inline</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Returns the InputManager owned by this <a href="/docs/helios/classes/helios/app/application">Application</a>.</p>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>InputManager</p></dd>
+</dl>
+<p>Definition at line 156 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a11fe3ec9b45731268a0eff32ced9f06c">156</a></span><span class="doxyLineContent"><span class="doxyHighlight">        [[nodiscard]] <a href="/docs/helios/namespaces/helios">helios</a>::input::InputManager&amp; <a href="#a11fe3ec9b45731268a0eff32ced9f06c">inputManager</a>()</span><span class="doxyHighlightKeyword"> const </span><span class="doxyHighlight">{</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">157</span><span class="doxyLineContent"><span class="doxyHighlight">            </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> *<a href="#a1a784b65ca2b1ce428b90d1be0728b0b">inputManager_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">158</span><span class="doxyLineContent"><span class="doxyHighlight">        };</span></span></div>
+</div>
+<p>Reference <a href="#a1a784b65ca2b1ce428b90d1be0728b0b">inputManager_</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a13d126308f1b5b61d9b87fc4dde57530">renderingDevice()<a href="#a13d126308f1b5b61d9b87fc4dde57530" class="hash-link" aria-label="Direct link to renderingDevice()" title="Direct link to renderingDevice()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">helios::rendering::RenderingDevice &amp; helios::app::Application::renderingDevice ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel inline">inline</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Returns the InputManager owned by this <a href="/docs/helios/classes/helios/app/application">Application</a>.</p>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>RenderingDevice</p></dd>
+</dl>
+<p>Definition at line 165 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a13d126308f1b5b61d9b87fc4dde57530">165</a></span><span class="doxyLineContent"><span class="doxyHighlight">        [[nodiscard]] <a href="/docs/helios/classes/helios/rendering/renderingdevice">helios::rendering::RenderingDevice</a>&amp; <a href="#a13d126308f1b5b61d9b87fc4dde57530">renderingDevice</a>()</span><span class="doxyHighlightKeyword"> const </span><span class="doxyHighlight">{</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">166</span><span class="doxyLineContent"><span class="doxyHighlight">            </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> *<a href="#aa04eb0a14f12afe4323122a4698c04f7">renderingDevice_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">167</span><span class="doxyLineContent"><span class="doxyHighlight">        };</span></span></div>
+</div>
+<p>Reference <a href="#aa04eb0a14f12afe4323122a4698c04f7">renderingDevice_</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="af98c4f879155bcbccf305b8018e7d884">setCurrent()<a href="#af98c4f879155bcbccf305b8018e7d884" class="hash-link" aria-label="Direct link to setCurrent()" title="Direct link to setCurrent()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">virtual void helios::app::Application::setCurrent (<a href="/docs/helios/classes/helios/window/window">helios::window::Window</a> &amp; win)</td></tr></tbody></table>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Set&#x27;s the application&#x27;s active window. Advises the InputManager to poll this window&#x27;s events.</p>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">win</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>Window</p></dd>
+</dl>
+<p>Definition at line 127 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+</div>
+</div>
+</div>
+<div class="doxySectionDef">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="protected-member-attributes">Protected Member Attributes<a href="#protected-member-attributes" class="hash-link" aria-label="Direct link to Protected Member Attributes" title="Direct link to Protected Member Attributes">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a2dfaeb4cd7c741b225bd968c827983d3">controllers_<a href="#a2dfaeb4cd7c741b225bd968c827983d3" class="hash-link" aria-label="Direct link to controllers_" title="Direct link to controllers_">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">std::vector&lt;std::unique_ptr&lt;helios::app::controller::Controller&gt; &gt; helios::app::Application::controllers_</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel protected">protected</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Definition at line 50 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a2dfaeb4cd7c741b225bd968c827983d3">50</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::vector&lt;std::unique_ptr&lt;helios::app::controller::Controller&gt;&gt; <a href="#a2dfaeb4cd7c741b225bd968c827983d3">controllers_</a>;</span></span></div>
+</div>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a6cbbd642405f8815ec1b5a58b7d27137">eventManager_<a href="#a6cbbd642405f8815ec1b5a58b7d27137" class="hash-link" aria-label="Direct link to eventManager_" title="Direct link to eventManager_">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">std::unique_ptr&lt;event::EventManager&gt; helios::app::Application::eventManager_</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel protected">protected</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Definition at line 43 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a6cbbd642405f8815ec1b5a58b7d27137">43</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;event::EventManager&gt; <a href="#a6cbbd642405f8815ec1b5a58b7d27137">eventManager_</a>;</span></span></div>
+</div>
+<p>Referenced by <a href="#a6ea14c8bd591020cbd5d2baef551a804">eventManager</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a60c02bedd6f7ad8ab0c486aa73c1983f">initialized_<a href="#a60c02bedd6f7ad8ab0c486aa73c1983f" class="hash-link" aria-label="Direct link to initialized_" title="Direct link to initialized_">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">bool helios::app::Application::initialized_ = false</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel protected">protected</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Definition at line 39 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a60c02bedd6f7ad8ab0c486aa73c1983f">39</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">bool</span><span class="doxyHighlight"> <a href="#a60c02bedd6f7ad8ab0c486aa73c1983f">initialized_</a> = </span><span class="doxyHighlightKeyword">false</span><span class="doxyHighlight">;</span></span></div>
+</div>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a1a784b65ca2b1ce428b90d1be0728b0b">inputManager_<a href="#a1a784b65ca2b1ce428b90d1be0728b0b" class="hash-link" aria-label="Direct link to inputManager_" title="Direct link to inputManager_">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">std::unique_ptr&lt;input::InputManager&gt; helios::app::Application::inputManager_</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel protected">protected</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Definition at line 42 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a1a784b65ca2b1ce428b90d1be0728b0b">42</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;input::InputManager&gt; <a href="#a1a784b65ca2b1ce428b90d1be0728b0b">inputManager_</a>;</span></span></div>
+</div>
+<p>Referenced by <a href="#a11fe3ec9b45731268a0eff32ced9f06c">inputManager</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a91c2fa7bb451e75bfbed236e270f2207">logger_<a href="#a91c2fa7bb451e75bfbed236e270f2207" class="hash-link" aria-label="Direct link to logger_" title="Direct link to logger_">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">const helios::util::log::Logger&amp; helios::app::Application::logger_ = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().registerLogger(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>)</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel protected">protected</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>The const reference to the logger used with this Adapter.</p>
+<p>Definition at line 37 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a91c2fa7bb451e75bfbed236e270f2207">37</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a>&amp; <a href="#a91c2fa7bb451e75bfbed236e270f2207">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>);</span></span></div>
+</div>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aa04eb0a14f12afe4323122a4698c04f7">renderingDevice_<a href="#aa04eb0a14f12afe4323122a4698c04f7" class="hash-link" aria-label="Direct link to renderingDevice_" title="Direct link to renderingDevice_">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">std::unique_ptr&lt;helios::rendering::RenderingDevice&gt; helios::app::Application::renderingDevice_</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel protected">protected</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Definition at line 41 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aa04eb0a14f12afe4323122a4698c04f7">41</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;helios::rendering::RenderingDevice&gt; <a href="#aa04eb0a14f12afe4323122a4698c04f7">renderingDevice_</a>;</span></span></div>
+</div>
+<p>Referenced by <a href="#a13d126308f1b5b61d9b87fc4dde57530">renderingDevice</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aedbc6395e86cec1e645d5fd093764fa0">windowList_<a href="#aedbc6395e86cec1e645d5fd093764fa0" class="hash-link" aria-label="Direct link to windowList_" title="Direct link to windowList_">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">std::list&lt;std::unique_ptr&lt;helios::window::Window&gt; &gt; helios::app::Application::windowList_</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel protected">protected</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>A list containing all Windows managed by this <a href="/docs/helios/classes/helios/app/application">Application</a>.</p>
+<p>Definition at line 48 of file <a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aedbc6395e86cec1e645d5fd093764fa0">48</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::list&lt;std::unique_ptr&lt;helios::window::Window&gt;&gt; <a href="#aedbc6395e86cec1e645d5fd093764fa0">windowList_</a>;</span></span></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<p>The documentation for this class was generated from the following file:</p>
+<ul>
+<li><a href="/docs/helios/files/include/include/helios/include/helios/app/application-ixx">Application.ixx</a></li>
+</ul>
+<hr>
+<p class="doxyGeneratedBy">Generated via <a href="https://xpack.github.io/doxygen2docusaurus" target="_blank" rel="noopener noreferrer">doxygen2docusaurus</a> 2.0.0 by <a href="https://www.doxygen.nl" target="_blank" rel="noopener noreferrer">Doxygen</a> 1.9.8.</p>
+</div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/helios/classes"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Classes</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/helios/classes/helios/ext/glfw/app/glfwapplication"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">GLFWApplication</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#declaration" class="table-of-contents__link toc-highlight">Declaration</a></li><li><a href="#derived-classes" class="table-of-contents__link toc-highlight">Derived Classes</a></li><li><a href="#public-constructors-index" class="table-of-contents__link toc-highlight">Public Constructors Index</a></li><li><a href="#public-destructor-index" class="table-of-contents__link toc-highlight">Public Destructor Index</a></li><li><a href="#public-member-functions-index" class="table-of-contents__link toc-highlight">Public Member Functions Index</a></li><li><a href="#protected-member-attributes-index" class="table-of-contents__link toc-highlight">Protected Member Attributes Index</a></li><li><a href="#details" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#public-constructors" class="table-of-contents__link toc-highlight">Public Constructors</a><ul><li><a href="#a770ed54a97c68d5ac40542f3a702121a" class="table-of-contents__link toc-highlight">Application()</a></li></ul></li><li><a href="#public-destructor" class="table-of-contents__link toc-highlight">Public Destructor</a><ul><li><a href="#aec579824c0704542d3f7d6c4f47851a1" class="table-of-contents__link toc-highlight">~Application()</a></li></ul></li><li><a href="#public-member-functions" class="table-of-contents__link toc-highlight">Public Member Functions</a><ul><li><a href="#ac74fe7518d57fe0892b44f956e73f970" class="table-of-contents__link toc-highlight">addController()</a></li><li><a href="#a91fa8a45e2a79d32dba31bc37deeb824" class="table-of-contents__link toc-highlight">createWindow()</a></li><li><a href="#a361bd11af60d329332662b5b5a940bb9" class="table-of-contents__link toc-highlight">current()</a></li><li><a href="#a6ea14c8bd591020cbd5d2baef551a804" class="table-of-contents__link toc-highlight">eventManager()</a></li><li><a href="#a3cd9e39b64d771f2bc795cbc8c255a33" class="table-of-contents__link toc-highlight">hasWindow()</a></li><li><a href="#a94b89541520f5b9e6e8f21c3f7ee1aa9" class="table-of-contents__link toc-highlight">init()</a></li><li><a href="#a11fe3ec9b45731268a0eff32ced9f06c" class="table-of-contents__link toc-highlight">inputManager()</a></li><li><a href="#a13d126308f1b5b61d9b87fc4dde57530" class="table-of-contents__link toc-highlight">renderingDevice()</a></li><li><a href="#af98c4f879155bcbccf305b8018e7d884" class="table-of-contents__link toc-highlight">setCurrent()</a></li></ul></li><li><a href="#protected-member-attributes" class="table-of-contents__link toc-highlight">Protected Member Attributes</a><ul><li><a href="#a2dfaeb4cd7c741b225bd968c827983d3" class="table-of-contents__link toc-highlight">controllers_</a></li><li><a href="#a6cbbd642405f8815ec1b5a58b7d27137" class="table-of-contents__link toc-highlight">eventManager_</a></li><li><a href="#a60c02bedd6f7ad8ab0c486aa73c1983f" class="table-of-contents__link toc-highlight">initialized_</a></li><li><a href="#a1a784b65ca2b1ce428b90d1be0728b0b" class="table-of-contents__link toc-highlight">inputManager_</a></li><li><a href="#a91c2fa7bb451e75bfbed236e270f2207" class="table-of-contents__link toc-highlight">logger_</a></li><li><a href="#aa04eb0a14f12afe4323122a4698c04f7" class="table-of-contents__link toc-highlight">renderingDevice_</a></li><li><a href="#aedbc6395e86cec1e645d5fd093764fa0" class="table-of-contents__link toc-highlight">windowList_</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">copyright © 2025 <a href="#">GarageCraft Games</a> / <a href="https://garagecraft.games">Thorsten Suckow-Homberg</a>.</div></div></div></footer></div>
+</body>
+</html>
