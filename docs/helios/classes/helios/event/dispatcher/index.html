@@ -6,7 +6,7 @@
 <title data-rh="true">helios-event-dispatcher | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-event-dispatcher | garagecraft.games"><meta data-rh="true" name="description" content="Declaration"><meta data-rh="true" property="og:description" content="Declaration"><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"Dispatcher","item":"https://garagecraft.games/docs/helios/classes/helios/event/dispatcher"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.83795771.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3d5fdedd.js" defer="defer"></script>
 <script src="/assets/js/main.5a038eee.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -52,7 +52,7 @@ class helios::event::Dispatcher { ... }
 <table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">event</td><td class="doxyParamItemDescription"><p>A unique_ptr to the event instance to be dispatched.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line 65 of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx/#l00065">65</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="aee202c4c9b5815367964b788367a8741">subscribe()<a href="#aee202c4c9b5815367964b788367a8741" class="hash-link" aria-label="Direct link to subscribe()" title="Direct link to subscribe()">​</a></h3>
@@ -82,7 +82,7 @@ class helios::event::Dispatcher { ... }
 <table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">callback</td><td class="doxyParamItemDescription"><p>The callback function to be executed when the event is dispatched. The function should accept <span class="doxyComputerOutput">const EventType&amp;</span> as its single argument.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line 43 of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx/#l00043">43</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>
 <div class="doxyProgramListing">
 <div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aee202c4c9b5815367964b788367a8741">43</a></span><span class="doxyLineContent"><span class="doxyHighlight">            </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> <a href="#aee202c4c9b5815367964b788367a8741">subscribe</a>(std::function&lt;</span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight">(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> EventType&amp;)&gt; callback) {</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">44</span><span class="doxyLineContent"><span class="doxyHighlight">            </span><span class="doxyHighlightKeyword">static_assert</span><span class="doxyHighlight">(std::is_base_of_v&lt;Event, EventType&gt;, </span><span class="doxyHighlightStringLiteral">&quot;EventType is not of type Event&quot;</span><span class="doxyHighlight">);</span></span></div>
@@ -111,7 +111,7 @@ class helios::event::Dispatcher { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Internal map to store registered callbacks for various event types.</p>
-<p>Definition at line 29 of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx/#l00029">29</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>
 <div class="doxyProgramListing">
 <div class="doxyCodeLine"><span class="doxyLineNumber">29</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unordered_map&lt;std::type_index, std::vector&lt;std::function&lt;void(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/event/event">Event</a>&amp;)&gt;&gt;&gt; callbacks_;</span></span></div>
 </div>
