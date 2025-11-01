@@ -6,7 +6,7 @@
 <title data-rh="true">helios-rendering-shader | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/namespaces/helios/rendering/shader"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-rendering-shader | garagecraft.games"><meta data-rh="true" name="description" content="Definition"><meta data-rh="true" property="og:description" content="Definition"><meta data-rh="true" name="keywords" content="doxygen,reference,namespace"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/namespaces/helios/rendering/shader"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/namespaces/helios/rendering/shader" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/namespaces/helios/rendering/shader" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Namespaces","item":"https://garagecraft.games/docs/helios/namespaces"},{"@type":"ListItem","position":3,"name":"helios","item":"https://garagecraft.games/docs/helios/namespaces/helios"},{"@type":"ListItem","position":4,"name":"rendering","item":"https://garagecraft.games/docs/helios/namespaces/helios/rendering"},{"@type":"ListItem","position":5,"name":"shader","item":"https://garagecraft.games/docs/helios/namespaces/helios/rendering/shader"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.3d5fdedd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2b5e752e.js" defer="defer"></script>
 <script src="/assets/js/main.5a038eee.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -24,17 +24,21 @@ namespace helios::rendering::shader { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">class</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/rendering/shader/shader">Shader</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Abstract representation of a <a href="/docs/helios/classes/helios/rendering/shader/shader">Shader</a> program (e.g. composed of vertex/fragment shader). <a href="/docs/helios/classes/helios/rendering/shader/shader/#details">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">class</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/rendering/shader/uniformvaluemap">UniformValueMap</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Manages a collection of values for mapping them to their UniformSemantics identifier. <a href="/docs/helios/classes/helios/rendering/shader/uniformvaluemap/#details">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="typedefs-index">Typedefs Index<a href="#typedefs-index" class="hash-link" aria-label="Direct link to Typedefs Index" title="Direct link to Typedefs Index">​</a></h2>
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">using</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aeddeeda205abd11eba049b7eed93806f">UniformValue</a> = std::variant&lt; <a href="/docs/helios/namespaces/helios/math/#ad99110868c90702fab85df37e507009a">helios::math::mat4f</a> &gt;</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>A type alias for the variant containing all supported uniform types. <a href="#aeddeeda205abd11eba049b7eed93806f">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="enumerations-index">Enumerations Index<a href="#enumerations-index" class="hash-link" aria-label="Direct link to Enumerations Index" title="Direct link to Enumerations Index">​</a></h2>
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">enum class</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left">UniformSemantics { <a href="#a0a320e03bcf6f60bc90428c450dfb329">...</a> }</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Enumeration class defining common semantic meanings for uniform variables in Shaders. <a href="#a0a320e03bcf6f60bc90428c450dfb329">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="typedefs">Typedefs<a href="#typedefs" class="hash-link" aria-label="Direct link to Typedefs" title="Direct link to Typedefs">​</a></h2>
@@ -72,6 +76,7 @@ namespace helios::rendering::shader { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
+<p>Enumeration class defining common semantic meanings for uniform variables in Shaders.</p>
 <dl class="doxyEnumList">
 <dt class="doxyEnumTableTitle">Enumeration values</dt>
 <dd>
@@ -80,10 +85,9 @@ namespace helios::rendering::shader { ... }
 
 
 
-<table class="doxyEnumTable"><tbody><tr class="doxyEnumItem"><td class="doxyEnumItemName">WorldMatrix<a id="a0a320e03bcf6f60bc90428c450dfb329ae10b6dfca8d323f6ec5779344835885e"></a></td><td class="doxyEnumItemDescription"> (= 0)</td></tr><tr class="doxyEnumItem"><td class="doxyEnumItemName">ProjectionMatrix<a id="a0a320e03bcf6f60bc90428c450dfb329a5c79d4241e5a2978c699473b01f82fe9"></a></td><td class="doxyEnumItemDescription"></td></tr><tr class="doxyEnumItem"><td class="doxyEnumItemName">ViewMatrix<a id="a0a320e03bcf6f60bc90428c450dfb329ab3184e06babbab03e639eed0554b29eb"></a></td><td class="doxyEnumItemDescription"></td></tr><tr class="doxyEnumItem"><td class="doxyEnumItemName">count<a id="a0a320e03bcf6f60bc90428c450dfb329ae2942a04780e223b215eb8b663cf5353"></a></td><td class="doxyEnumItemDescription"></td></tr></tbody></table>
+<table class="doxyEnumTable"><tbody><tr class="doxyEnumItem"><td class="doxyEnumItemName">WorldMatrix<a id="a0a320e03bcf6f60bc90428c450dfb329ae10b6dfca8d323f6ec5779344835885e"></a></td><td class="doxyEnumItemDescription">Represents the world transformation matrix of an object (= 0)</td></tr><tr class="doxyEnumItem"><td class="doxyEnumItemName">ProjectionMatrix<a id="a0a320e03bcf6f60bc90428c450dfb329a5c79d4241e5a2978c699473b01f82fe9"></a></td><td class="doxyEnumItemDescription">Represents the projection matrix</td></tr><tr class="doxyEnumItem"><td class="doxyEnumItemName">ViewMatrix<a id="a0a320e03bcf6f60bc90428c450dfb329ab3184e06babbab03e639eed0554b29eb"></a></td><td class="doxyEnumItemDescription">Represents the (camera) view space, transforming world space to view space</td></tr><tr class="doxyEnumItem"><td class="doxyEnumItemName">count<a id="a0a320e03bcf6f60bc90428c450dfb329ae2942a04780e223b215eb8b663cf5353"></a></td><td class="doxyEnumItemDescription">Representant for the number of entries in this enum</td></tr></tbody></table>
 </dd>
 </dl>
-<p>Enumeration class defining common semantic meanings for uniform variables in Shaders.</p>
 <p>This enum class provides a strongly typed way to refer to <b>standard</b> uniform variables that represent essential matrices or other global data typically passed to shaders.</p>
 <p>Concrete shader implementations use these semantics to map actual uniform names and their respective uniform locations.</p>
 <dl class="doxySectionUser">
@@ -95,22 +99,22 @@ namespace helios::rendering::shader { ... }
 <div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a0a320e03bcf6f60bc90428c450dfb329">22</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">enum class</span><span class="doxyHighlight"> <a href="#a0a320e03bcf6f60bc90428c450dfb329">UniformSemantics</a> {</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">23</span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">24</span><span class="doxyLineContent"><span class="doxyHighlightComment">        /**</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">25</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * Represents the world transformation matrix of an object.</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">25</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * @brief Represents the world transformation matrix of an object.</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">26</span><span class="doxyLineContent"><span class="doxyHighlightComment">         */</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">27</span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="#a0a320e03bcf6f60bc90428c450dfb329ae10b6dfca8d323f6ec5779344835885e">WorldMatrix</a> = 0,</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">28</span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">29</span><span class="doxyLineContent"><span class="doxyHighlightComment">        /**</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">30</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * Represents the projection matrix.</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">30</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * @brief Represents the projection matrix.</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">31</span><span class="doxyLineContent"><span class="doxyHighlightComment">         */</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">32</span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="#a0a320e03bcf6f60bc90428c450dfb329a5c79d4241e5a2978c699473b01f82fe9">ProjectionMatrix</a>,</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">33</span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">34</span><span class="doxyLineContent"><span class="doxyHighlightComment">        /**</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">35</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * Represents the (camera) view space, transforming world space to view space.</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">35</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * @brief Represents the (camera) view space, transforming world space to view space.</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">36</span><span class="doxyLineContent"><span class="doxyHighlightComment">         */</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">37</span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="#a0a320e03bcf6f60bc90428c450dfb329ab3184e06babbab03e639eed0554b29eb">ViewMatrix</a>,</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">38</span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">39</span><span class="doxyLineContent"><span class="doxyHighlightComment">        /**</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">40</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * Representant for the number of entries in this enum.</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">40</span><span class="doxyLineContent"><span class="doxyHighlightComment">         * @brief Representant for the number of entries in this enum.</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">41</span><span class="doxyLineContent"><span class="doxyHighlightComment">         */</span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">42</span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="#a0a320e03bcf6f60bc90428c450dfb329ae2942a04780e223b215eb8b663cf5353">count</a></span></span></div>
 <div class="doxyCodeLine"><span class="doxyLineNumber">43</span><span class="doxyLineContent"><span class="doxyHighlight">    };</span></span></div>
