@@ -7,7 +7,7 @@
     "sidebarCategoryLabel": "helios API",
     "navbarLabel": "API Docs",
     "mainPageTitle": "helios",
-    "renderProgramListing": false,
+    "renderProgramListing": true,
     "renderProgramListingInline": true
   }
 }
