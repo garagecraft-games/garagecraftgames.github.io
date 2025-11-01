@@ -4,8 +4,7 @@ on:
   pull_request:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+  workflow_dispatch:
 
 jobs:
   test-deploy:
@@ -18,7 +17,15 @@ jobs:
           node-version: 18.x
           cache: npm
 
+      - name: Fetch Doxygen XML archive from helios Pages
+        run: |
+          mkdir -p .doxygen/xml
+          curl -fsSL "https://garagecraft-games.github.io/helios/api/xml.tgz" -o /tmp/xml.tgz
+          tar -xzf /tmp/xml.tgz -C .doxygen/xml --strip-components=1
+
       - name: Install dependencies
         run: npm ci
-      - name: Test build website
+      - name: Build helios API docs
+        run: npx doxygen2docusaurus --id helios
+      - name: Build website
         run: npm run build
