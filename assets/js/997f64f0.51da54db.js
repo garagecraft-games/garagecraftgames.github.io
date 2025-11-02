@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgaragecraft_games=self.webpackChunkgaragecraft_games||[]).push([[490],{3616:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"devlog"}')}}]);
