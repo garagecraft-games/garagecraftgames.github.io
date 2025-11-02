@@ -6,7 +6,7 @@
 <title data-rh="true">helios-event-dispatcher | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-event-dispatcher | garagecraft.games"><meta data-rh="true" name="description" content="A generic event Dispatcher for type-safe event handling. More..."><meta data-rh="true" property="og:description" content="A generic event Dispatcher for type-safe event handling. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/event/dispatcher" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"Dispatcher","item":"https://garagecraft.games/docs/helios/classes/helios/event/dispatcher"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.2c6abb6a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aa869a7a.js" defer="defer"></script>
 <script src="/assets/js/main.db3b594f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -37,7 +37,7 @@ class helios::event::Dispatcher { ... }
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Description<a href="#details" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
 <p>A generic event <a href="/docs/helios/classes/helios/event/dispatcher">Dispatcher</a> for type-safe event handling.</p>
-<p>The <span class="doxyComputerOutput"><a href="/docs/helios/classes/helios/event/dispatcher">Dispatcher</a></span> allows interested entities to subscribe to specific event types and dispatch events in a decoupled manner. Using <span class="doxyComputerOutput">std::type_index</span> makes sure that only relevant handlers receive specific event instances.</p>
+<p>The `Dispatcher` allows interested entities to subscribe to specific event types and dispatch events in a decoupled manner. Using `std::type_index` makes sure that only relevant handlers receive specific event instances.</p>
 <p>Definition at line 23 of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-member-functions">Public Member Functions<a href="#public-member-functions" class="hash-link" aria-label="Direct link to Public Member Functions" title="Direct link to Public Member Functions">​</a></h2>
@@ -50,7 +50,7 @@ class helios::event::Dispatcher { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Dispatches an event to all subscribed callbacks (i.e. listeners) of the specific EventType.</p>
-<p>This method will take ownership of the event to dispatch. Once this method returns, the unique_ptr to the <span class="doxyComputerOutput"><a href="/docs/helios/classes/helios/event/event">Event</a></span> will be a nullptr.</p>
+<p>This method will take ownership of the event to dispatch. Once this method returns, the unique_ptr to the `Event` will be a nullptr.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
@@ -74,17 +74,17 @@ class helios::event::Dispatcher { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Subscribes a callback to a specific event type.</p>
-<p>Registers a <span class="doxyComputerOutput">std::function</span> to be invoked when an event of <span class="doxyComputerOutput">EventType</span> is dispatched. The callback will receive the dispatched event as a const reference.</p>
+<p>Registers a `std::function` to be invoked when an event of `EventType` is dispatched. The callback will receive the dispatched event as a const reference.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Template Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">EventType</td><td class="doxyParamItemDescription"><p>The specific type of event to subscribe to. Must derive from <span class="doxyComputerOutput"><a href="/docs/helios/classes/helios/event/event">Event</a></span>.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">EventType</td><td class="doxyParamItemDescription"><p>The specific type of event to subscribe to. Must derive from `Event`.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">callback</td><td class="doxyParamItemDescription"><p>The callback function to be executed when the event is dispatched. The function should accept <span class="doxyComputerOutput">const EventType&amp;</span> as its single argument.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">callback</td><td class="doxyParamItemDescription"><p>The callback function to be executed when the event is dispatched. The function should accept `const EventType&amp;` as its single argument.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx/#l00043">43</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/event/dispatcher-ixx">Dispatcher.ixx</a>.</p>

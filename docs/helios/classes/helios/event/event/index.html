@@ -6,7 +6,7 @@
 <title data-rh="true">helios-event-event | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/event/event"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-event-event | garagecraft.games"><meta data-rh="true" name="description" content="Base class for events in the helios framework. More..."><meta data-rh="true" property="og:description" content="Base class for events in the helios framework. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/event/event"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/event/event" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/event/event" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"Event","item":"https://garagecraft.games/docs/helios/classes/helios/event/event"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.2c6abb6a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aa869a7a.js" defer="defer"></script>
 <script src="/assets/js/main.db3b594f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -60,13 +60,13 @@ class helios::event::Event { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/util/guid">helios::util::Guid</a></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a5d230c911b7ce021871d0701e380007a">guid_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>The guid uniquely identifying <em>this</em> event. <a href="#a5d230c911b7ce021871d0701e380007a">More...</a></p>
+<p>The guid uniquely identifying _this_ event. <a href="#a5d230c911b7ce021871d0701e380007a">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const uint64_t</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aeb59ce30076dde6602fe0e959fee659f">tag_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>An optional tag for this event. Defaults to 0. <a href="#aeb59ce30076dde6602fe0e959fee659f">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Description<a href="#details" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
 <p>Base class for events in the helios framework.</p>
-<p><span class="doxyComputerOutput"><a href="/docs/helios/classes/helios/event/event">Event</a></span> provides a common interface for all application related events. Each event instance is uniquely identified by a <span class="doxyComputerOutput">Guid</span> generated upon construction. An additional tag can be provided to identify groups of events for further categorization or filtering.</p>
+<p>`Event` provides a common interface for all application related events. Each event instance is uniquely identified by a `Guid` generated upon construction. An additional tag can be provided to identify groups of events for further categorization or filtering.</p>
 <p>Events should be treated as immutable after construction.</p>
 <div class="doxyXrefSect">
 <dl class="doxyXrefSectList">
@@ -203,7 +203,7 @@ class helios::event::Event { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>The guid uniquely identifying <em>this</em> event.</p>
+<p>The guid uniquely identifying _this_ event.</p>
 <p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/event/event-ixx/#l00029">29</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/event/event-ixx">Event.ixx</a>.</p>
 <div class="doxyProgramListing">
 <div class="doxyCodeLine"><span class="doxyLineNumber">29</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/guid">helios::util::Guid</a> guid_;</span></span></div>
