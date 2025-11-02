@@ -147,7 +147,7 @@ const config = {
         style: 'dark',
         links: [
         ],
-        copyright: `copyright © ${new Date().getFullYear()} <a href="#">GarageCraft Games</a> / <a href="https://garagecraft.games">Thorsten Suckow-Homberg</a>.`,
+        copyright: `copyright © ${new Date().getFullYear()} <a href="#">GarageCraft Games</a> / <a href="https://thorsten.suckow-homberg.de">Thorsten Suckow-Homberg</a>.`,
       },
       prism: {
         theme: prismThemes.github,
