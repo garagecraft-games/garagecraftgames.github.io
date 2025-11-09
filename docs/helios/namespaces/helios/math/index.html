@@ -6,8 +6,8 @@
 <title data-rh="true">helios-math | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/namespaces/helios/math"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-math | garagecraft.games"><meta data-rh="true" name="description" content="Mathematical operations and types. More..."><meta data-rh="true" property="og:description" content="Mathematical operations and types. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,namespace"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/namespaces/helios/math"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/namespaces/helios/math" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/namespaces/helios/math" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Namespaces","item":"https://garagecraft.games/docs/helios/namespaces"},{"@type":"ListItem","position":3,"name":"helios","item":"https://garagecraft.games/docs/helios/namespaces/helios"},{"@type":"ListItem","position":4,"name":"math","item":"https://garagecraft.games/docs/helios/namespaces/helios/math"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.4be43ed6.js" defer="defer"></script>
-<script src="/assets/js/main.b4f846df.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.cc046b02.js" defer="defer"></script>
+<script src="/assets/js/main.505431b5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -98,6 +98,8 @@ namespace helios::math { ... }
 
 
 
+
+
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="#ad422120d6e1f106140808f16e348f0b3">mat4f</a></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aef6bef7ca3d31a4908a66e16c9771420">lookAt</a> (const vec3f &amp;eye, const vec3f &amp;center, const vec3f &amp;up) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Returns the 4x4 lookAt-matrix for transforming world coordinates to camera space. The method creates the camera coordinate system based on the parameters eye, i.e. the vantage point in world space, the camera&#x27;s up direction and center, representing the point of interest. Note that the returned matrix is essentially a composition of a change of coordinates matrix P(C &lt;- W) and a translation to the origin, i.e. the camera is sitting at the origin (0, 0, 0) looking down the negative z-axis, i.e. conceptually. <a href="#aef6bef7ca3d31a4908a66e16c9771420">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="#ad422120d6e1f106140808f16e348f0b3">mat4f</a></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a643691235959c2f53d144a4ee9a0e251">rotate</a> (const mat4f &amp;model, float radians, const vec3f &amp;axis) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
@@ -112,10 +114,14 @@ namespace helios::math { ... }
 <p>Returns a const pointer to the first element of the matrix&#x27;s components. <a href="#a0bae6331c7cb70432b8c4d2444f0678b">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexTemplate"><td class="doxyMemberIndexTemplate" colspan="2"><div>template &lt;helios::math::Numeric T&gt;</div></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemTypeTemplate" valign="top" style="text-align:left">float *</td><td class="doxyMemberIndexItemNameTemplate" valign="top" style="text-align:left"><a href="#af32c0aff779da14e59040ace49452067">value_ptr</a> (mat4&lt; T &gt; &amp;m) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Returns a pointer to the first element of the matrix&#x27;s components. <a href="#af32c0aff779da14e59040ace49452067">More...</a></p>
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexTemplate"><td class="doxyMemberIndexTemplate" colspan="2"><div>template &lt;helios::math::Numeric T&gt;</div></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemTypeTemplate" valign="top" style="text-align:left">constexpr float</td><td class="doxyMemberIndexItemNameTemplate" valign="top" style="text-align:left"><a href="#af097518c5752da1fb987db83d9b97ecc">dot</a> (const vec2&lt; T &gt; &amp;x, const vec2&lt; T &gt; &amp;y) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Computes the dot product of two 2D vectors. <a href="#af097518c5752da1fb987db83d9b97ecc">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexTemplate"><td class="doxyMemberIndexTemplate" colspan="2"><div>template &lt;helios::math::Numeric T&gt;</div></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemTypeTemplate" valign="top" style="text-align:left">constexpr auto </td><td class="doxyMemberIndexItemNameTemplate" valign="top" style="text-align:left"><a href="#a82d2ab8d8240be4606a885c554b93fb5">cross</a> (const vec3&lt; T &gt; &amp;v1, const vec3&lt; T &gt; &amp;v2) noexcept -&gt; <a href="/docs/helios/structs/helios/math/vec3">vec3</a>&lt; T &gt;</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Computes the cross product of two 3D vectors. <a href="#a82d2ab8d8240be4606a885c554b93fb5">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexTemplate"><td class="doxyMemberIndexTemplate" colspan="2"><div>template &lt;helios::math::Numeric T&gt;</div></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemTypeTemplate" valign="top" style="text-align:left">constexpr float</td><td class="doxyMemberIndexItemNameTemplate" valign="top" style="text-align:left"><a href="#ada75e2b260fe520041c61b0ed2f72357">dot</a> (const vec3&lt; T &gt; &amp;x, const vec3&lt; T &gt; &amp;y) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Computes the dot product of two 3D vectors. <a href="#ada75e2b260fe520041c61b0ed2f72357">More...</a></p>
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexTemplate"><td class="doxyMemberIndexTemplate" colspan="2"><div>template &lt;helios::math::Numeric T&gt;</div></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemTypeTemplate" valign="top" style="text-align:left">const float *</td><td class="doxyMemberIndexItemNameTemplate" valign="top" style="text-align:left"><a href="#af29f2fac35d935400b2dd46d5d76a88f">value_ptr</a> (const vec4&lt; T &gt; &amp;m) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Returns a const pointer to the first element of the vector&#x27;s components. <a href="#af29f2fac35d935400b2dd46d5d76a88f">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">constexpr float</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a4949642a7cca09c7950bb6a1b75260c9">radians</a> (const float angle) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Converts an angle from degrees to radians. <a href="#a4949642a7cca09c7950bb6a1b75260c9">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
@@ -174,9 +180,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx/#l00078">78</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx">vec2.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx/#l00092">92</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx">vec2.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#acb8f1b0c5acc937254f38e27787db452">78</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#acb8f1b0c5acc937254f38e27787db452">vec2d</a> = <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;double&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#acb8f1b0c5acc937254f38e27787db452">92</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#acb8f1b0c5acc937254f38e27787db452">vec2d</a> = <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;double&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -188,9 +194,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx/#l00077">77</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx">vec2.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx/#l00091">91</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx">vec2.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aeab5c7e555a142f8f763a3317460d5c0">77</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#aeab5c7e555a142f8f763a3317460d5c0">vec2f</a> = <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;float&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aeab5c7e555a142f8f763a3317460d5c0">91</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#aeab5c7e555a142f8f763a3317460d5c0">vec2f</a> = <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;float&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -202,9 +208,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx/#l00079">79</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx">vec2.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx/#l00093">93</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx">vec2.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aff32bafe25abeda0bb858b51ae46bff8">79</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#aff32bafe25abeda0bb858b51ae46bff8">vec2i</a> = <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;int&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aff32bafe25abeda0bb858b51ae46bff8">93</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#aff32bafe25abeda0bb858b51ae46bff8">vec2i</a> = <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;int&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -216,9 +222,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00202">202</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00211">211</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a57c950d4cb887c103dc2423f3ea81ce4">202</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a57c950d4cb887c103dc2423f3ea81ce4">vec3d</a> = <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;double&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a57c950d4cb887c103dc2423f3ea81ce4">211</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a57c950d4cb887c103dc2423f3ea81ce4">vec3d</a> = <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;double&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -230,9 +236,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00200">200</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00209">209</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a71f1e40e636f47229c3122bdb63099d5">200</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a71f1e40e636f47229c3122bdb63099d5">vec3f</a> = <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;float&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a71f1e40e636f47229c3122bdb63099d5">209</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a71f1e40e636f47229c3122bdb63099d5">vec3f</a> = <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;float&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -244,9 +250,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00201">201</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00210">210</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a0fd329cdb93d866fad284b88f7acb4f4">201</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a0fd329cdb93d866fad284b88f7acb4f4">vec3i</a> = <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;int&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a0fd329cdb93d866fad284b88f7acb4f4">210</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a0fd329cdb93d866fad284b88f7acb4f4">vec3i</a> = <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;int&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -258,9 +264,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx/#l00102">102</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx">vec4.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx/#l00118">118</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx">vec4.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a78a0f495523b71681b549f098f994126">102</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a78a0f495523b71681b549f098f994126">vec4d</a> = <a href="/docs/helios/structs/helios/math/vec4">vec4&lt;double&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a78a0f495523b71681b549f098f994126">118</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a78a0f495523b71681b549f098f994126">vec4d</a> = <a href="/docs/helios/structs/helios/math/vec4">vec4&lt;double&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -272,9 +278,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx/#l00101">101</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx">vec4.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx/#l00117">117</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx">vec4.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a08252f81850c5902e3c8dead272f3332">101</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a08252f81850c5902e3c8dead272f3332">vec4f</a> = <a href="/docs/helios/structs/helios/math/vec4">vec4&lt;float&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a08252f81850c5902e3c8dead272f3332">117</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a08252f81850c5902e3c8dead272f3332">vec4f</a> = <a href="/docs/helios/structs/helios/math/vec4">vec4&lt;float&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -286,9 +292,9 @@ namespace helios::math { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx/#l00103">103</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx">vec4.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx/#l00119">119</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx">vec4.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a9ce6ecf5869b53d92a26354e2c48d0b4">103</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a9ce6ecf5869b53d92a26354e2c48d0b4">vec4i</a> = <a href="/docs/helios/structs/helios/math/vec4">vec4&lt;int&gt;</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a9ce6ecf5869b53d92a26354e2c48d0b4">119</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">using </span><span class="doxyHighlight"><a href="#a9ce6ecf5869b53d92a26354e2c48d0b4">vec4i</a> = <a href="/docs/helios/structs/helios/math/vec4">vec4&lt;int&gt;</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -326,11 +332,11 @@ namespace helios::math { ... }
 <dt>Returns</dt>
 <dd><p>A new <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> instance representing the difference between v1 and v2.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00195">195</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00204">204</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a7a21ef269927b19863a1eae2d87666ee">195</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> <a href="#a7a21ef269927b19863a1eae2d87666ee">operator-</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v1, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v2) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">196</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3</a>{v1[0] - v2[0], v1[1] - v2[1], v1[2] - v2[2]};</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">197</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a7a21ef269927b19863a1eae2d87666ee">204</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> <a href="#a7a21ef269927b19863a1eae2d87666ee">operator-</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v1, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v2) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">205</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3</a>{v1[0] - v2[0], v1[1] - v2[1], v1[2] - v2[2]};</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">206</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
 </div>
 </div>
 </div>
@@ -365,11 +371,11 @@ namespace helios::math { ... }
 <dt>Returns</dt>
 <dd><p>a new <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> instance representing the result of the scalar multiplication.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00119">119</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00128">128</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ae21f80815ae495b8d521d6ad829ee7b6">119</a></span><span class="doxyLineContent"><span class="doxyHighlight">    constexpr <a href="/docs/helios/structs/helios/math/vec3">vec3</a>&lt;T&gt; operator*(const <a href="/docs/helios/structs/helios/math/vec3">vec3</a>&lt;T&gt;&amp; v, const T n) noexcept {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">120</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>{v[0] * n, v[1] * n, v[2] * n};</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">121</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ae21f80815ae495b8d521d6ad829ee7b6">128</a></span><span class="doxyLineContent"><span class="doxyHighlight">    constexpr <a href="/docs/helios/structs/helios/math/vec3">vec3</a>&lt;T&gt; operator*(const <a href="/docs/helios/structs/helios/math/vec3">vec3</a>&lt;T&gt;&amp; v, const T n) noexcept {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">129</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>{v[0] * n, v[1] * n, v[2] * n};</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">130</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
 </div>
 </div>
 </div>
@@ -404,11 +410,11 @@ namespace helios::math { ... }
 <dt>Returns</dt>
 <dd><p>a new <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> instance representing the result of the scalar multiplication.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00135">135</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00144">144</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#afc199c848736c24ad37fd5028b2997c4">135</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> <a href="#ae21f80815ae495b8d521d6ad829ee7b6">operator*</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">float</span><span class="doxyHighlight"> n, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">136</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3</a>{v[0] * n, v[1] * n, v[2] * n};</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">137</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#afc199c848736c24ad37fd5028b2997c4">144</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> <a href="#ae21f80815ae495b8d521d6ad829ee7b6">operator*</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">float</span><span class="doxyHighlight"> n, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">145</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3</a>{v[0] * n, v[1] * n, v[2] * n};</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">146</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
 </div>
 </div>
 </div>
@@ -446,15 +452,54 @@ namespace helios::math { ... }
 <dt>Returns</dt>
 <dd><p>A new <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> instance representing the cross product.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00161">161</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00170">170</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a82d2ab8d8240be4606a885c554b93fb5">161</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> <a href="#a82d2ab8d8240be4606a885c554b93fb5">cross</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v1, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v2) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">162</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3</a>{</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">163</span><span class="doxyLineContent"><span class="doxyHighlight">            v1[1]*v2[2] - v1[2]*v2[1],</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">164</span><span class="doxyLineContent"><span class="doxyHighlight">            v1[2]*v2[0] - v1[0]*v2[2],</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">165</span><span class="doxyLineContent"><span class="doxyHighlight">            v1[0]*v2[1] - v1[1]*v2[0]</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">166</span><span class="doxyLineContent"><span class="doxyHighlight">        };</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">167</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a82d2ab8d8240be4606a885c554b93fb5">170</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> <a href="#a82d2ab8d8240be4606a885c554b93fb5">cross</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v1, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; v2) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">171</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3</a>{</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">172</span><span class="doxyLineContent"><span class="doxyHighlight">            v1[1]*v2[2] - v1[2]*v2[1],</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">173</span><span class="doxyLineContent"><span class="doxyHighlight">            v1[2]*v2[0] - v1[0]*v2[2],</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">174</span><span class="doxyLineContent"><span class="doxyHighlight">            v1[0]*v2[1] - v1[1]*v2[0]</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">175</span><span class="doxyLineContent"><span class="doxyHighlight">        };</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">176</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
+</div>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="af097518c5752da1fb987db83d9b97ecc">dot()<a href="#af097518c5752da1fb987db83d9b97ecc" class="hash-link" aria-label="Direct link to dot()" title="Direct link to dot()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<div class="doxyMemberTemplate">template &lt;helios::math::Numeric T&gt;</div>
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">float helios::math::dot (const <a href="/docs/helios/structs/helios/math/vec2">vec2</a>&lt; T &gt; &amp; x, const <a href="/docs/helios/structs/helios/math/vec2">vec2</a>&lt; T &gt; &amp; y)</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel constexpr">constexpr</span>
+<span class="doxyMemberLabel noexcept">noexcept</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Computes the dot product of two 2D vectors.</p>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Template Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">T</td><td class="doxyParamItemDescription"><p>The numeric type of the vector components.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">v1</td><td class="doxyParamItemDescription"><p>The first <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;T&gt;</a> vector.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">v2</td><td class="doxyParamItemDescription"><p>The second <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;T&gt;</a> vector.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>A new <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;T&gt;</a> instance representing the dot product.</p></dd>
+</dl>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx/#l00087">87</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec2-ixx">vec2.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#af097518c5752da1fb987db83d9b97ecc">87</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">float</span><span class="doxyHighlight"> <a href="#af097518c5752da1fb987db83d9b97ecc">dot</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;T&gt;</a>&amp; x, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec2">vec2&lt;T&gt;</a>&amp; y) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">88</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> x[0]*y[0] + x[1]*y[1];</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">89</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
 </div>
 </div>
 </div>
@@ -489,11 +534,11 @@ namespace helios::math { ... }
 <dt>Returns</dt>
 <dd><p>A new <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a> instance representing the dot product.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00180">180</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx/#l00189">189</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec3-ixx">vec3.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ada75e2b260fe520041c61b0ed2f72357">180</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">float</span><span class="doxyHighlight"> <a href="#ada75e2b260fe520041c61b0ed2f72357">dot</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; x, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; y) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">181</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> x[0]*y[0] + x[1]*y[1] + x[2]*y[2];</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">182</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ada75e2b260fe520041c61b0ed2f72357">189</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">constexpr</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">float</span><span class="doxyHighlight"> <a href="#af097518c5752da1fb987db83d9b97ecc">dot</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; x, </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec3">vec3&lt;T&gt;</a>&amp; y) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">190</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> x[0]*y[0] + x[1]*y[1] + x[2]*y[2];</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">191</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
 </div>
 </div>
 </div>
@@ -777,6 +822,45 @@ namespace helios::math { ... }
 </div>
 </div>
 </div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="af29f2fac35d935400b2dd46d5d76a88f">value_ptr()<a href="#af29f2fac35d935400b2dd46d5d76a88f" class="hash-link" aria-label="Direct link to value_ptr()" title="Direct link to value_ptr()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<div class="doxyMemberTemplate">template &lt;helios::math::Numeric T&gt;</div>
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">const float * helios::math::value_ptr (const <a href="/docs/helios/structs/helios/math/vec4">vec4</a>&lt; T &gt; &amp; m)</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel noexcept">noexcept</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Returns a const pointer to the first element of the vector&#x27;s components.</p>
+<p>Useful for APIs that expect a pointer to vector data, like OpenGL.</p>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Template Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">T</td><td class="doxyParamItemDescription"><p>The numeric type of the vector components.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxyParamsList">
+<dt class="doxyParamsTableTitle">Parameters</dt>
+<dd>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">m</td><td class="doxyParamItemDescription"><p>A reference to the `vec4&lt;T&gt;` vector.</p></td></tr></tbody></table>
+</dd>
+</dl>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>A const pointer to the element at [0]</p></dd>
+</dl>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx/#l00113">113</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/math/include/helios/math/types/vec4-ixx">vec4.ixx</a>.</p>
+<div class="doxyProgramListing">
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#af29f2fac35d935400b2dd46d5d76a88f">113</a></span><span class="doxyLineContent"><span class="doxyHighlight">    </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">float</span><span class="doxyHighlight">* <a href="#a0bae6331c7cb70432b8c4d2444f0678b">value_ptr</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/math/vec4">vec4&lt;T&gt;</a>&amp; m) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">114</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordFlow">return</span><span class="doxyHighlight"> &amp;m[0];</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">115</span><span class="doxyLineContent"><span class="doxyHighlight">    }</span></span></div>
+</div>
+</div>
+</div>
 </div>
 <hr>
 <p>The documentation for this namespace was generated from the following files:</p>
@@ -791,6 +875,6 @@ namespace helios::math { ... }
 </ul>
 <hr>
 <p class="doxyGeneratedBy">Generated via <a href="https://xpack.github.io/doxygen2docusaurus" target="_blank" rel="noopener noreferrer">doxygen2docusaurus</a> 2.0.0 by <a href="https://www.doxygen.nl" target="_blank" rel="noopener noreferrer">Doxygen</a> 1.15.0.</p>
-</div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/helios/namespaces/helios/input/types"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">types</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/helios/namespaces/helios/math/concepts"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">concepts</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#definition" class="table-of-contents__link toc-highlight">Definition</a></li><li><a href="#namespaces-index" class="table-of-contents__link toc-highlight">Namespaces Index</a></li><li><a href="#classes-index" class="table-of-contents__link toc-highlight">Classes Index</a></li><li><a href="#typedefs-index" class="table-of-contents__link toc-highlight">Typedefs Index</a></li><li><a href="#operators-index" class="table-of-contents__link toc-highlight">Operators Index</a></li><li><a href="#functions-index" class="table-of-contents__link toc-highlight">Functions Index</a></li><li><a href="#details" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#typedefs" class="table-of-contents__link toc-highlight">Typedefs</a><ul><li><a href="#a058bd8629e8b9fdd7914ec513cf515f5" class="table-of-contents__link toc-highlight">mat4d</a></li><li><a href="#ad422120d6e1f106140808f16e348f0b3" class="table-of-contents__link toc-highlight">mat4f</a></li><li><a href="#abfde83491c8def2cca7e8816bb9a0075" class="table-of-contents__link toc-highlight">mat4i</a></li><li><a href="#acb8f1b0c5acc937254f38e27787db452" class="table-of-contents__link toc-highlight">vec2d</a></li><li><a href="#aeab5c7e555a142f8f763a3317460d5c0" class="table-of-contents__link toc-highlight">vec2f</a></li><li><a href="#aff32bafe25abeda0bb858b51ae46bff8" class="table-of-contents__link toc-highlight">vec2i</a></li><li><a href="#a57c950d4cb887c103dc2423f3ea81ce4" class="table-of-contents__link toc-highlight">vec3d</a></li><li><a href="#a71f1e40e636f47229c3122bdb63099d5" class="table-of-contents__link toc-highlight">vec3f</a></li><li><a href="#a0fd329cdb93d866fad284b88f7acb4f4" class="table-of-contents__link toc-highlight">vec3i</a></li><li><a href="#a78a0f495523b71681b549f098f994126" class="table-of-contents__link toc-highlight">vec4d</a></li><li><a href="#a08252f81850c5902e3c8dead272f3332" class="table-of-contents__link toc-highlight">vec4f</a></li><li><a href="#a9ce6ecf5869b53d92a26354e2c48d0b4" class="table-of-contents__link toc-highlight">vec4i</a></li></ul></li><li><a href="#operators" class="table-of-contents__link toc-highlight">Operators</a><ul><li><a href="#a7a21ef269927b19863a1eae2d87666ee" class="table-of-contents__link toc-highlight">operator-()</a></li><li><a href="#ae21f80815ae495b8d521d6ad829ee7b6" class="table-of-contents__link toc-highlight">operator*()</a></li><li><a href="#afc199c848736c24ad37fd5028b2997c4" class="table-of-contents__link toc-highlight">operator*()</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#a82d2ab8d8240be4606a885c554b93fb5" class="table-of-contents__link toc-highlight">cross()</a></li><li><a href="#ada75e2b260fe520041c61b0ed2f72357" class="table-of-contents__link toc-highlight">dot()</a></li><li><a href="#aef6bef7ca3d31a4908a66e16c9771420" class="table-of-contents__link toc-highlight">lookAt()</a></li><li><a href="#a4949642a7cca09c7950bb6a1b75260c9" class="table-of-contents__link toc-highlight">radians()</a></li><li><a href="#a643691235959c2f53d144a4ee9a0e251" class="table-of-contents__link toc-highlight">rotate()</a></li><li><a href="#ae230dbf0f416c8c868d5fea73d6babdb" class="table-of-contents__link toc-highlight">scale()</a></li><li><a href="#a8cc238c96b9b131d26357870e87ed668" class="table-of-contents__link toc-highlight">scale()</a></li><li><a href="#addafb8dbe33d09352658b55cee9a0898" class="table-of-contents__link toc-highlight">translate()</a></li><li><a href="#a0bae6331c7cb70432b8c4d2444f0678b" class="table-of-contents__link toc-highlight">value_ptr()</a></li><li><a href="#af32c0aff779da14e59040ace49452067" class="table-of-contents__link toc-highlight">value_ptr()</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">copyright © 2025 <a href="#">GarageCraft Games</a> / <a href="https://thorsten.suckow-homberg.de">Thorsten Suckow-Homberg</a>.</div></div></div></footer></div>
+</div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/helios/namespaces/helios/input/types"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">types</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/helios/namespaces/helios/math/concepts"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">concepts</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#definition" class="table-of-contents__link toc-highlight">Definition</a></li><li><a href="#namespaces-index" class="table-of-contents__link toc-highlight">Namespaces Index</a></li><li><a href="#classes-index" class="table-of-contents__link toc-highlight">Classes Index</a></li><li><a href="#typedefs-index" class="table-of-contents__link toc-highlight">Typedefs Index</a></li><li><a href="#operators-index" class="table-of-contents__link toc-highlight">Operators Index</a></li><li><a href="#functions-index" class="table-of-contents__link toc-highlight">Functions Index</a></li><li><a href="#details" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#typedefs" class="table-of-contents__link toc-highlight">Typedefs</a><ul><li><a href="#a058bd8629e8b9fdd7914ec513cf515f5" class="table-of-contents__link toc-highlight">mat4d</a></li><li><a href="#ad422120d6e1f106140808f16e348f0b3" class="table-of-contents__link toc-highlight">mat4f</a></li><li><a href="#abfde83491c8def2cca7e8816bb9a0075" class="table-of-contents__link toc-highlight">mat4i</a></li><li><a href="#acb8f1b0c5acc937254f38e27787db452" class="table-of-contents__link toc-highlight">vec2d</a></li><li><a href="#aeab5c7e555a142f8f763a3317460d5c0" class="table-of-contents__link toc-highlight">vec2f</a></li><li><a href="#aff32bafe25abeda0bb858b51ae46bff8" class="table-of-contents__link toc-highlight">vec2i</a></li><li><a href="#a57c950d4cb887c103dc2423f3ea81ce4" class="table-of-contents__link toc-highlight">vec3d</a></li><li><a href="#a71f1e40e636f47229c3122bdb63099d5" class="table-of-contents__link toc-highlight">vec3f</a></li><li><a href="#a0fd329cdb93d866fad284b88f7acb4f4" class="table-of-contents__link toc-highlight">vec3i</a></li><li><a href="#a78a0f495523b71681b549f098f994126" class="table-of-contents__link toc-highlight">vec4d</a></li><li><a href="#a08252f81850c5902e3c8dead272f3332" class="table-of-contents__link toc-highlight">vec4f</a></li><li><a href="#a9ce6ecf5869b53d92a26354e2c48d0b4" class="table-of-contents__link toc-highlight">vec4i</a></li></ul></li><li><a href="#operators" class="table-of-contents__link toc-highlight">Operators</a><ul><li><a href="#a7a21ef269927b19863a1eae2d87666ee" class="table-of-contents__link toc-highlight">operator-()</a></li><li><a href="#ae21f80815ae495b8d521d6ad829ee7b6" class="table-of-contents__link toc-highlight">operator*()</a></li><li><a href="#afc199c848736c24ad37fd5028b2997c4" class="table-of-contents__link toc-highlight">operator*()</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#a82d2ab8d8240be4606a885c554b93fb5" class="table-of-contents__link toc-highlight">cross()</a></li><li><a href="#af097518c5752da1fb987db83d9b97ecc" class="table-of-contents__link toc-highlight">dot()</a></li><li><a href="#ada75e2b260fe520041c61b0ed2f72357" class="table-of-contents__link toc-highlight">dot()</a></li><li><a href="#aef6bef7ca3d31a4908a66e16c9771420" class="table-of-contents__link toc-highlight">lookAt()</a></li><li><a href="#a4949642a7cca09c7950bb6a1b75260c9" class="table-of-contents__link toc-highlight">radians()</a></li><li><a href="#a643691235959c2f53d144a4ee9a0e251" class="table-of-contents__link toc-highlight">rotate()</a></li><li><a href="#ae230dbf0f416c8c868d5fea73d6babdb" class="table-of-contents__link toc-highlight">scale()</a></li><li><a href="#a8cc238c96b9b131d26357870e87ed668" class="table-of-contents__link toc-highlight">scale()</a></li><li><a href="#addafb8dbe33d09352658b55cee9a0898" class="table-of-contents__link toc-highlight">translate()</a></li><li><a href="#a0bae6331c7cb70432b8c4d2444f0678b" class="table-of-contents__link toc-highlight">value_ptr()</a></li><li><a href="#af32c0aff779da14e59040ace49452067" class="table-of-contents__link toc-highlight">value_ptr()</a></li><li><a href="#af29f2fac35d935400b2dd46d5d76a88f" class="table-of-contents__link toc-highlight">value_ptr()</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">copyright © 2025 <a href="#">GarageCraft Games</a> / <a href="https://thorsten.suckow-homberg.de">Thorsten Suckow-Homberg</a>.</div></div></div></footer></div>
 </body>
 </html>
