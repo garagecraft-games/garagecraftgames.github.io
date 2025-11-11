@@ -6,7 +6,7 @@
 <title data-rh="true">helios-scene-scene | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/scene/scene"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-scene-scene | garagecraft.games"><meta data-rh="true" name="description" content="Represents a hierarchical SceneGraph that organizes all renderable and non-renderable objects within a scene. More..."><meta data-rh="true" property="og:description" content="Represents a hierarchical SceneGraph that organizes all renderable and non-renderable objects within a scene. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/scene/scene"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/scene/scene" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/scene/scene" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"Scene","item":"https://garagecraft.games/docs/helios/classes/helios/scene/scene"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -60,7 +60,7 @@ class helios::scene::Scene { ... }
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::vector&lt; const <a href="/docs/helios/classes/helios/scene/scenenode">helios::scene::SceneNode</a> * &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#abf75dec7fa3988d3c22556a08a1f236b">findVisibleNodes</a> (const helios::scene::Camera &amp;camera) const</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>This method applies this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>&#x27;s frustumCullingStrategy and returns all nodes visible for the specified <a href="/docs/helios/classes/helios/scene/camera">Camera</a>. This method makes also sure that all nodes&#x27; world geometry is properly updated before culling is applied. <a href="#abf75dec7fa3988d3c22556a08a1f236b">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/scene/scenenode">helios::scene::SceneNode</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aff7c39985b9197a877dc4a698168e0c8">root</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Returns the root not of this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>. Thr root node is considered to be always existing. <a href="#aff7c39985b9197a877dc4a698168e0c8">More...</a></p>
+<p>Returns the root node of this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>. The root node is guaranteed to exist. <a href="#aff7c39985b9197a877dc4a698168e0c8">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/scene/snapshot">Snapshot</a></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aa27f858e0665c608f5402872aca0dae0">createSnapshot</a> (const helios::scene::Camera &amp;camera) const</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Creates a <a href="/docs/helios/classes/helios/scene/snapshot">Snapshot</a> of the <a href="/docs/helios/classes/helios/scene/scene">Scene</a> and returns it. Taking a snapshot will frustum cull the SceneNodes and place their Renderables along with the current matrices of this scene&#x27;s matrix into the <a href="/docs/helios/classes/helios/scene/snapshot">Snapshot</a> object. <a href="#aa27f858e0665c608f5402872aca0dae0">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
@@ -108,7 +108,7 @@ class helios::scene::Scene { ... }
 <dd><p>[HDMS+14, pp. 138]</p></dd>
 </dl>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>By default, we&#x27;re not allowing copying/moving Scenes. These constraints may be relaxed in the future, depending on valid use cases.</p></div></div>
-<p>Definition at line 44 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line 48 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="af485d366a14aae8f69913d9cb01739f1">Scene()<a href="#af485d366a14aae8f69913d9cb01739f1" class="hash-link" aria-label="Direct link to Scene()" title="Direct link to Scene()">​</a></h3>
@@ -124,7 +124,7 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Prevent copying. A <a href="/docs/helios/classes/helios/scene/scene">Scene</a> is not intended to be copied.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00109">109</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00113">113</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#af485d366a14aae8f69913d9cb01739f1">Scene</a>.</p>
 <p>Referenced by <a href="#a213062a1999076c7fea5688c9831efbf">operator=</a>, <a href="#a42bc78c5ad2c016b17ea61860e51a266">operator=</a>, <a href="#af485d366a14aae8f69913d9cb01739f1">Scene</a>, <a href="#aed8d3cf0ab98ebd89de94edfdb7f477a">Scene</a>, <a href="#a9b596ef125f2e58772117279f8b1351c">Scene</a> and <a href="#ac25813beeeb6cbccf15cb04a14df9113">~Scene</a>.</p>
 </div>
@@ -143,7 +143,7 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Prevent move constructor.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00120">120</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00124">124</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#af485d366a14aae8f69913d9cb01739f1">Scene</a>.</p>
 </div>
 </div>
@@ -160,7 +160,7 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Constructs a new <a href="/docs/helios/classes/helios/scene/scene">Scene</a>. The root node for this scene is automatically created.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00133">133</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00137">137</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#af485d366a14aae8f69913d9cb01739f1">Scene</a>.</p>
 </div>
 </div>
@@ -179,7 +179,7 @@ class helios::scene::Scene { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00127">127</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00131">131</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#af485d366a14aae8f69913d9cb01739f1">Scene</a>.</p>
 </div>
 </div>
@@ -199,7 +199,7 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Prevent copy assignment. A scene is not intended to be copied.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00115">115</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00119">119</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#af485d366a14aae8f69913d9cb01739f1">Scene</a>.</p>
 </div>
 </div>
@@ -217,7 +217,7 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Prevent move assignment operator.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00125">125</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00129">129</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#af485d366a14aae8f69913d9cb01739f1">Scene</a>.</p>
 </div>
 </div>
@@ -247,7 +247,7 @@ class helios::scene::Scene { ... }
 <dt>Returns</dt>
 <dd><p>The raw pointer to the newly added node, or `nullptr` if the node wasn&#x27;t added.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00146">146</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00150">150</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#a776c5b21ffb85e5d63a5117b51797bb9">addNode</a>.</p>
 <p>Referenced by <a href="#a776c5b21ffb85e5d63a5117b51797bb9">addNode</a>.</p>
 </div>
@@ -275,7 +275,7 @@ class helios::scene::Scene { ... }
 <dt>Returns</dt>
 <dd><p>The snapshot created for this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00183">183</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00188">188</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#aa27f858e0665c608f5402872aca0dae0">createSnapshot</a>.</p>
 <p>Referenced by <a href="#aa27f858e0665c608f5402872aca0dae0">createSnapshot</a>.</p>
 </div>
@@ -296,14 +296,14 @@ class helios::scene::Scene { ... }
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">camera</td><td class="doxyParamItemDescription"><p>The</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">camera</td><td class="doxyParamItemDescription"><p>The camera used to determine the view frustum for culling.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>a list of currently visible nodes</p></dd>
+<dd><p>a list of currently visible nodes (const pointers into the scene graph).</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00165">165</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00169">169</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#abf75dec7fa3988d3c22556a08a1f236b">findVisibleNodes</a>.</p>
 <p>Referenced by <a href="#abf75dec7fa3988d3c22556a08a1f236b">findVisibleNodes</a>.</p>
 </div>
@@ -321,12 +321,12 @@ class helios::scene::Scene { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Returns the root not of this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>. Thr root node is considered to be always existing.</p>
+<p>Returns the root node of this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>. The root node is guaranteed to exist.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
 <dd><p>the root node of this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00172">172</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00177">177</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <p>Reference <a href="#aff7c39985b9197a877dc4a698168e0c8">root</a>.</p>
 <p>Referenced by <a href="#aff7c39985b9197a877dc4a698168e0c8">root</a>.</p>
 </div>
@@ -340,7 +340,7 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Updates the world transformations of SceneNodes in the graph. The method traverses the <a href="/docs/helios/classes/helios/scene/scene">Scene</a> and propagates updated world transformations to their respective child nodes if the processed node is considered to be dirty.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00153">153</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00157">157</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -365,7 +365,7 @@ class helios::scene::Scene { ... }
 <dt>See Also</dt>
 <dd><p><a href="#a411492ac5cc05ac601ee0aef03dced51">updateNodes()</a></p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00076">76</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00080">80</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a72b8b3087e2e005c79c6d74f137adb47">updateNodes()<a href="#a72b8b3087e2e005c79c6d74f137adb47" class="hash-link" aria-label="Direct link to updateNodes()" title="Direct link to updateNodes()">​</a></h3>
@@ -383,7 +383,7 @@ class helios::scene::Scene { ... }
 <table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">node</td><td class="doxyParamItemDescription"><p>The current <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> processed.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">wt</td><td class="doxyParamItemDescription"><p>The world transform to apply.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00087">87</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00091">91</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -398,9 +398,9 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>The <a href="/docs/helios/classes/helios/scene/frustumcullingstrategy">FrustumCullingStrategy</a> used with this <a href="/docs/helios/classes/helios/scene/scene">Scene</a>.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00092">92</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00096">96</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">92</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;helios::scene::FrustumCullingStrategy&gt; frustumCullingStrategy_;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">96</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;helios::scene::FrustumCullingStrategy&gt; frustumCullingStrategy_;</span></span></div>
 </div>
 </div>
 </div>
@@ -430,9 +430,9 @@ class helios::scene::Scene { ... }
 </dd>
 </dl>
 </div>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00100">100</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00104">104</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">100</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a>&amp; logger_ = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">104</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a>&amp; logger_ = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(</span></span></div>
 </div>
 </div>
 </div>
@@ -445,9 +445,9 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>4x4 identity matrix for internal use.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00057">57</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00061">61</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">57</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> mat4fid = <a href="/docs/helios/structs/helios/math/mat4/#ad856b4652346ff475b653e257d64428d">helios::math::mat4f::identity</a>();</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">61</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> mat4fid = <a href="/docs/helios/structs/helios/math/mat4/#ad856b4652346ff475b653e257d64428d">helios::math::mat4f::identity</a>();</span></span></div>
 </div>
 </div>
 </div>
@@ -460,9 +460,9 @@ class helios::scene::Scene { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>The root node of this scene. All other SceneNodes are (in)direct children of this node.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00063">63</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00067">67</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">63</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;SceneNode&gt; root_;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">67</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;SceneNode&gt; root_;</span></span></div>
 </div>
 </div>
 </div>
@@ -479,9 +479,9 @@ class helios::scene::Scene { ... }
 <dt>See Also</dt>
 <dd><p><a href="/docs/helios/classes/helios/scene/scenenode/#a1dbd995b4aace249c6786588e3279ae3">helios::scene::SceneNode::setWorldTransform()</a></p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00052">52</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx/#l00056">56</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scene-ixx">Scene.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">52</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/scene/scenegraphkey">SceneGraphKey</a> sceneGraphKey_{};</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">56</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/structs/helios/scene/scenegraphkey">SceneGraphKey</a> sceneGraphKey_{};</span></span></div>
 </div>
 </div>
 </div>

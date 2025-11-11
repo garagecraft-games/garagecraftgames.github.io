@@ -6,7 +6,7 @@
 <title data-rh="true">helios-rendering-renderpass | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/rendering/renderpass"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-rendering-renderpass | garagecraft.games"><meta data-rh="true" name="description" content="Represents a single RenderPass under a set of specific uniform values. More..."><meta data-rh="true" property="og:description" content="Represents a single RenderPass under a set of specific uniform values. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/rendering/renderpass"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/rendering/renderpass" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/rendering/renderpass" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"RenderPass","item":"https://garagecraft.games/docs/helios/classes/helios/rendering/renderpass"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -42,7 +42,7 @@ class helios::rendering::RenderPass { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="#afac382a610028b5e09af4ade728b78b3">RenderPass</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a10c7f73c83242609ccd9828ab3068c67">operator=</a> (const RenderPass &amp;)=delete</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Prevent Copying. A <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a> is not intended to be copied. <a href="#a10c7f73c83242609ccd9828ab3068c67">More...</a></p>
+<p>Prevent copy assignment. A <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a> is not intended to be copied. <a href="#a10c7f73c83242609ccd9828ab3068c67">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="#afac382a610028b5e09af4ade728b78b3">RenderPass</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a86cf6c3fe8c0df2ed6a5018744ab7464">operator=</a> (RenderPass &amp;&amp;) noexcept=delete</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Prevent move assignment. <a href="#a86cf6c3fe8c0df2ed6a5018744ab7464">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
@@ -50,8 +50,11 @@ class helios::rendering::RenderPass { ... }
 
 
 
-<table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a54bc377a9a1ad0c2d0f8a31342d247d7">setFrameUniformValues</a> (std::unique_ptr&lt; const helios::rendering::shader::UniformValueMap &gt; frameUniformValues) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Returns a const ref to the `RenderQueue` this `RenderPass` holds. <a href="#a54bc377a9a1ad0c2d0f8a31342d247d7">More...</a></p>
+
+<table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/rendering/renderqueue">RenderQueue</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aa8e67383f0e4057c47b80405c02eae19">renderQueue</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Returns a const ref to the `RenderQueue` this `RenderPass` holds. <a href="#aa8e67383f0e4057c47b80405c02eae19">More...</a></p>
+</td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a54bc377a9a1ad0c2d0f8a31342d247d7">setFrameUniformValues</a> (std::unique_ptr&lt; const helios::rendering::shader::UniformValueMap &gt; frameUniformValues) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Sets this `RenderPass`&#x27; `UniformValueMap` containing per-frame specific uniform values. Transfers ownership of the provided UniformValueMap to this `RenderPass`. <a href="#a54bc377a9a1ad0c2d0f8a31342d247d7">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/rendering/shader/uniformvaluemap">helios::rendering::shader::UniformValueMap</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b">frameUniformValues</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Returns a const ref to this `RenderPass`&#x27; `UniformValueMap`. The map might be empty. <a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
@@ -59,23 +62,23 @@ class helios::rendering::RenderPass { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a3e984be7b0f5767e98d681219b290967">logger_</a> = ...</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>The logger used with this Scene instance. Defaults to HELIOS_LOG_SCOPE. <a href="#a3e984be7b0f5767e98d681219b290967">More...</a></p>
+<p>The logger used with this <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a> instance. Defaults to HELIOS_LOG_SCOPE. <a href="#a3e984be7b0f5767e98d681219b290967">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="private-member-attributes-index">Private Member Attributes Index<a href="#private-member-attributes-index" class="hash-link" aria-label="Direct link to Private Member Attributes Index" title="Direct link to Private Member Attributes Index">​</a></h2>
 
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::unique_ptr&lt; <a href="/docs/helios/classes/helios/rendering/renderqueue">helios::rendering::RenderQueue</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a98e610776349551ac08ce83682a252a0">renderQueue_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>An owning, unique pointer to the `RenderQueue` for this pass. <a href="#a98e610776349551ac08ce83682a252a0">More...</a></p>
+<p>An owning unique pointer to the `RenderQueue` for this pass. <a href="#a98e610776349551ac08ce83682a252a0">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::unique_ptr&lt; const <a href="/docs/helios/classes/helios/rendering/shader/uniformvaluemap">helios::rendering::shader::UniformValueMap</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aaa7698120fe0fd86ae4334fe78f0e172">frameUniformValues_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>An owning, unique pointer to the uniform values specific to the current pass (i.e., the rendered &quot;frame&quot;). This map contains uniforms that change once per frame, such as the view and the projection matrix. <a href="#aaa7698120fe0fd86ae4334fe78f0e172">More...</a></p>
+<p>An owning unique pointer to the uniform values specific to the current pass (i.e., the rendered &quot;frame&quot;). This map contains uniforms that change once per frame, such as the view and the projection matrix. <a href="#aaa7698120fe0fd86ae4334fe78f0e172">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Description<a href="#details" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
 <p>Represents a single <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a> under a set of specific uniform values.</p>
-<p>A `RenderPass` holds a `RenderQueue` that contains all `RenderCommands` that need to be processed in the subsequent rendering. The associated uniform values specified with this `RenderPass`remain constant during processing the `RenderCommmand`s.</p>
-<p>`RenderPass`es are typically processed sequentially by an API-specific implementation of the pure virtual `RenderingDevice`-class.</p>
+<p>A `RenderPass` holds a `RenderQueue` that contains all `RenderCommands` that need to be processed in the subsequent rendering. The associated uniform values specified with this `RenderPass` remain constant during processing of the `RenderCommand`s.</p>
+<p>`RenderPass`es are typically processed sequentially by an API-specific implementation of the pure virtual `RenderingDevice` class.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>A `RenderPass` should be configurable with other properties relevant to the underlying rendering backend, e.g. depth testing, draw mode etc.</p></div></div>
-<p>Definition at line 30 of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
+<p>Definition at line 32 of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="afac382a610028b5e09af4ade728b78b3">RenderPass()<a href="#afac382a610028b5e09af4ade728b78b3" class="hash-link" aria-label="Direct link to RenderPass()" title="Direct link to RenderPass()">​</a></h3>
@@ -131,11 +134,11 @@ class helios::rendering::RenderPass { ... }
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderQueue</td><td class="doxyParamItemDescription"><p>A unique ptr to the `RenderQueue` that should be processes with this pass.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">frameUniformValues</td><td class="doxyParamItemDescription"><p>A unique ptr to the UniformValueMap associated with this pass, i.e. frame specific Uniform Values. If no values are specified, a default empty set is created.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderQueue</td><td class="doxyParamItemDescription"><p>A unique ptr to the `RenderQueue` that should be processed with this pass.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">frameUniformValues</td><td class="doxyParamItemDescription"><p>A unique ptr to the `UniformValueMap` associated with this pass, i.e. frame-specific uniform values. If no values are specified, a default empty set is created.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx/#l00091">91</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
-<p>References <a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b">frameUniformValues</a> and <a href="#afac382a610028b5e09af4ade728b78b3">RenderPass</a>.</p>
+<p>References <a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b">frameUniformValues</a>, <a href="#afac382a610028b5e09af4ade728b78b3">RenderPass</a> and <a href="#aa8e67383f0e4057c47b80405c02eae19">renderQueue</a>.</p>
 </div>
 </div>
 </div>
@@ -171,7 +174,7 @@ class helios::rendering::RenderPass { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Prevent Copying. A <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a> is not intended to be copied.</p>
+<p>Prevent copy assignment. A <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a> is not intended to be copied.</p>
 <p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx/#l00071">71</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
 <p>Reference <a href="#afac382a610028b5e09af4ade728b78b3">RenderPass</a>.</p>
 </div>
@@ -213,11 +216,34 @@ class helios::rendering::RenderPass { ... }
 <p>Returns a const ref to this `RenderPass`&#x27; `UniformValueMap`. The map might be empty.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>A const ref to this <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a>&#x27; UniformValueMap for the frame.</p></dd>
+<dd><p>A const ref to this <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a>&#x27; UniformValueMap for the current frame.</p></dd>
 </dl>
 <p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx/#l00117">117</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
 <p>Reference <a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b">frameUniformValues</a>.</p>
 <p>Referenced by <a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b">frameUniformValues</a>, <a href="#ae3f4f46b15048f4aa38852938748fe28">RenderPass</a> and <a href="#a54bc377a9a1ad0c2d0f8a31342d247d7">setFrameUniformValues</a>.</p>
+</div>
+</div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aa8e67383f0e4057c47b80405c02eae19">renderQueue()<a href="#aa8e67383f0e4057c47b80405c02eae19" class="hash-link" aria-label="Direct link to renderQueue()" title="Direct link to renderQueue()">​</a></h3>
+<div class="doxyMemberItem">
+<div class="doxyMemberProto">
+<table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
+<table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">const RenderQueue &amp; helios::rendering::RenderPass::renderQueue ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel nodiscard">nodiscard</span>
+<span class="doxyMemberLabel noexcept">noexcept</span>
+</span>
+</td></tr></tbody></table>
+</div>
+<div class="doxyMemberDoc">
+<p>Returns a const ref to the `RenderQueue` this `RenderPass` holds.</p>
+<dl class="doxySectionUser">
+<dt>Returns</dt>
+<dd><p>A const ref to this `RenderPass`&#x27; `RenderQueue`.</p></dd>
+</dl>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx/#l00101">101</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
+<p>Reference <a href="#aa8e67383f0e4057c47b80405c02eae19">renderQueue</a>.</p>
+<p>Referenced by <a href="#ae3f4f46b15048f4aa38852938748fe28">RenderPass</a> and <a href="#aa8e67383f0e4057c47b80405c02eae19">renderQueue</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a54bc377a9a1ad0c2d0f8a31342d247d7">setFrameUniformValues()<a href="#a54bc377a9a1ad0c2d0f8a31342d247d7" class="hash-link" aria-label="Direct link to setFrameUniformValues()" title="Direct link to setFrameUniformValues()">​</a></h3>
@@ -232,12 +258,6 @@ class helios::rendering::RenderPass { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Returns a const ref to the `RenderQueue` this `RenderPass` holds.</p>
-<dl class="doxySectionUser">
-<dt>Returns</dt>
-<dd><p>A const ref to this `RenderPass` `RenderQueue`.` */ [[nodiscard]] const <a href="/docs/helios/classes/helios/rendering/renderqueue">RenderQueue</a>&amp; renderQueue() const noexcept;</p></dd>
-</dl>
-<p>/**</p>
 <p>Sets this `RenderPass`&#x27; `UniformValueMap` containing per-frame specific uniform values. Transfers ownership of the provided UniformValueMap to this `RenderPass`.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
@@ -265,7 +285,7 @@ class helios::rendering::RenderPass { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>The logger used with this Scene instance. Defaults to HELIOS_LOG_SCOPE.</p>
+<p>The logger used with this <a href="/docs/helios/classes/helios/rendering/renderpass">RenderPass</a> instance. Defaults to HELIOS_LOG_SCOPE.</p>
 <dl class="doxySectionUser">
 <dt>Initialiser</dt>
 <dd>
@@ -300,7 +320,7 @@ class helios::rendering::RenderPass { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>An owning, unique pointer to the uniform values specific to the current pass (i.e., the rendered &quot;frame&quot;). This map contains uniforms that change once per frame, such as the view and the projection matrix.</p>
+<p>An owning unique pointer to the uniform values specific to the current pass (i.e., the rendered &quot;frame&quot;). This map contains uniforms that change once per frame, such as the view and the projection matrix.</p>
 <p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx/#l00045">45</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
 <div class="doxyProgramListing">
 <div class="doxyCodeLine"><span class="doxyLineNumber">45</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;const helios::rendering::shader::UniformValueMap&gt; frameUniformValues_;</span></span></div>
@@ -315,10 +335,10 @@ class helios::rendering::RenderPass { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>An owning, unique pointer to the `RenderQueue` for this pass.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx/#l00037">37</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
+<p>An owning unique pointer to the `RenderQueue` for this pass.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx/#l00038">38</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderpass-ixx">RenderPass.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">37</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;helios::rendering::RenderQueue&gt; renderQueue_;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">38</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;helios::rendering::RenderQueue&gt; renderQueue_;</span></span></div>
 </div>
 </div>
 </div>
@@ -330,6 +350,6 @@ class helios::rendering::RenderPass { ... }
 </ul>
 <hr>
 <p class="doxyGeneratedBy">Generated via <a href="https://xpack.github.io/doxygen2docusaurus" target="_blank" rel="noopener noreferrer">doxygen2docusaurus</a> 2.0.0 by <a href="https://www.doxygen.nl" target="_blank" rel="noopener noreferrer">Doxygen</a> 1.15.0.</p>
-</div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/helios/classes/helios/ext/opengl/rendering/opengldevice"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">OpenGLDevice</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/helios/classes/helios/rendering/renderpassfactory"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">RenderPassFactory</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#declaration" class="table-of-contents__link toc-highlight">Declaration</a></li><li><a href="#public-constructors-index" class="table-of-contents__link toc-highlight">Public Constructors Index</a></li><li><a href="#public-destructor-index" class="table-of-contents__link toc-highlight">Public Destructor Index</a></li><li><a href="#public-operators-index" class="table-of-contents__link toc-highlight">Public Operators Index</a></li><li><a href="#public-member-functions-index" class="table-of-contents__link toc-highlight">Public Member Functions Index</a></li><li><a href="#protected-member-attributes-index" class="table-of-contents__link toc-highlight">Protected Member Attributes Index</a></li><li><a href="#private-member-attributes-index" class="table-of-contents__link toc-highlight">Private Member Attributes Index</a></li><li><a href="#details" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#public-constructors" class="table-of-contents__link toc-highlight">Public Constructors</a><ul><li><a href="#afac382a610028b5e09af4ade728b78b3" class="table-of-contents__link toc-highlight">RenderPass()</a></li><li><a href="#a45f186c5f167cb06540512a287ab83a1" class="table-of-contents__link toc-highlight">RenderPass()</a></li><li><a href="#ae3f4f46b15048f4aa38852938748fe28" class="table-of-contents__link toc-highlight">RenderPass()</a></li></ul></li><li><a href="#public-destructor" class="table-of-contents__link toc-highlight">Public Destructor</a><ul><li><a href="#a86414eb8eafb963d6e34e4b8148fed8f" class="table-of-contents__link toc-highlight">~RenderPass()</a></li></ul></li><li><a href="#public-operators" class="table-of-contents__link toc-highlight">Public Operators</a><ul><li><a href="#a10c7f73c83242609ccd9828ab3068c67" class="table-of-contents__link toc-highlight">operator=()</a></li><li><a href="#a86cf6c3fe8c0df2ed6a5018744ab7464" class="table-of-contents__link toc-highlight">operator=()</a></li></ul></li><li><a href="#public-member-functions" class="table-of-contents__link toc-highlight">Public Member Functions</a><ul><li><a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b" class="table-of-contents__link toc-highlight">frameUniformValues()</a></li><li><a href="#a54bc377a9a1ad0c2d0f8a31342d247d7" class="table-of-contents__link toc-highlight">setFrameUniformValues()</a></li></ul></li><li><a href="#protected-member-attributes" class="table-of-contents__link toc-highlight">Protected Member Attributes</a><ul><li><a href="#a3e984be7b0f5767e98d681219b290967" class="table-of-contents__link toc-highlight">logger_</a></li></ul></li><li><a href="#private-member-attributes" class="table-of-contents__link toc-highlight">Private Member Attributes</a><ul><li><a href="#aaa7698120fe0fd86ae4334fe78f0e172" class="table-of-contents__link toc-highlight">frameUniformValues_</a></li><li><a href="#a98e610776349551ac08ce83682a252a0" class="table-of-contents__link toc-highlight">renderQueue_</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">copyright © 2025 <a href="#">GarageCraft Games</a> / <a href="https://thorsten.suckow-homberg.de">Thorsten Suckow-Homberg</a>.</div></div></div></footer></div>
+</div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/helios/classes/helios/ext/opengl/rendering/opengldevice"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">OpenGLDevice</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/helios/classes/helios/rendering/renderpassfactory"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">RenderPassFactory</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#declaration" class="table-of-contents__link toc-highlight">Declaration</a></li><li><a href="#public-constructors-index" class="table-of-contents__link toc-highlight">Public Constructors Index</a></li><li><a href="#public-destructor-index" class="table-of-contents__link toc-highlight">Public Destructor Index</a></li><li><a href="#public-operators-index" class="table-of-contents__link toc-highlight">Public Operators Index</a></li><li><a href="#public-member-functions-index" class="table-of-contents__link toc-highlight">Public Member Functions Index</a></li><li><a href="#protected-member-attributes-index" class="table-of-contents__link toc-highlight">Protected Member Attributes Index</a></li><li><a href="#private-member-attributes-index" class="table-of-contents__link toc-highlight">Private Member Attributes Index</a></li><li><a href="#details" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#public-constructors" class="table-of-contents__link toc-highlight">Public Constructors</a><ul><li><a href="#afac382a610028b5e09af4ade728b78b3" class="table-of-contents__link toc-highlight">RenderPass()</a></li><li><a href="#a45f186c5f167cb06540512a287ab83a1" class="table-of-contents__link toc-highlight">RenderPass()</a></li><li><a href="#ae3f4f46b15048f4aa38852938748fe28" class="table-of-contents__link toc-highlight">RenderPass()</a></li></ul></li><li><a href="#public-destructor" class="table-of-contents__link toc-highlight">Public Destructor</a><ul><li><a href="#a86414eb8eafb963d6e34e4b8148fed8f" class="table-of-contents__link toc-highlight">~RenderPass()</a></li></ul></li><li><a href="#public-operators" class="table-of-contents__link toc-highlight">Public Operators</a><ul><li><a href="#a10c7f73c83242609ccd9828ab3068c67" class="table-of-contents__link toc-highlight">operator=()</a></li><li><a href="#a86cf6c3fe8c0df2ed6a5018744ab7464" class="table-of-contents__link toc-highlight">operator=()</a></li></ul></li><li><a href="#public-member-functions" class="table-of-contents__link toc-highlight">Public Member Functions</a><ul><li><a href="#a9b3b86c9d3d2455bba80ee4b410fbb5b" class="table-of-contents__link toc-highlight">frameUniformValues()</a></li><li><a href="#aa8e67383f0e4057c47b80405c02eae19" class="table-of-contents__link toc-highlight">renderQueue()</a></li><li><a href="#a54bc377a9a1ad0c2d0f8a31342d247d7" class="table-of-contents__link toc-highlight">setFrameUniformValues()</a></li></ul></li><li><a href="#protected-member-attributes" class="table-of-contents__link toc-highlight">Protected Member Attributes</a><ul><li><a href="#a3e984be7b0f5767e98d681219b290967" class="table-of-contents__link toc-highlight">logger_</a></li></ul></li><li><a href="#private-member-attributes" class="table-of-contents__link toc-highlight">Private Member Attributes</a><ul><li><a href="#aaa7698120fe0fd86ae4334fe78f0e172" class="table-of-contents__link toc-highlight">frameUniformValues_</a></li><li><a href="#a98e610776349551ac08ce83682a252a0" class="table-of-contents__link toc-highlight">renderQueue_</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">copyright © 2025 <a href="#">GarageCraft Games</a> / <a href="https://thorsten.suckow-homberg.de">Thorsten Suckow-Homberg</a>.</div></div></div></footer></div>
 </body>
 </html>

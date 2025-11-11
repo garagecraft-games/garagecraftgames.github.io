@@ -6,7 +6,7 @@
 <title data-rh="true">helios-rendering-renderable | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/rendering/renderable"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-rendering-renderable | garagecraft.games"><meta data-rh="true" name="description" content="Representative of a configurable Renderable rendered by the underlying GL API. More..."><meta data-rh="true" property="og:description" content="Representative of a configurable Renderable rendered by the underlying GL API. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/rendering/renderable"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/rendering/renderable" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/rendering/renderable" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"Renderable","item":"https://garagecraft.games/docs/helios/classes/helios/rendering/renderable"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -62,9 +62,9 @@ class helios::rendering::Renderable { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::shared_ptr&lt; const <a href="/docs/helios/classes/helios/rendering/model/mesh">helios::rendering::model::Mesh</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a7a7d54190d3e65ee8a933e0e6ef75dea">mesh</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Returns a shared ptr to the Mesh this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a> uses. The returned data is guaranteed to be a valid reference to existing data. <a href="#a7a7d54190d3e65ee8a933e0e6ef75dea">More...</a></p>
+<p>Returns a shared ptr to the Mesh this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a> uses. The returned shared_ptr references the underlying Mesh object. <a href="#a7a7d54190d3e65ee8a933e0e6ef75dea">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/rendering/model/materialinstance">helios::rendering::model::MaterialInstance</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a75aba581d21c509d9d14581e76b3f0ca">materialInstance</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Returns a const reference to the Material shared with this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a>. The returned data is guaranteed to be a valid reference to existing data. <a href="#a75aba581d21c509d9d14581e76b3f0ca">More...</a></p>
+<p>Returns a const reference to the MaterialInstance associated with this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a>. <a href="#a75aba581d21c509d9d14581e76b3f0ca">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="protected-member-attributes-index">Protected Member Attributes Index<a href="#protected-member-attributes-index" class="hash-link" aria-label="Direct link to Protected Member Attributes Index" title="Direct link to Protected Member Attributes Index">​</a></h2>
 
@@ -89,7 +89,7 @@ class helios::rendering::Renderable { ... }
 </dd>
 </dl>
 </div>
-<p>Definition at line 31 of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line 33 of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a6a9406c41eca52028f9cd08a1c2c300a">Renderable()<a href="#a6a9406c41eca52028f9cd08a1c2c300a" class="hash-link" aria-label="Direct link to Renderable()" title="Direct link to Renderable()">​</a></h3>
@@ -105,7 +105,7 @@ class helios::rendering::Renderable { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Delete copy constructor.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00064">64</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00066">66</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>Reference <a href="#a5a0b1ee7371be890d2b48b5582e4eebf">Renderable</a>.</p>
 </div>
 </div>
@@ -123,7 +123,7 @@ class helios::rendering::Renderable { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Delete move constructor.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00074">74</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00076">76</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>Reference <a href="#a5a0b1ee7371be890d2b48b5582e4eebf">Renderable</a>.</p>
 </div>
 </div>
@@ -152,7 +152,7 @@ class helios::rendering::Renderable { ... }
 <table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">std::invalid_argument</td><td class="doxyParamItemDescription"><p>if either mesh or material are null.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00089">89</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00091">91</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>References <a href="#a75aba581d21c509d9d14581e76b3f0ca">materialInstance</a>, <a href="#a7a7d54190d3e65ee8a933e0e6ef75dea">mesh</a> and <a href="#a5a0b1ee7371be890d2b48b5582e4eebf">Renderable</a>.</p>
 </div>
 </div>
@@ -172,7 +172,7 @@ class helios::rendering::Renderable { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00034">34</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00036">36</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>Referenced by <a href="#adc490817c535742ed59dc691a68f440f">operator=</a>, <a href="#a69c84c1afbfc0b66e96b505c3729fa26">operator=</a>, <a href="#a6a9406c41eca52028f9cd08a1c2c300a">Renderable</a>, <a href="#a7f8dfa2987e25fb3994225b77de8c5b7">Renderable</a> and <a href="#a4f9d2935a141735fb3f10c1108aeda20">Renderable</a>.</p>
 </div>
 </div>
@@ -192,7 +192,7 @@ class helios::rendering::Renderable { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00058">58</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00060">60</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -211,7 +211,7 @@ class helios::rendering::Renderable { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Delete copy assignment operator.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00069">69</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00071">71</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>Reference <a href="#a5a0b1ee7371be890d2b48b5582e4eebf">Renderable</a>.</p>
 </div>
 </div>
@@ -229,7 +229,7 @@ class helios::rendering::Renderable { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Delete move assignment operator.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00079">79</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00081">81</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>Reference <a href="#a5a0b1ee7371be890d2b48b5582e4eebf">Renderable</a>.</p>
 </div>
 </div>
@@ -249,12 +249,12 @@ class helios::rendering::Renderable { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Returns a const reference to the Material shared with this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a>. The returned data is guaranteed to be a valid reference to existing data.</p>
+<p>Returns a const reference to the MaterialInstance associated with this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a>.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>MaterialInstance</p></dd>
+<dd><p>A const reference to the MaterialInstance.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00109">109</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00110">110</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>Reference <a href="#a75aba581d21c509d9d14581e76b3f0ca">materialInstance</a>.</p>
 <p>Referenced by <a href="#a75aba581d21c509d9d14581e76b3f0ca">materialInstance</a>, <a href="/docs/helios/classes/helios/ext/opengl/rendering/openglrenderable/#a62c884e1b814c24ecfe8994cdf0e1b23">helios::ext::opengl::rendering::OpenGLRenderable::OpenGLRenderable</a> and <a href="#a4f9d2935a141735fb3f10c1108aeda20">Renderable</a>.</p>
 </div>
@@ -272,12 +272,12 @@ class helios::rendering::Renderable { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Returns a shared ptr to the Mesh this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a> uses. The returned data is guaranteed to be a valid reference to existing data.</p>
+<p>Returns a shared ptr to the Mesh this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a> uses. The returned shared_ptr references the underlying Mesh object.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>Mesh</p></dd>
+<dd><p>A shared pointer to the Mesh used by this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00100">100</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00102">102</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <p>Reference <a href="#a7a7d54190d3e65ee8a933e0e6ef75dea">mesh</a>.</p>
 <p>Referenced by <a href="#a7a7d54190d3e65ee8a933e0e6ef75dea">mesh</a>, <a href="/docs/helios/classes/helios/ext/opengl/rendering/openglrenderable/#a62c884e1b814c24ecfe8994cdf0e1b23">helios::ext::opengl::rendering::OpenGLRenderable::OpenGLRenderable</a> and <a href="#a4f9d2935a141735fb3f10c1108aeda20">Renderable</a>.</p>
 </div>
@@ -315,9 +315,9 @@ class helios::rendering::Renderable { ... }
 </dd>
 </dl>
 </div>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00052">52</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00054">54</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ab3090959e1dc6df5b5737501abbb648a">52</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a>&amp; <a href="#ab3090959e1dc6df5b5737501abbb648a">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ab3090959e1dc6df5b5737501abbb648a">54</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a>&amp; <a href="#ab3090959e1dc6df5b5737501abbb648a">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(</span></span></div>
 </div>
 </div>
 </div>
@@ -334,9 +334,9 @@ class helios::rendering::Renderable { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A shared pointer to the MaterialInstance owned by the <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a>.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00044">44</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00046">46</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ab809c7cec04da5320174a52d369e8a02">44</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::shared_ptr&lt;helios::rendering::model::MaterialInstance&gt; <a href="#ab809c7cec04da5320174a52d369e8a02">materialInstance_</a> = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ab809c7cec04da5320174a52d369e8a02">46</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::shared_ptr&lt;helios::rendering::model::MaterialInstance&gt; <a href="#ab809c7cec04da5320174a52d369e8a02">materialInstance_</a> = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
 </div>
 </div>
 </div>
@@ -353,9 +353,9 @@ class helios::rendering::Renderable { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A shared pointer to the Mesh this <a href="/docs/helios/classes/helios/rendering/renderable">Renderable</a> uses.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00039">39</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx/#l00041">41</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/rendering/renderable-ixx">Renderable.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a3571aa77dd70413767443bb5fe9b2105">39</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::shared_ptr&lt;helios::rendering::model::Mesh&gt; <a href="#a3571aa77dd70413767443bb5fe9b2105">mesh_</a> = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a3571aa77dd70413767443bb5fe9b2105">41</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::shared_ptr&lt;helios::rendering::model::Mesh&gt; <a href="#a3571aa77dd70413767443bb5fe9b2105">mesh_</a> = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
 </div>
 </div>
 </div>

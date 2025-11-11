@@ -6,7 +6,7 @@
 <title data-rh="true">helios-scene-scenenode | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/scene/scenenode"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-scene-scenenode | garagecraft.games"><meta data-rh="true" name="description" content="Represents a SceneNode within a SceneGraph. More..."><meta data-rh="true" property="og:description" content="Represents a SceneNode within a SceneGraph. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/scene/scenenode"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/scene/scenenode" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/scene/scenenode" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"SceneNode","item":"https://garagecraft.games/docs/helios/classes/helios/scene/scenenode"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -116,7 +116,7 @@ class helios::scene::SceneNode { ... }
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::shared_ptr&lt; const <a href="/docs/helios/classes/helios/rendering/renderable">helios::rendering::Renderable</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a555a431744b64c11210bf0d8012f3215">renderable_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>A shared pointer to the Renderable this node represents in the SceneGraph. May be nullptr if this node does not represent a renderable object. <a href="#a555a431744b64c11210bf0d8012f3215">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a> *</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a718f8d4e4ecddeb659031dd9ad9ad079">parent_</a> = nullptr</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>The paren node of **this** node. This will be nullptr for any root node. Implementing APIs must take care of properly assigning parent nodes when adding child nodes. <a href="#a718f8d4e4ecddeb659031dd9ad9ad079">More...</a></p>
+<p>The parent node of **this** node. This will be nullptr for any root node. Implementing APIs must take care of properly assigning parent nodes when adding child nodes. <a href="#a718f8d4e4ecddeb659031dd9ad9ad079">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::vector&lt; std::unique_ptr&lt; <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a> &gt; &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aa362a46b4917ee9955a38d6422b72668">children_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>A list of unique pointers to this node&#x27;s children. Ensures ownership of the child nodes withing the graph hierarchy. <a href="#aa362a46b4917ee9955a38d6422b72668">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">math::mat4f</a></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a93375ed6bd9aa627be8a5c2342ba4b4c">worldTransform_</a> = <a href="/docs/helios/structs/helios/math/mat4/#ad856b4652346ff475b653e257d64428d">math::mat4f::identity</a>()</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
@@ -135,7 +135,7 @@ class helios::scene::SceneNode { ... }
 <p>A <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> holds its local transformation and a (shared) pointer to a Renderable object (the representative of a visible element). Furthermore, a <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> can have multiple child nodes uniquely owned by **this** <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>.</p>
 <p>A <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> holds a global unique identifier and tracks a dirty state (`needsUpdate_`) related to any transformations that occurred on the <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>. Ownership is managed by a collection of unique pointers of the child nodes. SceneNodes are designed to be not copyable and not assignable to prevent duplication and to enforce the hierarchical tree structure.</p>
 <p>The `worldTransform_` is derived from a <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>&#x27;s `localTransform_` and the <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>&#x27;s parent&#x27;s `worldTransform`s. A call to `worldTransform()` will update the particular subtree of the <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> bottom-up to make sure the actual values are available with the <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>&#x27;s `worldTransform`. A <a href="/docs/helios/classes/helios/scene/scene">Scene</a> might also propagate changes top-bottom - see `Scene:.udpateNodes()`.</p>
-<p>Definition at line 53 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line 56 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a30ad1d7f49d6114a261cbac2706546ab">SceneNode()<a href="#a30ad1d7f49d6114a261cbac2706546ab" class="hash-link" aria-label="Direct link to SceneNode()" title="Direct link to SceneNode()">​</a></h3>
@@ -151,7 +151,7 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Delete copy constructor. A <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> is not copyable.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00124">124</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00127">127</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 <p>Referenced by <a href="/docs/helios/classes/helios/scene/camera/#a08c74a826af54a6de82dd64516df4017">helios::scene::Camera::addChild</a>, <a href="#a8f13644573f0a5ffd64d11424937fdce">addChild</a>, <a href="#a345af64a75ad370d482051006658c81e">children</a>, <a href="#a7cc7b1c8b3b57927c9d33abd8f652964">operator=</a>, <a href="#a4e31b52717a76a9bae9a80a1db0b808b">parent</a>, <a href="#a93c13a4891599eeaf09fd47ae25439b9">rotate</a>, <a href="#aaadb3500317f5c3552d9f7192421e0de">scale</a>, <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>, <a href="#a1a7a726c994dd5b29a0719f45845ccb0">SceneNode</a>, <a href="#af2af3ad7c17ecf2a693724deed12ce02">SceneNode</a>, <a href="#ac391d6973219428d9048caffe721cfb1">SceneNode</a>, <a href="#a8e150f0c631aa964846dc20cd627b538">setParent</a> and <a href="#a63bdfe0a081a96112036b8e7d226fd09">translate</a>.</p>
 </div>
@@ -177,7 +177,7 @@ class helios::scene::SceneNode { ... }
 </dd>
 </dl>
 </div>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00142">142</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00145">145</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a1a7a726c994dd5b29a0719f45845ccb0">SceneNode()<a href="#a1a7a726c994dd5b29a0719f45845ccb0" class="hash-link" aria-label="Direct link to SceneNode()" title="Direct link to SceneNode()">​</a></h3>
@@ -200,7 +200,7 @@ class helios::scene::SceneNode { ... }
 <table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">transform</td><td class="doxyParamItemDescription"><p>The initial transformation for this node.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00151">151</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00154">154</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 </div>
 </div>
@@ -221,10 +221,10 @@ class helios::scene::SceneNode { ... }
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderable</td><td class="doxyParamItemDescription"><p>A shred pointer to the Renderable this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> represents in a <a href="/docs/helios/classes/helios/scene/scene">Scene</a>.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">transform</td><td class="doxyParamItemDescription"><p>The initial local transform for this node.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderable</td><td class="doxyParamItemDescription"><p>A shared_ptr to the Renderable this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> represents in a <a href="/docs/helios/classes/helios/scene/scene">Scene</a>.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">transform</td><td class="doxyParamItemDescription"><p>The initial local transform for this node.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00160">160</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00163">163</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#a2f4bba61e70c28e98747ee84af651812">renderable</a> and <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 </div>
 </div>
@@ -245,10 +245,10 @@ class helios::scene::SceneNode { ... }
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderable</td><td class="doxyParamItemDescription"><p>A shred pointer to the Renderable this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> represents in a <a href="/docs/helios/classes/helios/scene/scene">Scene</a>.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderable</td><td class="doxyParamItemDescription"><p>A shared_ptr to the Renderable this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> represents in a <a href="/docs/helios/classes/helios/scene/scene">Scene</a>.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00171">171</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00174">174</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#a2f4bba61e70c28e98747ee84af651812">renderable</a> and <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 </div>
 </div>
@@ -268,7 +268,7 @@ class helios::scene::SceneNode { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00118">118</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00121">121</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -287,7 +287,7 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Delete copy assignment constructor. A <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> ist not indtended to be copied.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00130">130</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00133">133</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 </div>
 </div>
@@ -318,7 +318,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>The raw pointer to the newly added node, or nullptr if adding failed</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00191">191</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00194">194</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#a8f13644573f0a5ffd64d11424937fdce">addChild</a> and <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 <p>Referenced by <a href="#a8f13644573f0a5ffd64d11424937fdce">addChild</a>.</p>
 </div>
@@ -330,6 +330,7 @@ class helios::scene::SceneNode { ... }
 <table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">const helios::math::mat4f &amp; helios::scene::SceneNode::cachedWorldTransform ()</td></tr></tbody></table>
 </td><td class="doxyMemberLabelsRight">
 <span class="doxyMemberLabels">
+<span class="doxyMemberLabel nodiscard">nodiscard</span>
 <span class="doxyMemberLabel noexcept">noexcept</span>
 </span>
 </td></tr></tbody></table>
@@ -340,7 +341,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>The current worldTransform matrix of this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00290">290</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00293">293</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#ab908b6a16d34640eca0d92f2573e6cc3">cachedWorldTransform</a>.</p>
 <p>Referenced by <a href="#ab908b6a16d34640eca0d92f2573e6cc3">cachedWorldTransform</a>.</p>
 </div>
@@ -363,7 +364,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>A const ref to the list of children of this node.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00198">198</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00201">201</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#a345af64a75ad370d482051006658c81e">children</a> and <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 <p>Referenced by <a href="#a345af64a75ad370d482051006658c81e">children</a>.</p>
 </div>
@@ -386,7 +387,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>The unique identifier for this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00180">180</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00183">183</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a1488aa0cc05f989400589f36814afba1">guid</a>.</p>
 <p>Referenced by <a href="#a1488aa0cc05f989400589f36814afba1">guid</a>.</p>
 </div>
@@ -409,7 +410,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>A const reference to this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>&#x27;s `Transform` object.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00246">246</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00249">249</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a52ac30adf28408c010626d9236c78828">localTransform</a>.</p>
 <p>Referenced by <a href="#a52ac30adf28408c010626d9236c78828">localTransform</a>.</p>
 </div>
@@ -432,7 +433,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>true if this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a> is considered to be dirty, otherwise false.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00299">299</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00302">302</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a88551e7d166868342b87fd83e767442c">needsUpdate</a>.</p>
 <p>Referenced by <a href="#a88551e7d166868342b87fd83e767442c">needsUpdate</a>.</p>
 </div>
@@ -455,7 +456,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>The pointer to this node&#x27;s parent, or nullptr if no parent exists, e.g. for the root node.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00254">254</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00257">257</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#a4e31b52717a76a9bae9a80a1db0b808b">parent</a> and <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 <p>Referenced by <a href="#a4e31b52717a76a9bae9a80a1db0b808b">parent</a>.</p>
 </div>
@@ -476,9 +477,9 @@ class helios::scene::SceneNode { ... }
 <p>Returns a shared pointer to the Renderable of this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd></dd>
+<dd><p>A shared_ptr to the Renderable, may be nullptr if none is set.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00205">205</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00208">208</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a2f4bba61e70c28e98747ee84af651812">renderable</a>.</p>
 <p>Referenced by <a href="#a2f4bba61e70c28e98747ee84af651812">renderable</a>, <a href="#af2af3ad7c17ecf2a693724deed12ce02">SceneNode</a> and <a href="#ac391d6973219428d9048caffe721cfb1">SceneNode</a>.</p>
 </div>
@@ -506,7 +507,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>A reference to this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00227">227</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00230">230</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#a93c13a4891599eeaf09fd47ae25439b9">rotate</a> and <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 <p>Referenced by <a href="#a93c13a4891599eeaf09fd47ae25439b9">rotate</a>.</p>
 </div>
@@ -534,7 +535,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>A reference to this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00216">216</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00219">219</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#aaadb3500317f5c3552d9f7192421e0de">scale</a> and <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 <p>Referenced by <a href="#aaadb3500317f5c3552d9f7192421e0de">scale</a>.</p>
 </div>
@@ -563,7 +564,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>true if the world transform was updated, otherwise false</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00267">267</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00270">270</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a1dbd995b4aace249c6786588e3279ae3">setWorldTransform</a>.</p>
 <p>Referenced by <a href="#a1dbd995b4aace249c6786588e3279ae3">setWorldTransform</a>.</p>
 </div>
@@ -591,7 +592,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>A reference to this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00239">239</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00242">242</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>References <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a> and <a href="#a63bdfe0a081a96112036b8e7d226fd09">translate</a>.</p>
 <p>Referenced by <a href="#a63bdfe0a081a96112036b8e7d226fd09">translate</a>.</p>
 </div>
@@ -613,7 +614,7 @@ class helios::scene::SceneNode { ... }
 <dt>Returns</dt>
 <dd><p>The current world transform matrix for this scene node.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00280">280</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00283">283</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a2cd5ee14fdf4990952266c724c916551">worldTransform</a>.</p>
 <p>Referenced by <a href="#a2cd5ee14fdf4990952266c724c916551">worldTransform</a>.</p>
 </div>
@@ -644,7 +645,7 @@ class helios::scene::SceneNode { ... }
 <dt>See Also</dt>
 <dd><p><a href="#a8f13644573f0a5ffd64d11424937fdce">addChild()</a></p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00115">115</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00118">118</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <p>Reference <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>.</p>
 </div>
 </div>
@@ -664,9 +665,9 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A list of unique pointers to this node&#x27;s children. Ensures ownership of the child nodes withing the graph hierarchy.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00090">90</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00093">93</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aa362a46b4917ee9955a38d6422b72668">90</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::vector&lt;std::unique_ptr&lt;SceneNode&gt;&gt; <a href="#aa362a46b4917ee9955a38d6422b72668">children_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#aa362a46b4917ee9955a38d6422b72668">93</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::vector&lt;std::unique_ptr&lt;SceneNode&gt;&gt; <a href="#aa362a46b4917ee9955a38d6422b72668">children_</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -683,9 +684,9 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A local transformation representing affine transformation information for this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>. Encapsulates rotation, scaling and translation.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00105">105</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00108">108</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#acf949ca732802c66d4d0d3fee757e719">105</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="/docs/helios/classes/helios/scene/transform">Transform</a> <a href="#acf949ca732802c66d4d0d3fee757e719">localTransform_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#acf949ca732802c66d4d0d3fee757e719">108</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="/docs/helios/classes/helios/scene/transform">Transform</a> <a href="#acf949ca732802c66d4d0d3fee757e719">localTransform_</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -702,9 +703,9 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Boolean flag to represent the dirty-state of this node. Should be set to false if the current `worldTransform_` for this node was computed, otherwise true, e.g. if the node&#x27;s local transform has been changed.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00069">69</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00072">72</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a7810bc9069939badd249ce54f794d1e7">69</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">bool</span><span class="doxyHighlight"> <a href="#a7810bc9069939badd249ce54f794d1e7">needsUpdate_</a> = </span><span class="doxyHighlightKeyword">true</span><span class="doxyHighlight">;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a7810bc9069939badd249ce54f794d1e7">72</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">bool</span><span class="doxyHighlight"> <a href="#a7810bc9069939badd249ce54f794d1e7">needsUpdate_</a> = </span><span class="doxyHighlightKeyword">true</span><span class="doxyHighlight">;</span></span></div>
 </div>
 </div>
 </div>
@@ -720,10 +721,10 @@ class helios::scene::SceneNode { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>The paren node of **this** node. This will be nullptr for any root node. Implementing APIs must take care of properly assigning parent nodes when adding child nodes.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00084">84</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>The parent node of **this** node. This will be nullptr for any root node. Implementing APIs must take care of properly assigning parent nodes when adding child nodes.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00087">87</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a718f8d4e4ecddeb659031dd9ad9ad079">84</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>* <a href="#a718f8d4e4ecddeb659031dd9ad9ad079">parent_</a> = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a718f8d4e4ecddeb659031dd9ad9ad079">87</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a>* <a href="#a718f8d4e4ecddeb659031dd9ad9ad079">parent_</a> = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
 </div>
 </div>
 </div>
@@ -740,9 +741,9 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A shared pointer to the Renderable this node represents in the SceneGraph. May be nullptr if this node does not represent a renderable object.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00076">76</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00079">79</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a555a431744b64c11210bf0d8012f3215">76</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::shared_ptr&lt;const helios::rendering::Renderable&gt; <a href="#a555a431744b64c11210bf0d8012f3215">renderable_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a555a431744b64c11210bf0d8012f3215">79</a></span><span class="doxyLineContent"><span class="doxyHighlight">        std::shared_ptr&lt;const helios::rendering::Renderable&gt; <a href="#a555a431744b64c11210bf0d8012f3215">renderable_</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -759,9 +760,9 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>The 4x4 worldTransform-Matrix of this node. This matrix is initially set to the identity matrix. Implementing APIs MUST make sure to recompute the worldTransform before each rendering pass.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00098">98</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00101">101</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a93375ed6bd9aa627be8a5c2342ba4b4c">98</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">math::mat4f</a> <a href="#a93375ed6bd9aa627be8a5c2342ba4b4c">worldTransform_</a> = <a href="/docs/helios/structs/helios/math/mat4/#ad856b4652346ff475b653e257d64428d">math::mat4f::identity</a>();</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a93375ed6bd9aa627be8a5c2342ba4b4c">101</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">math::mat4f</a> <a href="#a93375ed6bd9aa627be8a5c2342ba4b4c">worldTransform_</a> = <a href="/docs/helios/structs/helios/math/mat4/#ad856b4652346ff475b653e257d64428d">math::mat4f::identity</a>();</span></span></div>
 </div>
 </div>
 </div>
@@ -777,9 +778,9 @@ class helios::scene::SceneNode { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A unique identifier for this <a href="/docs/helios/classes/helios/scene/scenenode">SceneNode</a>, computed automatically during instantiation.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00060">60</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx/#l00063">63</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/scenenode-ixx">SceneNode.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">60</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/guid">util::Guid</a> guid_;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">63</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/guid">util::Guid</a> guid_;</span></span></div>
 </div>
 </div>
 </div>

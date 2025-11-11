@@ -6,7 +6,7 @@
 <title data-rh="true">helios-util-io-stringfilereader | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/util/io/stringfilereader"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-util-io-stringfilereader | garagecraft.games"><meta data-rh="true" name="description" content="Abstract base class for reading file contents into a string. More..."><meta data-rh="true" property="og:description" content="Abstract base class for reading file contents into a string. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/util/io/stringfilereader"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/util/io/stringfilereader" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/util/io/stringfilereader" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"StringFileReader","item":"https://garagecraft.games/docs/helios/classes/helios/util/io/stringfilereader"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -41,19 +41,19 @@ class helios::util::io::StringFileReader { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::string</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#af89ef5d54bd420db553b9c34e3363b76">getContents</a> (const std::string &amp;filename) const =0</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Reads the file at the specified path. <a href="#af89ef5d54bd420db553b9c34e3363b76">More...</a></p>
+<p>Reads the entire contents of the file and returns them as a string. <a href="#af89ef5d54bd420db553b9c34e3363b76">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">bool</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a2fdb8416f82ef48c666b159152a606ae">readInto</a> (const std::string &amp;filename, std::string &amp;contents) const noexcept=0</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Reads the contents of the file into the specified string. <a href="#a2fdb8416f82ef48c666b159152a606ae">More...</a></p>
+<p>Attempts to read the entire contents of the file into the provided string. <a href="#a2fdb8416f82ef48c666b159152a606ae">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="protected-member-attributes-index">Protected Member Attributes Index<a href="#protected-member-attributes-index" class="hash-link" aria-label="Direct link to Protected Member Attributes Index" title="Direct link to Protected Member Attributes Index">​</a></h2>
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a807677d6c32c3746599d0d459a1bd07f">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().registerLogger(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>)</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>The Logegr used with this FileReader. <a href="#a807677d6c32c3746599d0d459a1bd07f">More...</a></p>
+<p>The logger used with this FileReader. <a href="#a807677d6c32c3746599d0d459a1bd07f">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Description<a href="#details" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
 <p>Abstract base class for reading file contents into a string.</p>
-<p>Definition at line 18 of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
+<p>Definition at line 21 of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a0d4a6a9707c98f149b7f80064562f427">StringFileReader()<a href="#a0d4a6a9707c98f149b7f80064562f427" class="hash-link" aria-label="Direct link to StringFileReader()" title="Direct link to StringFileReader()">​</a></h3>
@@ -69,7 +69,7 @@ class helios::util::io::StringFileReader { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Default constructor.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00033">33</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00036">36</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -88,7 +88,7 @@ class helios::util::io::StringFileReader { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00028">28</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00031">31</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -99,27 +99,31 @@ class helios::util::io::StringFileReader { ... }
 <div class="doxyMemberProto">
 <table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
 <table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">virtual std::string helios::util::io::StringFileReader::getContents (const std::string &amp; filename)</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel nodiscard">nodiscard</span>
+</span>
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Reads the file at the specified path.</p>
+<p>Reads the entire contents of the file and returns them as a string.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">filename</td><td class="doxyParamItemDescription"><p>The path to the file-object to read from.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">filename</td><td class="doxyParamItemDescription"><p>The path to the file to read.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>The contents of the file as a string.</p></dd>
+<dd><p>The contents of the file as a std::string. If reading fails, an empty string is returned.</p></dd>
 </dl>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Exceptions</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">std::runtime_error</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">std::runtime_error</td><td class="doxyParamItemDescription"><p>if the file operation fails.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00044">44</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00046">46</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a2fdb8416f82ef48c666b159152a606ae">readInto()<a href="#a2fdb8416f82ef48c666b159152a606ae" class="hash-link" aria-label="Direct link to readInto()" title="Direct link to readInto()">​</a></h3>
@@ -129,23 +133,24 @@ class helios::util::io::StringFileReader { ... }
 <table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">virtual bool helios::util::io::StringFileReader::readInto (const std::string &amp; filename, std::string &amp; contents)</td></tr></tbody></table>
 </td><td class="doxyMemberLabelsRight">
 <span class="doxyMemberLabels">
+<span class="doxyMemberLabel nodiscard">nodiscard</span>
 <span class="doxyMemberLabel noexcept">noexcept</span>
 </span>
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Reads the contents of the file into the specified string.</p>
+<p>Attempts to read the entire contents of the file into the provided string.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">filename</td><td class="doxyParamItemDescription"><p>The path to the file-object to read from.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">contents</td><td class="doxyParamItemDescription"><p>A ref to the string to write the file contents into.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">filename</td><td class="doxyParamItemDescription"><p>The path to the file to read.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">contents</td><td class="doxyParamItemDescription"><p>Output parameter receiving the file contents on success.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>True if reading succeeded, otherwise false.</p></dd>
+<dd><p>true if reading succeeded and `contents` was populated, otherwise false.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00054">54</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00055">55</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -163,10 +168,10 @@ class helios::util::io::StringFileReader { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>The Logegr used with this FileReader.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00024">24</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
+<p>The logger used with this FileReader.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx/#l00027">27</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/io/stringfilereader-ixx">StringFileReader.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a807677d6c32c3746599d0d459a1bd07f">24</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a> <a href="#a807677d6c32c3746599d0d459a1bd07f">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>);</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a807677d6c32c3746599d0d459a1bd07f">27</a></span><span class="doxyLineContent"><span class="doxyHighlight">        <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a> <a href="#a807677d6c32c3746599d0d459a1bd07f">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>);</span></span></div>
 </div>
 </div>
 </div>

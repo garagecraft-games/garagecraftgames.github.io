@@ -6,7 +6,7 @@
 <title data-rh="true">helios-input-inputmanager | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/input/inputmanager"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-input-inputmanager | garagecraft.games"><meta data-rh="true" name="description" content="InputManager providing access to various input states. More..."><meta data-rh="true" property="og:description" content="InputManager providing access to various input states. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/input/inputmanager"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/input/inputmanager" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/input/inputmanager" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"InputManager","item":"https://garagecraft.games/docs/helios/classes/helios/input/inputmanager"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -40,20 +40,21 @@ class helios::input::InputManager { ... }
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/window/window">helios::window::Window</a> *</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a73ff092ed6634db2dc52d8224700d35f">observedWindow</a> () const</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Returns a non-owning pointer to the currently observed window. <a href="#a73ff092ed6634db2dc52d8224700d35f">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#ab46c4ce60870839d557ba3d141964f01">poll</a> (float deltaTime) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Polls events from the currently observed window and registered Gamepads. <a href="#ab46c4ce60870839d557ba3d141964f01">More...</a></p>
+<p>Polls events from the currently observed window and registered gamepads. <a href="#ab46c4ce60870839d557ba3d141964f01">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">bool</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a9cdcf0b8c5ca77db5cba2498132479f1">isKeyPressed</a> (const helios::input::types::Key &amp;key) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Returns true if the specified key is currently pressed, otherwise false. <a href="#a9cdcf0b8c5ca77db5cba2498132479f1">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">unsigned int</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a138047fd0784a90715758d5e44afea3d">registerGamepads</a> (unsigned int gamepadMask) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Explicitly tells this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> which gamepads to poll for input states in <a href="#ab46c4ce60870839d557ba3d141964f01">poll()</a>. <a href="#a138047fd0784a90715758d5e44afea3d">More...</a></p>
+<p>Explicitly tells this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> which gamepads to poll for input states in `poll()`. <a href="#a138047fd0784a90715758d5e44afea3d">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a70f09d2b56d05c0ba55df05d3526f4f9">gamepadState</a> (helios::input::types::Gamepad gamepadId) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Returns a const ref of the <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> for the specified gamepadId. <a href="#a70f09d2b56d05c0ba55df05d3526f4f9">More...</a></p>
+<p>Returns a const reference to the `GamepadState` for the specified `gamepadId`. <a href="#a70f09d2b56d05c0ba55df05d3526f4f9">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">bool</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#aabc1c034f222ef983272ac4145575458">isConnected</a> (helios::input::types::Gamepad gamepadId) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
+<p>Returns true if the specified gamepad is connected, otherwise false. <a href="#aabc1c034f222ef983272ac4145575458">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="protected-member-attributes-index">Protected Member Attributes Index<a href="#protected-member-attributes-index" class="hash-link" aria-label="Direct link to Protected Member Attributes Index" title="Direct link to Protected Member Attributes Index">​</a></h2>
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a29a9dd828ced10e5ddf6cbe757debf97">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().registerLogger(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>)</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>The const reference to the logger used with this Adapter. <a href="#a29a9dd828ced10e5ddf6cbe757debf97">More...</a></p>
+<p>The const reference to the logger used with this instance. <a href="#a29a9dd828ced10e5ddf6cbe757debf97">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="private-member-attributes-index">Private Member Attributes Index<a href="#private-member-attributes-index" class="hash-link" aria-label="Direct link to Private Member Attributes Index" title="Direct link to Private Member Attributes Index">​</a></h2>
 
@@ -65,13 +66,13 @@ class helios::input::InputManager { ... }
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::unique_ptr&lt; <a href="/docs/helios/classes/helios/input/inputadapter">helios::input::InputAdapter</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#acf087e7c7062b3cb2d87fa0d06ec7075">input_</a></td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>The <a href="/docs/helios/classes/helios/input/inputadapter">InputAdapter</a> owned by this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a>. <a href="#acf087e7c7062b3cb2d87fa0d06ec7075">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">unsigned int</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a84b0b6c9c9cd9588eca70f9f6c784239">gamepadMask_</a> = 0x00</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>A Bitmask used for registering the Gamepads that should be polled for inputs. <a href="#a84b0b6c9c9cd9588eca70f9f6c784239">More...</a></p>
+<p>A bitmask used for registering the gamepads that should be polled for inputs. <a href="#a84b0b6c9c9cd9588eca70f9f6c784239">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Description<a href="#details" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
 <p><a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> providing access to various input states.</p>
-<p>The `InputManager` acts as an intermediary between the application and the underlying systems which require some sort of input mechanism. The raw events are processed by InputAdapters this InputManagers owns.</p>
-<p>An <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> allows for querying GamepadState-objects by calling <a href="#a70f09d2b56d05c0ba55df05d3526f4f9">gamepadState()</a>. The method allows for passing the id of the gamepad for which the input state should be returned.</p>
-<p>Definition at line 31 of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>The `InputManager` acts as an intermediary between the application and the underlying systems that provide input. Raw events are processed by InputAdapters owned by this `InputManager`.</p>
+<p>An `InputManager` allows querying `GamepadState` objects by calling `gamepadState()`. The method accepts an id that identifies the gamepad whose input state should be returned.</p>
+<p>Definition at line 33 of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a4981679919003c18830da98f4e3c8e65">InputManager()<a href="#a4981679919003c18830da98f4e3c8e65" class="hash-link" aria-label="Direct link to InputManager()" title="Direct link to InputManager()">​</a></h3>
@@ -94,7 +95,7 @@ class helios::input::InputManager { ... }
 <table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">input</td><td class="doxyParamItemDescription"><p>The <a href="/docs/helios/classes/helios/input/inputadapter">InputAdapter</a> used with this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a>.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00064">64</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00066">66</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -113,18 +114,18 @@ class helios::input::InputManager { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Returns a const ref of the <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> for the specified gamepadId.</p>
-<p>This method queries the <a href="/docs/helios/classes/helios/input/inputadapter">InputAdapter</a> owned by this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> for the <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> identified by the specified gamepadId. If no <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> was found under the specified gamepadId, this method returns a <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> object initialized to its default values. To test whether a gamepad is available, use <a href="#aabc1c034f222ef983272ac4145575458">isConnected()</a>. For lifetime management of the <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a>, see the documentation in <a href="/docs/helios/classes/helios/input/inputadapter">InputAdapter</a>.</p>
-<p><a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> objects get updated with <a href="#ab46c4ce60870839d557ba3d141964f01">poll()</a>.</p>
+<p>Returns a const reference to the `GamepadState` for the specified `gamepadId`.</p>
+<p>This method queries the `InputAdapter` owned by this `InputManager` for the `GamepadState` identified by the specified `gamepadId`. If no `GamepadState` exists for the given id, this method returns a `GamepadState` object initialized to its default values. To test whether a gamepad is available, use `isConnected()`.</p>
+<p>`GamepadState` objects are updated by calling `poll()`.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">gamepadId</td><td class="doxyParamItemDescription"><p>The id of the gamepad for which the <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> is queried.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">gamepadId</td><td class="doxyParamItemDescription"><p>The id of the gamepad for which the `GamepadState` is queried.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>The const ref <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> for the specified gamepad.</p></dd>
+<dd><p>A const reference to the `GamepadState` for the specified gamepad.</p></dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>See Also</dt>
@@ -134,7 +135,7 @@ class helios::input::InputManager { ... }
 <dt>See Also</dt>
 <dd><p><a href="#ab46c4ce60870839d557ba3d141964f01">poll()</a></p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00152">152</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00149">149</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="aabc1c034f222ef983272ac4145575458">isConnected()<a href="#aabc1c034f222ef983272ac4145575458" class="hash-link" aria-label="Direct link to isConnected()" title="Direct link to isConnected()">​</a></h3>
@@ -150,7 +151,7 @@ class helios::input::InputManager { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Return true if the specified gamepad is connected, otherwise false.</p>
+<p>Returns true if the specified gamepad is connected, otherwise false.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
@@ -159,9 +160,9 @@ class helios::input::InputManager { ... }
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>true if a gamepad was found for the specified gamepadId, otherwise false.</p></dd>
+<dd><p>True if a gamepad was found for the specified `gamepadId`, otherwise false.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00161">161</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00158">158</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a9cdcf0b8c5ca77db5cba2498132479f1">isKeyPressed()<a href="#a9cdcf0b8c5ca77db5cba2498132479f1" class="hash-link" aria-label="Direct link to isKeyPressed()" title="Direct link to isKeyPressed()">​</a></h3>
@@ -178,7 +179,7 @@ class helios::input::InputManager { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Returns true if the specified key is currently pressed, otherwise false.</p>
-<p>This method delegates to the underlying <a href="/docs/helios/classes/helios/input/inputadapter">InputAdapter</a>.</p>
+<p>This method delegates to the underlying `InputAdapter`.</p>
 <dl class="doxySectionUser">
 <dt>See Also</dt>
 <dd><p><a href="/docs/helios/classes/helios/input/inputadapter/#a8896a83d1b86578aa3c1f13be1c5e63f">InputAdapter::isKeyPressed</a></p></dd>
@@ -186,14 +187,14 @@ class helios::input::InputManager { ... }
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">key</td><td class="doxyParamItemDescription"><p>the key to check for the pressed-state</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">key</td><td class="doxyParamItemDescription"><p>The key to check for the pressed state.</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>true if the key is pressed, otherwise false. This method also returns false if the observed window is not set (nullptr).</p></dd>
+<dd><p>True if the key is pressed; returns false if the observed window is not set.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00117">117</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00116">116</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a0ad681204f4b9f65189340a0e3b87f28">observe()<a href="#a0ad681204f4b9f65189340a0e3b87f28" class="hash-link" aria-label="Direct link to observe()" title="Direct link to observe()">​</a></h3>
@@ -213,10 +214,10 @@ class helios::input::InputManager { ... }
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">win</td><td class="doxyParamItemDescription"><p>a const reference to the window to observe</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">win</td><td class="doxyParamItemDescription"><p>A const reference to the window to observe.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00075">75</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00076">76</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a73ff092ed6634db2dc52d8224700d35f">observedWindow()<a href="#a73ff092ed6634db2dc52d8224700d35f" class="hash-link" aria-label="Direct link to observedWindow()" title="Direct link to observedWindow()">​</a></h3>
@@ -224,14 +225,18 @@ class helios::input::InputManager { ... }
 <div class="doxyMemberProto">
 <table class="doxyMemberLabels"><tbody><tr class="doxyMemberLabels"><td class="doxyMemberLabelsLeft">
 <table class="doxyMemberName"><tbody><tr><td class="doxyMemberName">const helios::window::Window * helios::input::InputManager::observedWindow ()</td></tr></tbody></table>
+</td><td class="doxyMemberLabelsRight">
+<span class="doxyMemberLabels">
+<span class="doxyMemberLabel nodiscard">nodiscard</span>
+</span>
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
 <p>Returns a non-owning pointer to the currently observed window.</p>
-<p>Returns a nullptr if no window is currently observed.</p>
+<p>Returns `nullptr` if no window is currently observed.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>The currently observed window as a non owning cont pointer, or nullptr.</p></dd>
+<dd><p>A non-owning pointer to the currently observed window, or `nullptr`.</p></dd>
 </dl>
 <p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00086">86</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 </div>
@@ -248,8 +253,8 @@ class helios::input::InputManager { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Polls events from the currently observed window and registered Gamepads.</p>
-<p>Calls the `pollEvents()` method of the observed window to process any pending window-related input events. This method should be called regularly, preferably once per frame. For updating <a href="/docs/helios/classes/helios/input/gamepadstate">GamepadState</a> with their current input states, make sure to call <a href="#a138047fd0784a90715758d5e44afea3d">registerGamepads()</a> with a bitmask representing the gamepads to poll.</p>
+<p>Polls events from the currently observed window and registered gamepads.</p>
+<p>Calls the `pollEvents()` method of the observed window to process any pending window-related input events. This method should be called regularly, preferably once per frame. For updating `GamepadState` objects with their current input states, call `registerGamepads()` with a bitmask representing the gamepads to poll.</p>
 <dl class="doxySectionUser">
 <dt>See Also</dt>
 <dd><p>Window::pollEvents</p></dd>
@@ -275,18 +280,18 @@ class helios::input::InputManager { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Explicitly tells this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> which gamepads to poll for input states in <a href="#ab46c4ce60870839d557ba3d141964f01">poll()</a>.</p>
+<p>Explicitly tells this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> which gamepads to poll for input states in `poll()`.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">gamepadMask</td><td class="doxyParamItemDescription"><p>A bitmask representing the gamepad ids that should be observed by this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a>, i.e. registerGamepads(Gamepad::ONE | Gamepad::THREE).</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">gamepadMask</td><td class="doxyParamItemDescription"><p>A bitmask representing the gamepad ids that should be observed by this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> (e.g. `registerGamepads(Gamepad::ONE | Gamepad::THREE)`).</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>The bitmask this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> uses for polling gamepad states. Defaults to a bitmask that represents no Gamepads at all if an ínvalid mask was submitted .</p></dd>
+<dd><p>The bitmask this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a> uses for polling gamepad states. If an invalid mask is provided, the method returns a mask that represents no gamepads.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00130">130</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00129">129</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -304,10 +309,10 @@ class helios::input::InputManager { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>The const reference to the logger used with this Adapter.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00053">53</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>The const reference to the logger used with this instance.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00055">55</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a29a9dd828ced10e5ddf6cbe757debf97">53</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a>&amp; <a href="#a29a9dd828ced10e5ddf6cbe757debf97">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>);</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a29a9dd828ced10e5ddf6cbe757debf97">55</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a>&amp; <a href="#a29a9dd828ced10e5ddf6cbe757debf97">logger_</a> = <a href="/docs/helios/classes/helios/util/log/logmanager/#aeb3c579d6cd53e2ca50384ceadd5d3a6">helios::util::log::LogManager::getInstance</a>().<a href="/docs/helios/classes/helios/util/log/logmanager/#ac04d603885ef13b734099c4c812e2eb9">registerLogger</a>(<a href="/docs/helios/files/include/include/ext/include/ext/opengl/include/ext/opengl/rendering/include/ext/opengl/rendering/shader/opengluniformlocationmap-ixx/#acbc04f24078582c7d42b2085be5d5750">HELIOS_LOG_SCOPE</a>);</span></span></div>
 </div>
 </div>
 </div>
@@ -322,10 +327,10 @@ class helios::input::InputManager { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>A Bitmask used for registering the Gamepads that should be polled for inputs.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00047">47</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>A bitmask used for registering the gamepads that should be polled for inputs.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00049">49</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">47</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">unsigned</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">int</span><span class="doxyHighlight"> gamepadMask_ = 0x00;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">49</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">unsigned</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">int</span><span class="doxyHighlight"> gamepadMask_ = 0x00;</span></span></div>
 </div>
 </div>
 </div>
@@ -338,9 +343,9 @@ class helios::input::InputManager { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>The <a href="/docs/helios/classes/helios/input/inputadapter">InputAdapter</a> owned by this <a href="/docs/helios/classes/helios/input/inputmanager">InputManager</a>.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00042">42</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00044">44</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">42</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;helios::input::InputAdapter&gt; input_;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">44</span><span class="doxyLineContent"><span class="doxyHighlight">        std::unique_ptr&lt;helios::input::InputAdapter&gt; input_;</span></span></div>
 </div>
 </div>
 </div>
@@ -353,9 +358,9 @@ class helios::input::InputManager { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A pointer to the currently observed window, which might be nullptr.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00037">37</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx/#l00039">39</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/input/inputmanager-ixx">InputManager.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">37</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/window/window">helios::window::Window</a>* observedWin_ = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">39</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/classes/helios/window/window">helios::window::Window</a>* observedWin_ = </span><span class="doxyHighlightKeyword">nullptr</span><span class="doxyHighlight">;</span></span></div>
 </div>
 </div>
 </div>

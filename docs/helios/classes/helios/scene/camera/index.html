@@ -6,7 +6,7 @@
 <title data-rh="true">helios-scene-camera | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/scene/camera"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-scene-camera | garagecraft.games"><meta data-rh="true" name="description" content="Represents a camera for perspective or orthographic projection, deriving from SceneNode to allow for spatial positioning and transformation within the scene graph. More..."><meta data-rh="true" property="og:description" content="Represents a camera for perspective or orthographic projection, deriving from SceneNode to allow for spatial positioning and transformation within the scene graph. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/scene/camera"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/scene/camera" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/scene/camera" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"SceneNode","item":"https://garagecraft.games/docs/helios/classes/helios/scene/scenenode"},{"@type":"ListItem","position":4,"name":"Camera","item":"https://garagecraft.games/docs/helios/classes/helios/scene/camera"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -38,11 +38,11 @@ class helios::scene::Camera { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"><a href="/docs/helios/classes/helios/scene/scenenode/#a30ad1d7f49d6114a261cbac2706546ab">SceneNode</a> *</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a08c74a826af54a6de82dd64516df4017">addChild</a> (std::unique_ptr&lt; SceneNode &gt; sceneNode) override</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>This method will do nothing but returning a `nullptr`, indicating that a `Camera` must not have child modes. <a href="#a08c74a826af54a6de82dd64516df4017">More...</a></p>
+<p>This method will do nothing but return `nullptr`, indicating that a `Camera` must not have child nodes. <a href="#a08c74a826af54a6de82dd64516df4017">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a1dc42ba642ae41f7028a4cb927a6feb0">projectionMatrix</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Returns a constant ref to this camera&#x27;s current projection matrix. Typically set to the perspective / orthographic projection. <a href="#a1dc42ba642ae41f7028a4cb927a6feb0">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a920bac1e84b874d725027e37d091cb34">viewMatrix</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Returns a constant ref to this camera&#x27; view matrix. Automatically computed as inverse from the camera&#x27;s world transform (i.e. [v]_c = P_{C &lt;- W } [v]_w) = P_{W &lt;- C}^{-1} [v]_w. <a href="#a920bac1e84b874d725027e37d091cb34">More...</a></p>
+<p>Returns a constant ref to this camera&#x27;s view matrix. Automatically computed as the inverse of the camera&#x27;s world transform. <a href="#a920bac1e84b874d725027e37d091cb34">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="protected-member-attributes-index">Protected Member Attributes Index<a href="#protected-member-attributes-index" class="hash-link" aria-label="Direct link to Protected Member Attributes Index" title="Direct link to Protected Member Attributes Index">​</a></h2>
 
@@ -67,7 +67,7 @@ class helios::scene::Camera { ... }
 </dd>
 </dl>
 </div>
-<p>Definition at line 31 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
+<p>Definition at line 34 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="adb65c6af2c10921ccd7a5088a48adcf8">Camera()<a href="#adb65c6af2c10921ccd7a5088a48adcf8" class="hash-link" aria-label="Direct link to Camera()" title="Direct link to Camera()">​</a></h3>
@@ -79,7 +79,7 @@ class helios::scene::Camera { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Constructor for this class. Initializes projectionMatrix and viewMatrix with the identity matrix.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00049">49</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00052">52</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
 </div>
 </div>
 </div>
@@ -98,22 +98,22 @@ class helios::scene::Camera { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>This method will do nothing but returning a `nullptr`, indicating that a `Camera` must not have child modes.</p>
+<p>This method will do nothing but return `nullptr`, indicating that a `Camera` must not have child nodes.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">sceneNode</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">sceneNode</td><td class="doxyParamItemDescription"><p>The attempted child node to add (ignored).</p></td></tr></tbody></table>
 </dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>This implementation returns a `nullptr.`</p></dd>
+<dd><p>This implementation returns `nullptr`.</p></dd>
 </dl>
 <dl class="doxySectionUser">
 <dt>See Also</dt>
 <dd><p><a href="https://stackoverflow.com/questions/24609872/delete-virtual-function-from-a-derived-class" target="_blank" rel="noopener noreferrer">https://stackoverflow.com/questions/24609872/delete-virtual-function-from-a-derived-class</a></p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00061">61</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00063">63</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
 <p>Reference <a href="/docs/helios/classes/helios/scene/scenenode/#a30ad1d7f49d6114a261cbac2706546ab">helios::scene::SceneNode::SceneNode</a>.</p>
 </div>
 </div>
@@ -135,7 +135,7 @@ class helios::scene::Camera { ... }
 <dt>Returns</dt>
 <dd><p>A const ref to this `Camera`&#x27;s projection matrix.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00069">69</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00071">71</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
 </div>
 </div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a920bac1e84b874d725027e37d091cb34">viewMatrix()<a href="#a920bac1e84b874d725027e37d091cb34" class="hash-link" aria-label="Direct link to viewMatrix()" title="Direct link to viewMatrix()">​</a></h3>
@@ -151,12 +151,12 @@ class helios::scene::Camera { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Returns a constant ref to this camera&#x27; view matrix. Automatically computed as inverse from the camera&#x27;s world transform (i.e. [v]_c = P_{C &lt;- W } [v]_w) = P_{W &lt;- C}^{-1} [v]_w.</p>
+<p>Returns a constant ref to this camera&#x27;s view matrix. Automatically computed as the inverse of the camera&#x27;s world transform.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>A const ref to this `Camera`s view matrix.</p></dd>
+<dd><p>A const ref to this `Camera`&#x27;s view matrix.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00078">78</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00080">80</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
 <p>Reference <a href="#a920bac1e84b874d725027e37d091cb34">viewMatrix</a>.</p>
 <p>Referenced by <a href="#a920bac1e84b874d725027e37d091cb34">viewMatrix</a>.</p>
 </div>
@@ -178,9 +178,9 @@ class helios::scene::Camera { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>The projection matrix of this <a href="/docs/helios/classes/helios/scene/camera">Camera</a>.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00037">37</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00040">40</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a73a85eb4966fb4524dc6b87736500f62">37</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">mutable</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> <a href="#a73a85eb4966fb4524dc6b87736500f62">projectionMatrix_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a73a85eb4966fb4524dc6b87736500f62">40</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">mutable</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> <a href="#a73a85eb4966fb4524dc6b87736500f62">projectionMatrix_</a>;</span></span></div>
 </div>
 </div>
 </div>
@@ -198,9 +198,9 @@ class helios::scene::Camera { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>The view matrix of this <a href="/docs/helios/classes/helios/scene/camera">Camera</a>.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00042">42</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx/#l00045">45</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/camera-ixx">Camera.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a5c915d9ba00c11dcef1885f02e32945c">42</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">mutable</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> <a href="#a5c915d9ba00c11dcef1885f02e32945c">viewMatrix_</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a5c915d9ba00c11dcef1885f02e32945c">45</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">mutable</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> <a href="#a5c915d9ba00c11dcef1885f02e32945c">viewMatrix_</a>;</span></span></div>
 </div>
 </div>
 </div>

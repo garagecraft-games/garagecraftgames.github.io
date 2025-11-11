@@ -6,7 +6,7 @@
 <title data-rh="true">helios-scene-snapshotitem | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/structs/helios/scene/snapshotitem"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-scene-snapshotitem | garagecraft.games"><meta data-rh="true" name="description" content="Structure for representing a snapshot item of a renderable&#x27;s object state at a specific point in time. More..."><meta data-rh="true" property="og:description" content="Structure for representing a snapshot item of a renderable&#x27;s object state at a specific point in time. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,struct"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/structs/helios/scene/snapshotitem"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/structs/helios/scene/snapshotitem" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/structs/helios/scene/snapshotitem" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"SnapshotItem","item":"https://garagecraft.games/docs/helios/structs/helios/scene/snapshotitem"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -42,7 +42,7 @@ struct helios::scene::SnapshotItem { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">std::weak_ptr&lt; const <a href="/docs/helios/classes/helios/rendering/renderable">helios::rendering::Renderable</a> &gt;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a3145126ee37604f07f27f3f8ed8d30e2">renderable</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Returns a weak ptr to the Renderable of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>. Use .lock() on the returned weak pointer to obtain a shared pointer for the Renderable, if it still exists. If the Renderable does not exist, the <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a> should be ignored for further processing. <a href="#a3145126ee37604f07f27f3f8ed8d30e2">More...</a></p>
+<p>Returns a weak_ptr to the Renderable of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>. Use `.lock()` on the returned weak_ptr to obtain a shared_ptr for the Renderable, if it still exists. If the Renderable does not exist, the <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a> should be ignored for further processing. <a href="#a3145126ee37604f07f27f3f8ed8d30e2">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> &amp;</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a9b1e4c1e12d5c92284036256995442f5">worldMatrix</a> () const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 <p>Returns a const ref to the worldMatrix of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>. The world transformation matrix is a copy from the world transformation matrix created with this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>. <a href="#a9b1e4c1e12d5c92284036256995442f5">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
@@ -69,7 +69,7 @@ struct helios::scene::SnapshotItem { ... }
 </dd>
 </dl>
 </div>
-<p>Definition at line 44 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line 47 of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a896b2a4f5c6bf92b2dd560281cd0b3f6">SnapshotItem()<a href="#a896b2a4f5c6bf92b2dd560281cd0b3f6" class="hash-link" aria-label="Direct link to SnapshotItem()" title="Direct link to SnapshotItem()">​</a></h3>
@@ -85,7 +85,7 @@ struct helios::scene::SnapshotItem { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>Prevent copying.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00060">60</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00063">63</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <p>Reference <a href="#a896b2a4f5c6bf92b2dd560281cd0b3f6">SnapshotItem</a>.</p>
 <p>Referenced by <a href="#a10f299edb3444212e2837607f7cba4b9">operator=</a>, <a href="#a896b2a4f5c6bf92b2dd560281cd0b3f6">SnapshotItem</a>, <a href="#a6eab653f8e9aca29ddbbf1d147df23b3">SnapshotItem</a> and <a href="#a3d91e9c3e4e5529eb95aee6ca15c3c98">SnapshotItem</a>.</p>
 </div>
@@ -108,7 +108,7 @@ struct helios::scene::SnapshotItem { ... }
 <dt>See Also</dt>
 <dd><p><a href="https://en.cppreference.com/w/cpp/language/move_constructor.html" target="_blank" rel="noopener noreferrer">https://en.cppreference.com/w/cpp/language/move_constructor.html</a></p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00067">67</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00070">70</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <p>Reference <a href="#a896b2a4f5c6bf92b2dd560281cd0b3f6">SnapshotItem</a>.</p>
 </div>
 </div>
@@ -124,10 +124,10 @@ struct helios::scene::SnapshotItem { ... }
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderable</td><td class="doxyParamItemDescription"><p>A weak ptr to the Renderable.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">worldMatrix</td><td class="doxyParamItemDescription"><p>A const ref to the world transformation matrix, which gets copied.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">renderable</td><td class="doxyParamItemDescription"><p>A weak_ptr to the Renderable.</p></td></tr><tr class="doxyParamItem"><td class="doxyParamItemName">worldMatrix</td><td class="doxyParamItemDescription"><p>A const ref to the world transformation matrix, which gets copied.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00076">76</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00079">79</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <p>References <a href="#a3145126ee37604f07f27f3f8ed8d30e2">renderable</a>, <a href="#a896b2a4f5c6bf92b2dd560281cd0b3f6">SnapshotItem</a> and <a href="#a9b1e4c1e12d5c92284036256995442f5">worldMatrix</a>.</p>
 </div>
 </div>
@@ -146,7 +146,7 @@ struct helios::scene::SnapshotItem { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00061">61</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00064">64</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <p>Reference <a href="#a896b2a4f5c6bf92b2dd560281cd0b3f6">SnapshotItem</a>.</p>
 </div>
 </div>
@@ -166,12 +166,12 @@ struct helios::scene::SnapshotItem { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Returns a weak ptr to the Renderable of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>. Use .lock() on the returned weak pointer to obtain a shared pointer for the Renderable, if it still exists. If the Renderable does not exist, the <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a> should be ignored for further processing.</p>
+<p>Returns a weak_ptr to the Renderable of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>. Use `.lock()` on the returned weak_ptr to obtain a shared_ptr for the Renderable, if it still exists. If the Renderable does not exist, the <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a> should be ignored for further processing.</p>
 <dl class="doxySectionUser">
 <dt>Returns</dt>
-<dd><p>A weak ptr of Renderable of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>.</p></dd>
+<dd><p>A weak_ptr to the Renderable of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00089">89</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00092">92</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <p>Reference <a href="#a3145126ee37604f07f27f3f8ed8d30e2">renderable</a>.</p>
 <p>Referenced by <a href="#a3145126ee37604f07f27f3f8ed8d30e2">renderable</a> and <a href="#a3d91e9c3e4e5529eb95aee6ca15c3c98">SnapshotItem</a>.</p>
 </div>
@@ -194,7 +194,7 @@ struct helios::scene::SnapshotItem { ... }
 <dt>Returns</dt>
 <dd><p>The const ref to the world matrix of this <a href="/docs/helios/structs/helios/scene/snapshotitem">SnapshotItem</a>.</p></dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00098">98</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00101">101</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <p>Reference <a href="#a9b1e4c1e12d5c92284036256995442f5">worldMatrix</a>.</p>
 <p>Referenced by <a href="#a3d91e9c3e4e5529eb95aee6ca15c3c98">SnapshotItem</a> and <a href="#a9b1e4c1e12d5c92284036256995442f5">worldMatrix</a>.</p>
 </div>
@@ -211,9 +211,9 @@ struct helios::scene::SnapshotItem { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A weak pointer to the actual Renderable object.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00049">49</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00052">52</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">49</span><span class="doxyLineContent"><span class="doxyHighlight">        std::weak_ptr&lt;const helios::rendering::Renderable&gt; renderable_;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">52</span><span class="doxyLineContent"><span class="doxyHighlight">        std::weak_ptr&lt;const helios::rendering::Renderable&gt; renderable_;</span></span></div>
 </div>
 </div>
 </div>
@@ -226,9 +226,9 @@ struct helios::scene::SnapshotItem { ... }
 </div>
 <div class="doxyMemberDoc">
 <p>A copy of the world transformation matrix for the Renderable.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00054">54</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx/#l00057">57</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/scene/snapshotitem-ixx">SnapshotItem.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">54</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> worldMatrix_;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">57</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> <a href="/docs/helios/namespaces/helios/math/#ad422120d6e1f106140808f16e348f0b3">helios::math::mat4f</a> worldMatrix_;</span></span></div>
 </div>
 </div>
 </div>

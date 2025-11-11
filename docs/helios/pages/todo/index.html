@@ -6,7 +6,7 @@
 <title data-rh="true">todo | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/pages/todo"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="todo | garagecraft.games"><meta data-rh="true" name="description" content="Member helios::~Application  ()=default"><meta data-rh="true" property="og:description" content="Member helios::~Application  ()=default"><meta data-rh="true" name="keywords" content="doxygen,reference,page"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/pages/todo"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/pages/todo" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/pages/todo" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Todo List","item":"https://garagecraft.games/docs/helios/pages/todo"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -45,15 +45,15 @@
 <dt>Member <a href="/docs/helios/classes/helios/rendering/renderpassfactory/#aab5f2c3ba19ec1b271108b51e96bd2ac">helios::rendering::RenderPassFactory::logger_</a></dt>
 <dd><p><a id="_todo000016"></a>constructor injection</p></dd>
 <dt>Member <a href="/docs/helios/classes/helios/rendering/renderpassfactory/#a18d1346e8e3c78358ccb1872da3125a3">helios::rendering::RenderPassFactory::makeRenderCommand</a>  (const <a href="/docs/helios/structs/helios/scene/snapshotitem">helios::scene::SnapshotItem</a> &amp;snapshotItem) const noexcept</dt>
-<dd><p><a id="_todo000017"></a>future versions might want to use a FactoryMethod in <a href="/docs/helios/classes/helios/rendering/rendercommand">RenderCommand</a> that takes a SnapshotItem and creates a <a href="/docs/helios/classes/helios/rendering/rendercommand">RenderCommand</a> from it (e.g. RenderCommand::fromSnapshotItem()); or a Factory ReanderCommandBuilder() .withShader().withMesh().build();</p></dd>
+<dd><p><a id="_todo000017"></a>future versions might want to use a FactoryMethod in <a href="/docs/helios/classes/helios/rendering/rendercommand">RenderCommand</a> that takes a SnapshotItem and creates a <a href="/docs/helios/classes/helios/rendering/rendercommand">RenderCommand</a> from it (e.g. `RenderCommand::fromSnapshotItem()`); or a Factory `RenderCommandBuilder()` with fluent configuration `.withShader().withMesh().build();`</p></dd>
 <dt>Member <a href="/docs/helios/classes/helios/rendering/renderqueue/#ace107c45024c29efc237107e3307c2ab">helios::rendering::RenderQueue::add</a>  (std::unique_ptr&lt; const helios::rendering::RenderCommand &gt; renderCommand)</dt>
 <dd><p><a id="_todo000018"></a>prevent adding renderables while rendering</p></dd>
 <dt>Member <a href="/docs/helios/classes/helios/rendering/shader/shader/#a7a78ee99d3703e1237b335c09dadb285">helios::rendering::shader::Shader::logger_</a></dt>
 <dd><p><a id="_todo000019"></a>constructor injection</p></dd>
 <dt>Class <a href="/docs/helios/classes/helios/rendering/shader/uniformvaluemap">helios::rendering::shader::UniformValueMap</a></dt>
 <dd>
-<p><a id="_todo000020"></a>UniformMap must allow only one index for all datastructures, i.e. if mat4fMap_[semantics] is set, vec3fMap_[semantics] must not be allowed</p>
-<p><a id="_todo000021"></a>UniformValueMaps should be scope, e.g. per frame (world matrix, projection, view, view projection...), per Material (colors, emmissive...), per object (World matrix...) Which allws for better handling of assigning uniforms, e.g. per frame gets changed once, per object gets changed per object etc...</p>
+<p><a id="_todo000020"></a>UniformMap must allow only one index for all data structures, i.e. if map_[semantics] contains a mat4f, other types should not be allowed for the same semantics.</p>
+<p><a id="_todo000021"></a>UniformValueMaps should be scoped, e.g. per frame (world matrix, projection, view...), per material (colors, emissive...), per object (world matrix...), which allows for better handling of assigning uniforms: per-frame values change once per frame, while per-object values change per object.</p>
 </dd>
 <dt>Class <a href="/docs/helios/classes/helios/scene/camera">helios::scene::Camera</a></dt>
 <dd>
@@ -61,7 +61,7 @@
 <p>check whether nodes should further be divided into Parent- and LeafNodes. Cameras would be LeafNodes then, not allowing to have child nodes.</p>
 </dd>
 <dt>Class <a href="/docs/helios/classes/helios/scene/frustumcullingstrategy">helios::scene::FrustumCullingStrategy</a></dt>
-<dd><p><a id="_todo000023"></a>The returned list should be considered &quot;as is&quot; for now: Each entry in the list a single renderable entity to consider. It child nodes (i.e. the sub tree **this** node is the root of) should _not_ be automatically considered for rendering. Later iterations should probably use an individual struct that provides a hint whether for a given node a whole subtree should be considered, saving time for culling and memory when constructing the list.</p></dd>
+<dd><p><a id="_todo000023"></a>The returned list should be considered &quot;as is&quot; for now: Each entry in the list is a single renderable entity to consider. Its child nodes (i.e. the sub tree for which this node is the root) should _not_ be automatically considered for rendering. Later iterations should probably use an individual struct that provides a hint whether for a given node a whole subtree should be considered, saving time for culling and memory when constructing the list.</p></dd>
 <dt>Member <a href="/docs/helios/classes/helios/scene/scenenode/#a316494fedf68d4ca53cd4453885e0b07">helios::scene::SceneNode::SceneNode</a>  () noexcept</dt>
 <dd><p><a id="_todo000025"></a>explicitly implement move (assignment) constructor if required, since we have deleted the copy constructors</p></dd>
 <dt>Struct <a href="/docs/helios/structs/helios/scene/snapshotitem">helios::scene::SnapshotItem</a></dt>
@@ -69,7 +69,7 @@
 <dt>Class <a href="/docs/helios/classes/helios/scene/transform">helios::scene::Transform</a></dt>
 <dd><p><a id="_todo000027"></a>use quaternions for rotation</p></dd>
 <dt>Class <a href="/docs/helios/classes/helios/util/log/logger">helios::util::log::Logger</a></dt>
-<dd><p><a id="_todo000028"></a>configure log stream</p></dd>
+<dd><p><a id="_todo000028"></a>configure log stream, severity filtering and thread-safety.</p></dd>
 </dl>
 <hr>
 <p class="doxyGeneratedBy">Generated via <a href="https://xpack.github.io/doxygen2docusaurus" target="_blank" rel="noopener noreferrer">doxygen2docusaurus</a> 2.0.0 by <a href="https://www.doxygen.nl" target="_blank" rel="noopener noreferrer">Doxygen</a> 1.15.0.</p>

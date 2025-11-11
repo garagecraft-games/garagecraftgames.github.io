@@ -6,7 +6,7 @@
 <title data-rh="true">helios-util-log-logger | garagecraft.games</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://garagecraft.games/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://garagecraft.games/docs/helios/classes/helios/util/log/logger"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="helios-util-log-logger | garagecraft.games"><meta data-rh="true" name="description" content="Simple Logger implementation. More..."><meta data-rh="true" property="og:description" content="Simple Logger implementation. More..."><meta data-rh="true" name="keywords" content="doxygen,reference,class"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://garagecraft.games/docs/helios/classes/helios/util/log/logger"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/util/log/logger" hreflang="en"><link data-rh="true" rel="alternate" href="https://garagecraft.games/docs/helios/classes/helios/util/log/logger" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://LK14YGETTG-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"helios API","item":"https://garagecraft.games/docs/helios/"},{"@type":"ListItem","position":2,"name":"Classes","item":"https://garagecraft.games/docs/helios/classes"},{"@type":"ListItem","position":3,"name":"Logger","item":"https://garagecraft.games/docs/helios/classes/helios/util/log/logger"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="garagecraft.games" href="/opensearch.xml">
 <link rel="alternate" type="application/rss+xml" href="/devlog/rss.xml" title="garagecraft.games RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/devlog/atom.xml" title="garagecraft.games Atom Feed"><link rel="stylesheet" href="/assets/css/styles.849005bf.css">
-<script src="/assets/js/runtime~main.fc69fd00.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ca822fb7.js" defer="defer"></script>
 <script src="/assets/js/main.4c245b91.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -24,7 +24,7 @@ class helios::util::log::Logger { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left"></td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a77b4817447ad32e35b6805a7f4d6d6cf">Logger</a> (std::string scope)</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Creates a new <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>, tagged with specific scope. <a href="#a77b4817447ad32e35b6805a7f4d6d6cf">More...</a></p>
+<p>Creates a new <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>, tagged with a specific scope. <a href="#a77b4817447ad32e35b6805a7f4d6d6cf">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-member-functions-index">Public Member Functions Index<a href="#public-member-functions-index" class="hash-link" aria-label="Direct link to Public Member Functions Index" title="Direct link to Public Member Functions Index">​</a></h2>
 
@@ -34,15 +34,15 @@ class helios::util::log::Logger { ... }
 
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a> (const bool enable) noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Enables/disables log output for this Logger-instance. <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">More...</a></p>
+<p>Enables or disables log output for this <a href="/docs/helios/classes/helios/util/log/logger">Logger</a> instance. <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#ad4232b55897e7681214aa47a5a6bb3ec">warn</a> (const std::string &amp;msg) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Couts a warning. <a href="#ad4232b55897e7681214aa47a5a6bb3ec">More...</a></p>
+<p>Writes a warning message to stdout if logging is enabled. <a href="#ad4232b55897e7681214aa47a5a6bb3ec">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#ad0cdf4d952a639758e097ef25fddee8e">debug</a> (const std::string &amp;msg) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Couts a msg. <a href="#ad0cdf4d952a639758e097ef25fddee8e">More...</a></p>
+<p>Writes a debug message to stdout if logging is enabled. <a href="#ad0cdf4d952a639758e097ef25fddee8e">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a251284a49f19d7b77dc0646838e1bd97">info</a> (const std::string &amp;msg) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Couts an info. <a href="#a251284a49f19d7b77dc0646838e1bd97">More...</a></p>
+<p>Writes an info message to stdout if logging is enabled. <a href="#a251284a49f19d7b77dc0646838e1bd97">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">void</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a03cbf3976848f10002a33b89e9ddc9f1">error</a> (const std::string &amp;msg) const noexcept</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>Couts an error. <a href="#a03cbf3976848f10002a33b89e9ddc9f1">More...</a></p>
+<p>Writes an error message to stdout if logging is enabled. <a href="#a03cbf3976848f10002a33b89e9ddc9f1">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="private-member-attributes-index">Private Member Attributes Index<a href="#private-member-attributes-index" class="hash-link" aria-label="Direct link to Private Member Attributes Index" title="Direct link to Private Member Attributes Index">​</a></h2>
 
@@ -50,19 +50,20 @@ class helios::util::log::Logger { ... }
 
 <table class="doxyMembersIndex"><tbody><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">const std::string</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a3f5c34f76406c9d31661898596566ca5">scope_</a> = &quot;default&quot;</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr><tr class="doxyMemberIndexItem"><td class="doxyMemberIndexItemType" valign="top" style="text-align:left">bool</td><td class="doxyMemberIndexItemName" valign="top" style="text-align:left"><a href="#a2c7b3935145dcc8bda10b80815873bd2">enabled_</a> = true</td></tr><tr class="doxyMemberIndexDescription"><td class="doxyMemberIndexDescriptionLeft"></td><td class="doxyMemberIndexDescriptionRight">
-<p>flag to indicate whether this <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>&#x27;s output is enabled. <a href="#a2c7b3935145dcc8bda10b80815873bd2">More...</a></p>
+<p>Flag to indicate whether this <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>&#x27;s output is enabled. <a href="#a2c7b3935145dcc8bda10b80815873bd2">More...</a></p>
 </td></tr><tr class="doxyMemberIndexSeparator"><td class="doxyMemberIndexSeparator" colspan="2"></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="details">Description<a href="#details" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
 <p>Simple <a href="/docs/helios/classes/helios/util/log/logger">Logger</a> implementation.</p>
+<p>This logger writes messages to standard output with a scope prefix. It is intended for lightweight diagnostic output in examples and tests.</p>
 <div class="doxyXrefSect">
 <dl class="doxyXrefSectList">
 <dt class="doxyXrefSectTitle"><a href="/docs/helios/pages/todo/#_todo000028">Todo</a></dt>
 <dd class="doxyXrefSectDescription">
-<p>configure log stream</p>
+<p>configure log stream, severity filtering and thread-safety.</p>
 </dd>
 </dl>
 </div>
-<p>Definition at line 15 of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line 21 of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxySectionDef">
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-constructors">Public Constructors<a href="#public-constructors" class="hash-link" aria-label="Direct link to Public Constructors" title="Direct link to Public Constructors">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="a77b4817447ad32e35b6805a7f4d6d6cf">Logger()<a href="#a77b4817447ad32e35b6805a7f4d6d6cf" class="hash-link" aria-label="Direct link to Logger()" title="Direct link to Logger()">​</a></h3>
@@ -78,17 +79,17 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Creates a new <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>, tagged with specific scope.</p>
+<p>Creates a new <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>, tagged with a specific scope.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">scope</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">scope</td><td class="doxyParamItemDescription"><p>The textual scope used as a prefix in log output (e.g. &quot;helios::rendering&quot;).</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00031">31</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00037">37</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a77b4817447ad32e35b6805a7f4d6d6cf">31</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">explicit</span><span class="doxyHighlight"> <a href="#a77b4817447ad32e35b6805a7f4d6d6cf">Logger</a>(std::string scope) :</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">32</span><span class="doxyLineContent"><span class="doxyHighlight">            scope_(std::move(scope)) {}</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a77b4817447ad32e35b6805a7f4d6d6cf">37</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">explicit</span><span class="doxyHighlight"> <a href="#a77b4817447ad32e35b6805a7f4d6d6cf">Logger</a>(std::string scope) :</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">38</span><span class="doxyLineContent"><span class="doxyHighlight">            scope_(std::move(scope)) {}</span></span></div>
 </div>
 </div>
 </div>
@@ -108,18 +109,18 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Couts a msg.</p>
+<p>Writes a debug message to stdout if logging is enabled.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"><p>The message to write.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00059">59</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00065">65</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ad0cdf4d952a639758e097ef25fddee8e">59</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#ad0cdf4d952a639758e097ef25fddee8e">debug</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg) </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">60</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[DEBUG]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">61</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ad0cdf4d952a639758e097ef25fddee8e">65</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#ad0cdf4d952a639758e097ef25fddee8e">debug</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg) </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">66</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[DEBUG]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">67</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
 </div>
 </div>
 </div>
@@ -136,18 +137,18 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Enables/disables log output for this Logger-instance.</p>
+<p>Enables or disables log output for this <a href="/docs/helios/classes/helios/util/log/logger">Logger</a> instance.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">enable</td><td class="doxyParamItemDescription"><p>true to enable this log output, false to disable.</p></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">enable</td><td class="doxyParamItemDescription"><p>true to enable output, false to disable it.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00040">40</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00046">46</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a0a5f3e98be73ab2706d281ad3d1b3201">40</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">bool</span><span class="doxyHighlight"> <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">41</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ = <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>;</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">42</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a0a5f3e98be73ab2706d281ad3d1b3201">46</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeywordType">bool</span><span class="doxyHighlight"> <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>) </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">47</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ = <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">48</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
 </div>
 <p>Reference <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>.</p>
 <p>Referenced by <a href="#a0a5f3e98be73ab2706d281ad3d1b3201">enable</a>.</p>
@@ -166,18 +167,18 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Couts an error.</p>
+<p>Writes an error message to stdout if logging is enabled.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"><p>The message to write.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00079">79</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00085">85</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a03cbf3976848f10002a33b89e9ddc9f1">79</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#a03cbf3976848f10002a33b89e9ddc9f1">error</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg) </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">80</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[ERROR]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">81</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a03cbf3976848f10002a33b89e9ddc9f1">85</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#a03cbf3976848f10002a33b89e9ddc9f1">error</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg) </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight"> {</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">86</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[ERROR]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">87</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
 </div>
 </div>
 </div>
@@ -194,18 +195,18 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Couts an info.</p>
+<p>Writes an info message to stdout if logging is enabled.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"><p>The message to write.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00069">69</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00075">75</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a251284a49f19d7b77dc0646838e1bd97">69</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#a251284a49f19d7b77dc0646838e1bd97">info</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg)  </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight">{</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">70</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[INFO]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">71</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#a251284a49f19d7b77dc0646838e1bd97">75</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#a251284a49f19d7b77dc0646838e1bd97">info</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg)  </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight">{</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">76</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[INFO]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">77</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
 </div>
 </div>
 </div>
@@ -222,18 +223,18 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Couts a warning.</p>
+<p>Writes a warning message to stdout if logging is enabled.</p>
 <dl class="doxyParamsList">
 <dt class="doxyParamsTableTitle">Parameters</dt>
 <dd>
-<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"></td></tr></tbody></table>
+<table class="doxyParamsTable"><tbody><tr class="doxyParamItem"><td class="doxyParamItemName">msg</td><td class="doxyParamItemDescription"><p>The message to write.</p></td></tr></tbody></table>
 </dd>
 </dl>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00049">49</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00055">55</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ad4232b55897e7681214aa47a5a6bb3ec">49</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#ad4232b55897e7681214aa47a5a6bb3ec">warn</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg) </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight">{</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">50</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[WARN]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
-<div class="doxyCodeLine"><span class="doxyLineNumber">51</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber"><a href="#ad4232b55897e7681214aa47a5a6bb3ec">55</a></span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">void</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">inline</span><span class="doxyHighlight"> <a href="#ad4232b55897e7681214aa47a5a6bb3ec">warn</a>(</span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string&amp; msg) </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> </span><span class="doxyHighlightKeyword">noexcept</span><span class="doxyHighlight">{</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">56</span><span class="doxyLineContent"><span class="doxyHighlight">            enabled_ &amp;&amp; std::cout &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[WARN]&quot;</span><span class="doxyHighlight"> &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;[&quot;</span><span class="doxyHighlight"> &lt;&lt; scope_ &lt;&lt; </span><span class="doxyHighlightStringLiteral">&quot;] &quot;</span><span class="doxyHighlight"> &lt;&lt; msg &lt;&lt; std::endl;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">57</span><span class="doxyLineContent"><span class="doxyHighlight">        }</span></span></div>
 </div>
 </div>
 </div>
@@ -248,10 +249,10 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>flag to indicate whether this <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>&#x27;s output is enabled.</p>
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00023">23</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Flag to indicate whether this <a href="/docs/helios/classes/helios/util/log/logger">Logger</a>&#x27;s output is enabled.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00029">29</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">23</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">bool</span><span class="doxyHighlight"> enabled_ = </span><span class="doxyHighlightKeyword">true</span><span class="doxyHighlight">;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">29</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeywordType">bool</span><span class="doxyHighlight"> enabled_ = </span><span class="doxyHighlightKeyword">true</span><span class="doxyHighlight">;</span></span></div>
 </div>
 </div>
 </div>
@@ -263,9 +264,9 @@ class helios::util::log::Logger { ... }
 </td></tr></tbody></table>
 </div>
 <div class="doxyMemberDoc">
-<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00018">18</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
+<p>Definition at line <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx/#l00024">24</a> of file <a href="/docs/helios/files/include/include/helios/include/helios/util/include/helios/util/log/logger-ixx">Logger.ixx</a>.</p>
 <div class="doxyProgramListing">
-<div class="doxyCodeLine"><span class="doxyLineNumber">18</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string scope_ = </span><span class="doxyHighlightStringLiteral">&quot;default&quot;</span><span class="doxyHighlight">;</span></span></div>
+<div class="doxyCodeLine"><span class="doxyLineNumber">24</span><span class="doxyLineContent"><span class="doxyHighlight">        </span><span class="doxyHighlightKeyword">const</span><span class="doxyHighlight"> std::string scope_ = </span><span class="doxyHighlightStringLiteral">&quot;default&quot;</span><span class="doxyHighlight">;</span></span></div>
 </div>
 </div>
 </div>
