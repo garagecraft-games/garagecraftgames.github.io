@@ -5,7 +5,6 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-import doxygenApiNavbar from './docusaurus-config-navbar-doxygen-helios.json'
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -77,7 +76,6 @@ const config = {
         },
         theme: {
           customCss: [
-              './src/css/custom-doxygen2docusaurus.css',
               './src/css/custom.css'
           ]
         },
@@ -129,7 +127,6 @@ const config = {
         },
         items: [
           {to: '/helios', label: 'helios', position: 'left'},
-          doxygenApiNavbar,
           {to: '/devlog', label: 'devlog', position: 'left'},
           {
             href: 'https://github.com/garagecraft-games',
