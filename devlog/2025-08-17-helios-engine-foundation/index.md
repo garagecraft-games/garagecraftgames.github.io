@@ -33,9 +33,7 @@ Well, as much as I like the concept behind the [Bridge Pattern](https://en.wikip
 
 I scrapped the Pimpl (heh!) and rebuilt Guid as a simple, efficient class wrapping a `uint64_t`. It should be as cheap to use as an `int` - benchmarks tba.
 
-<center>
 ![](img/guid.png)
-</center>
 
 ### What's Next?
 The foundation is now in place. I'm striving for a small math and utility library before I go back to rendering and OpenGL. The process has been a deep dive into not just how C++ features work, but why they are designed the way they are.
