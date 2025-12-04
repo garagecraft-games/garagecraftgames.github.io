@@ -1,7 +1,9 @@
 ---
 title: "From Camera- to Clip-Space, to NDCs and z-Fighting"
+description: "Deriving orthographic and perspective projection matrices - from camera space to clip space"
 tags: [devlog, helios]
-keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+keywords: [linear algebra, projection matrices, orthographic projection, perspective projection, clip space, ndc, opengl, camera]
+authors: [thorstensuckow]
 ---
 
 import CubeOrthoIso from "./img/ortho_proj_cube_iso_small.gif";
@@ -10,15 +12,11 @@ import {SocialLinks} from "../../src/components/SocialLinks";
 <center>
 <img style={{mixBlendMode:"screen",filter:"invert(1)"}} src={CubeOrthoIso} />
 </center>
-As a follow-up to [my article on Model Matrix Rotations](/devlog/2025/09/02/model-matrix-rotations), I'm continuing my exploration of the OpenGL rendering pipeline's mathematical foundations. This new article examines projection matrices, one of the final computational steps before rasterization transforms 3D geometry into the 2D pixels we see on screen.
+Continuing from [my article on Model Matrix Rotations](/devlog/2025/09/02/model-matrix-rotations), I've written about projection matrices - one of the final steps before rasterization.
 
  <!--truncate-->
 
-The article provides mathematical derivations for both orthographic and perspective projection matrices, demonstrating how arbitrary view volumes in camera space are transformed into the canonical unit cube through clip space coordinates.
-
-If you're interested in how coordinate spaces work in 3D graphics, particularly in OpenGL, this article should be worth your time.
-
-You can read the full article [here](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/from-camera-to-clip-space-derivation-of-the-projection-matrices).
+The [article](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/from-camera-to-clip-space-derivation-of-the-projection-matrices) derives both orthographic and perspective projection matrices, showing how view volumes in camera space are transformed into the canonical unit cube.
 
 
 <SocialLinks />

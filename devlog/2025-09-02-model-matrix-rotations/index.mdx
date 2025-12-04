@@ -1,7 +1,9 @@
 ---
 title: "Model Matrix: Rotations"
+description: "Matrix composition for rotations - local space vs world space transformations"
 tags: [devlog, helios]
-keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+keywords: [linear algebra, model matrix, rotations, matrix composition, local space, world space, opengl, unity]
+authors: [thorstensuckow]
 ---
 
 import RotationComposition from "./img/rotationcomposition.gif";
@@ -10,13 +12,11 @@ import {SocialLinks} from "../../src/components/SocialLinks";
 <center>
 <img style={{mixBlendMode:"screen",filter:"invert(1)"}} src={RotationComposition} />
 </center>
-As a follow-up to [my article on Model Matrices](/devlog/2025/08/26/model-matrix-transformations), which describes the connection to change-of-coordinates matrices, I've found the time to revisit the topic. I've written a [new article](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/model-matrix-rotation-world-vs-local-origin) about matrix composition in the context of the Model and Rotation matrices to highlight the algebraic foundations.
+Following up on [my article on Model Matrices](/devlog/2025/08/26/model-matrix-transformations), I've written about matrix composition in the context of Model and Rotation matrices.
 
  <!--truncate-->
 
-In the article, I explore the difference between rotating an object around its own center (local space) and rotating it around an external point in the game world (world space). I show why the order of matrix multiplication is so important and how you can significantly improve performance by pre-calculating the transformation matrix. And since I use glm as a reference for my own implementation, I also cover how rotations are handled in that library (and in Unity).
-
-You can read the article [here](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/model-matrix-rotation-world-vs-local-origin).
+The [article](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/model-matrix-rotation-world-vs-local-origin) covers the difference between rotating around an object's own center (local space) versus rotating around a point in world space. It explains why matrix multiplication order matters, how to pre-calculate transformations for better performance, and how glm and Unity handle rotations.
 
 
 <SocialLinks />

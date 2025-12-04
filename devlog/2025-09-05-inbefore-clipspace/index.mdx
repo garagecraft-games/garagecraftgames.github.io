@@ -1,21 +1,21 @@
 ---
-title: "Inb4 Clip Space "
+title: "Inb4 Clip Space"
+description: "Implementing vector operations and lookAt function - cross product, dot product, and view matrices"
 tags: [devlog, helios]
-keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+keywords: [cpp, vector operations, cross product, dot product, lookAt, view matrix, camera, glm, benchmarks]
+authors: [thorstensuckow]
 ---
 
 import {SocialLinks} from "../../src/components/SocialLinks";
 
 ### Updates from the commit log
 
-`helios` now implements core vector operations, including subtraction for directional calculations, dot product for scalar projections, and cross product for normal vector computation and creating orthonormal bases, respectively. The cross product implementation utilizes `constexpr` specifications for compile-time evaluation when operands are constant expressions.
-The `lookAt` function constructs view matrices for camera-space transformations following [standard computer graphics methodology](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/change-of-coordinates-and-applications-to-view-matrices). The implementation creates an orthonormal basis from `eye`, `target`, and `up` vectors, then formulates the change-of-basis matrix with integrated translation components for camera positioning to the origin.
+`helios` now has core vector operations: subtraction, dot product, cross product. The `lookAt` function constructs view matrices from `eye`, `target`, and `up` vectors, following [standard methodology](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/change-of-coordinates-and-applications-to-view-matrices).
 
 <!--truncate-->
 
-### Performance and Technical Considerations
-Benchmarking was implemented for the cross product and `lookAt` functions due to their frequent invocation in rendering contexts.
-The results validate the effectiveness of `constexpr` optimizations, but I'm not close to `glm` in this regard, as their optimizations go several steps further than helios' userland code implementation.
+### Performance
+I benchmarked `cross` and `lookAt` since they're called frequently during rendering. The `constexpr` optimizations help, but `glm` is still faster - their optimizations go deeper than what I've implemented so far.
 
 | Benchmark | Time | CPU | Iterations |
 |-----------|------|-----|------------|
@@ -27,6 +27,6 @@ The results validate the effectiveness of `constexpr` optimizations, but I'm not
 | BM_glm_vec3Dot/real_time | 10.1 ns | 9.81 ns | 70,071,613 |
 
 ### Static
-Some symbol collisions from duplicate test function definitions happened during compilation. I remembered from C that `static` limits symbol scope to file level, which resolved the issue without further changes - it's always nice when simple concepts provide quick solutions without requiring the introduction of new namespaces.
+Had some symbol collisions from duplicate test function definitions. Using `static` to limit symbol scope to file level solved it - a simple fix from C that still works.
 
 <SocialLinks />

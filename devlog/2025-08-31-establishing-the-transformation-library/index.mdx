@@ -1,21 +1,23 @@
 ---
 title: "Establishing the Transformation Library"
+description: "Implementing translate, rotate, and scale functions with constexpr for helios.math.transform"
 tags: [devlog, helios]
-keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+keywords: [cpp, constexpr, transformations, translate, rotate, scale, glm, matrix math, post-multiplication]
+authors: [thorstensuckow]
 ---
 
 import {SocialLinks} from "../../src/components/SocialLinks";
 
-This weekend's development on the [helios engine](/helios) centered on finalizing transformation logic within [`helios.math`](https://github.com/ThorstenSuckow/helios/tree/main/src/helios/math).
+`translate`, `rotate`, `scale` - done. They now live in [`helios.math.transform`](https://github.com/ThorstenSuckow/helios/tree/main/src/helios/math).
 
-The transformation functions `translate`, `rotate`, `scale` were implemented within `helios.math.transform`. A key decision was to standardize on post-multiplication (M' = M * T) for all transformations, to provide parity with [`glm`](https://github.com/g-truc/glm): This convention ensures that new transformations are applied in the _local space_ of a [model matrix `M`](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/model-matrix-transformations-a-change-of-coordinates-perspective).
+I standardized on post-multiplication (`M' = M * T`) to stay consistent with [`glm`](https://github.com/g-truc/glm). Transformations are applied in [local space](https://thorsten.suckow-homberg.de/docs/articles/computer-graphics/model-matrix-transformations-a-change-of-coordinates-perspective).
 
   <!--truncate-->
 
-## Implementation Notes: `constexpr` and Performance
-To maximize performance and enable compile-time computation, all transformation functions were designed as `constexpr` operations. The notable exception is `rotate()`, which depends on trigonometric functions (`sin`, `cos`) and vector normalization (`sqrt`), none of which are `constexpr` in the standard library. Future work may include implementing `constexpr` variants of these mathematical primitives, depending on how benchmarks fare in specific rendering scenarios.
+## `constexpr` - mostly
+`translate` and `scale` are `constexpr`. `rotate` isn't - `sin`, `cos`, `sqrt` aren't `constexpr` in the standard library, so that's that for now.
 
-The `translate` and `scale` functions were implemented as direct, element-wise modifications of the input matrix, avoiding the creation of temporary matrices. This optimized approach is mathematically equivalent to the full matrix multiplication but results in more efficient code.
+I also skipped the temporary matrices for `translate` and `scale` and went with direct element-wise modification instead. Mathematically equivalent, slightly more efficient.
 
 On to the rendering pipeline!
 

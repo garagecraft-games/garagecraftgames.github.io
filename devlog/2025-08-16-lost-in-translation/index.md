@@ -1,6 +1,9 @@
 ---
 title: "Lost in Translation"
+description: "Moving from web development to C++ - the culture shock of pointers, memory management, and build systems"
 tags: [devlog, helios]
+keywords: [cpp, c++, web development, java, javascript, memory management, pointers, visual studio, learning cpp]
+authors: [thorstensuckow]
 ---
 
 

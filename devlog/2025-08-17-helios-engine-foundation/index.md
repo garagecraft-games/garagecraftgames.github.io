@@ -1,6 +1,9 @@
 ---
 title: "Sundays are for constexpr"
+description: "Building helios from first principles - C++20 modules, constexpr, and the Pimpl idiom"
 tags: [devlog, helios]
+keywords: [cpp, c++, constexpr, cpp20, cpp20 modules, pimpl, game engine, helios, vec3, guid]
+authors: [thorstensuckow]
 ---
 
 import {SocialLinks} from "../../src/components/SocialLinks";

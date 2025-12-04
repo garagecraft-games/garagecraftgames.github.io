@@ -1,7 +1,9 @@
 ---
 title: "Layer Abstraction initiated"
+description: "Architecting the rendering and scene layer - from Vertex to MeshData to device-specific Meshes"
 tags: [devlog, helios]
-keywords: [indiedev, gamedev, solodev, cpp, programming, linear algebra, computer graphics, indiegames]
+keywords: [cpp, game engine architecture, rendering layer, scene graph, vertex, mesh, glfw, opengl, testing]
+authors: [thorstensuckow]
 ---
 
 import {SocialLinks} from "../../src/components/SocialLinks";
@@ -12,11 +14,11 @@ From `Vertex` to `MeshData` to device-specific `Meshes` - over the weekend, I to
 
 <!--truncate-->
 
-### Testing and Examples Subsystem
-One of the more important tasks was to establish a proper testing infrastructure. `glm` integration provides both robust math functionality and reference implementations for testing. Additionally, I've added an examples subsystem, complete with `GLFW` windowing and `glad` OpenGL context management.
+### Testing and Examples
+I set up a testing infrastructure with `glm` as a reference for validating my own implementations. Added an examples subsystem with `GLFW` windowing and `glad` OpenGL context management.
 
-### Game Programming as Enterprise Software Development?
-I'm well aware that the true test isn't whether `helios` can render a perfect triangle in isolation, but whether these early architectural decisions will hold up when handling the complex and dynamic scenes that real applications demand. In software architecture, a well-laid-out plan is fundamental. And, as I know from my time as a senior full-stack dev, the deepest insights come not just from understanding the domain, but - from an engineering perspective - from refactoring.
+### Architecture First
+The real test isn't whether helios can render a triangle - it's whether these early decisions hold up with complex, dynamic scenes. In software architecture, a well-laid-out plan matters. And the deepest insights come from refactoring.
 
 
 <SocialLinks />
