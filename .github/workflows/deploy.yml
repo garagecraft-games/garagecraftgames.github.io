@@ -17,17 +17,8 @@ jobs:
           node-version: 20.x
           cache: npm
 
-      - name: Fetch Doxygen XML archive from helios Pages
-        run: |
-          rm -rf .doxygen/xml
-          mkdir -p .doxygen/xml
-          curl -fsSL "https://garagecraft-games.github.io/helios/api/xml.tgz" -o /tmp/xml.tgz
-          tar -xzf /tmp/xml.tgz -C .doxygen/xml --strip-components=1
-
       - name: Install dependencies
         run: npm ci
-      - name: Build helios API docs
-        run: npx doxygen2docusaurus --id helios
       - name: Build website
         run: npm run build
 
