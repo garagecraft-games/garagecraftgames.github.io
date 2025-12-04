@@ -1,0 +1,80 @@
+---
+title: "ImGui Integration and Breaking Changes"
+description: "Frame pacing, debug overlays, and architectural improvements - preparing for the next milestone"
+tags: [devlog, helios]
+keywords: [cpp, imgui, frame pacing, fps, debug tools, breaking changes, architecture, refactoring]
+authors: [thorstensuckow]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+Since wrapping up [milestone_1](https://www.researchgate.net/publication/397445662_helios_Design_and_prototypical_implementation_of_a_C_game_framework) in October, I've been working on tooling and performance infrastructure. The focus has been on frame timing control and debugging capabilities - things you need before scaling up to more complex scenes.
+
+<!--truncate-->
+
+## Frame Timing Infrastructure
+
+Frame rate control is now in place with three new classes: `FramePacer` handles the actual frame rate limiting, `FrameStats` tracks timing information, and `FpsMetrics` analyzes performance over time. There's also a `Stopwatch` for high-resolution timing measurements.
+
+The implementation is straightforward - the `FramePacer` ensures consistent frame times, which is important for physics integration later. Right now it's just preventing the GPU from running at 100% unnecessarily.
+
+## ImGui Integration
+
+I've added an ImGui layer for debug overlays. The architecture is split into:
+- `ImGuiBackend` - platform abstraction
+- `ImGuiGlfwOpenGLBackend` - concrete GLFW/OpenGL implementation
+- `ImGuiOverlay` - singleton manager for widgets
+- `ImGuiWidget` - base interface for custom widgets
+
+Three widgets are currently implemented: `FpsWidget` for frame rate display, `GamepadWidget` for controller input visualization, and `LogWidget` - a scrollable console with log filtering.
+
+The overlay system makes it easy to toggle debug info on and off, which has already helped with tracking down frame timing issues.
+
+<center>
+![](img/imgui_overlay.gif)
+</center>
+
+## Breaking Changes
+
+Along the way, I've made some architectural improvements that required breaking changes:
+
+**Enum sentinels** are now consistently named `size_` across the codebase. Before, some enums used `COUNT`, others `SIZE`, some `size`. The trailing underscore avoids macro conflicts and works better with code generation tools.
+
+```cpp
+// Before
+enum class Key { A, B, C, COUNT };
+
+// After
+enum class Key { A, B, C, size_ };
+```
+
+**MeshData merged with Mesh**. The separate `MeshData` class was redundant - `Mesh` now handles geometry directly.
+
+**New RenderPrototype abstraction**. The rendering setup now uses a `RenderPrototype` that combines `Material` and `Mesh`. A `Renderable` then references this prototype, optionally with a `MaterialPropertiesOverride` for per-instance variations:
+
+```cpp
+// Material = Shader + MaterialProperties
+auto materialProps = std::make_shared<MaterialProperties>(
+    vec4f(1.0f, 0.0f, 1.0f, 0.5f), 0.0f
+);
+auto material = std::make_shared<Material>(shader, materialProps);
+
+// RenderPrototype = Material + Mesh
+auto prototype = std::make_shared<RenderPrototype>(material, mesh);
+
+// Renderable with optional per-instance override
+auto renderable = std::make_shared<Renderable>(
+    prototype,
+    MaterialPropertiesOverride(vec4f(0.25f, 0.96f, 0.35f, 0.5f), 0.0f)
+);
+```
+
+This separates shared resources (prototype) from instance-specific data (override), which is useful when rendering multiple objects with the same mesh but different colors.
+
+
+## What's Next
+
+With frame timing and debug tools in place, I can focus on the actual game logic. The input system is solid, the rendering pipeline handles basic geometry, and the scene graph works. Time to build something that moves.
+
+<SocialLinks />
+
