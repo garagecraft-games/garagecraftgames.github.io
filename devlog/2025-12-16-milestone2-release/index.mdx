@@ -1,0 +1,127 @@
+---
+title: "Milestone 2: Scene Graph, Gamepad Widgets, and a Flying Spaceship"
+description: "helios v0.1.0-milestone2 brings scene graph camera integration, gamepad customization, ImGui dev tools, and an interactive spaceship demo"
+tags: [devlog, helios]
+keywords: [cpp, scene graph, camera, gamepad, imgui, game framework, indiedev, spaceship, input handling, milestone]
+authors: [thorstensuckow]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+Milestone 2 is out. I originally planned to add some camera controls, but ended up rewriting how cameras integrate with the scene graph entirely. Along the way I also built the foundations for the game object system, a bunch of ImGui debug widgets, and a small spaceship demo where you fly around with a gamepad.
+
+<!--truncate-->
+
+## Camera Refactor
+
+In milestone_1, `Camera` inherited from `SceneNode`. That worked, but it always felt a bit off - a camera is really just a viewpoint, not a scene object. Having cameras inherit all the scene node behavior led to some awkward edge cases.
+
+The new design flips it around: `CameraSceneNode` now wraps a `Camera` component. The node participates in the transform hierarchy, the camera handles projection and view logic. Much cleaner separation.
+
+The big win here is component-wise transform inheritance: Say you have a camera following a spaceship - you probably want the camera to track the ship's position, but not roll when the ship does. With `TransformType` flags you can now pick exactly what gets inherited:
+
+```cpp
+auto camera = std::make_unique<Camera>();
+auto cameraNode = std::make_unique<CameraSceneNode>(std::move(camera));
+
+// Only inherit translation from parent - ignore rotation and scale
+cameraNode->setInheritance(TransformType::Translation);
+
+auto* nodePtr = scene->addNode(std::move(cameraNode));
+```
+
+The view matrix now comes from the inverse world transform of the camera node, so all the existing hierarchy logic I had for other nodes just works here too.
+
+## Game Objects and Commands
+
+I went back and forth on the concepts of ECS, but decided to keep it simple with plain old OOP/inheritance: I landed on a basic `GameObject` class with GUID identification and a `GameWorld` container. Nothing fancy, but it covers what helios needs right now.
+
+The part I like is the `CommandBuffer`. Instead of having input handlers execute game logic directly, they push commands to a buffer that gets processed once per frame. Same inputs in the same frame always produce the same result, and it opens the door for replays later:
+
+```cpp
+const auto stick = inputSnapshot.gamepadState().left();
+float speed      = stick.length();
+speed = speed <= helios::math::EPSILON_LENGTH ? 0.0f : speed;
+
+helios::math::vec2f dir = speed > 0.0f
+                            ? stick * (1.0f/speed)
+                            : helios::math::vec2f{0.0f, 0.0f};
+
+commandBuffer.add(
+    guid,
+    std::make_unique<
+    helios::examples::spaceshipControl::commands::PlayerMoveCommand
+    >(dir, speed)
+);
+```
+
+## Gamepad Config
+
+I've been testing with a couple of different controllers: An old Xbox Elite Series 2 pad (whose best days are long gone) and a GameSir G7 (which really deserves all the praise it got in reviews - minus the dpad). The important thing for debugging was that they all behave slightly differently when it comes to stick drift and axis ranges.
+So I added `GamepadSettings` for per-controller deadzone thresholds and axis inversion. The deadzones use a radial strategy, which gets rid of that annoying diagonal drift you get with cheap analog sticks. The `GamepadWidget` exposes all of this at runtime with sliders and toggles, which beats recompiling every time I want to try a different threshold.
+
+## Units
+
+This is one of those things I should have done from the start: helios now has a proper units system. One helios unit equals one meter, time is measured in seconds. There are conversion helpers for when you need centimeters or milliseconds:
+
+```cpp
+using namespace helios::core::units;
+
+float distance = from(50.0, helios::core::units::Unit::Centimeter);  // 0.5
+```
+
+## Spaceship Demo
+
+The `spaceship_control` example brings everything together: a small spaceship you fly with gamepad, a camera parented to the ship that inherits only translation (so it follows position but stays level when the ship rotates), and the ImGui overlay for tweaking things live.
+
+Input flows through `InputSnapshot`, the handler creates movement commands, and the `CommandBuffer` executes them each frame. It's more architecture than a demo strictly needs, but it validates that the systems work together. And flying the spaceship around is genuinely fun.
+
+<center>
+![](img/spaceship_control.gif)
+</center>
+
+## Breaking Changes
+
+If you're coming from milestone_1, a few things moved around:
+
+- **Cameras**: `CameraSceneNode` now wraps `Camera`, not the other way around. Viewport uses `setCameraSceneNode()`.
+- **Enum sentinels**: Renamed from `COUNT` to `size_` everywhere for consistency.
+- **MeshData**: Merged into `Mesh`.
+- **Material**: Now owns shader and properties via shared_ptr.
+
+The camera change is the disruptive one, but the component-wise transform inheritance makes the migration worth it.
+
+## Next
+
+The scene graph works the way I want now, input handling is solid, and I have debug tools that save time. The obvious gap is that everything still looks like colored shapes. Next milestone will focus on shooting bullets and basic collision detection, so the ship doesn't leave the arena.
+
+[Pre-built binaries can be found here](https://github.com/ThorstenSuckow/helios/releases) if you want to try the examples.
+
+## Usage of Copilot in this Milestone
+
+### Code Generation
+I ended up spending more time on debug widgets than I originally planned, but having good tools makes everything else faster. I saw this as a good opportunity to try GitHub Copilot for code generation, so I gave it a shot for the ImGui widgets after I implemented the basic ImGui-related API.
+
+ Copilot generated boilerplate code for the widgets based on my comments and function signatures, which saved me a lot of typing. I still had to tweak the generated code to fit my architecture and style to some extent, but it was a helpful starting point and impressive to see how far models like Claude Opus 4.5 have come.
+
+Here's what was built with the help of Claude Opus 4.5, Gemini 3 Pro and ChatGPT-5.1-Codex:
+
+| Widget | What it does |
+|--------|-------------|
+| `FpsWidget` | Frame rate display, target FPS control |
+| `GamepadWidget` | Real-time stick visualization, deadzone config |
+| `LogWidget` | Searchable log console with scope filtering |
+| `CameraWidget` | Position, orientation, projection controls |
+| `MainMenuWidget` | Theme switching, docking options |
+
+The `LogWidget` hooks into the logging system through a custom `ImGuiLogSink`. You can filter by scope and search through the output while the app is running. I've already found bugs in minutes that would have taken me much longer with plain console output.
+
+### Code Review
+As a solo dev, I've also come to appreciate GitHub's Copilot code review. No colleagues to catch my mistakes, but at least I get a second pair of "eyes" on pull requests before merging.
+
+### Manifesto for AI-Augmented Software Craftsmanship
+
+As I have stated in a [previous post](http://garagecraft.games/devlog/2025/11/25/value-driven-game-development-in-the-age-of%20-aI-assistance), it is important to me that I understand what I'm building. Using AI tools for boilerplate generation and code review helps me focus on the architecture and design decisions, while still ensuring that I grasp the underlying concepts. To add transparency to my use of AI tools, I have documented my approach in [The Manifesto for AI-Augmented Software Craftsmanship](https://ai-manifesto.software-craftsmanship.dev), which I also discussed [in more detail here](https://thorsten.suckow-homberg.de/blog/manifesto-for-ai-augmented-software-craftsmanship).
+
+<SocialLinks />
+
