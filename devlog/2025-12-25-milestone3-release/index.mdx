@@ -1,0 +1,95 @@
+---
+title: "🎄 Milestone 3: Game Systems, Components, Projectiles and Boundaries 🎁"
+description: "helios milestone 3 adds game systems, a component-based approach for composing behavior, projectile pooling for shooting, and simple AABB level bounds collision."
+tags: [devlog, helios, milestone3, game-systems, components]
+keywords: [cpp, game framework, components, projectile, pooling, aabb, camera, scene graph, indiedev, spaceship, input]
+authors: [thorstensuckow]
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+Merry Christmas - Milestone 3 is out. This one is smaller on flashy visuals but much bigger where it matters: the framework now helps to build gameplay faster. Over the last week I focused on three practical gaps that showed up while iterating on the spaceship demo: clearer system boundaries, easier composition of behavior, and stable, cheap shooting.
+
+<!--truncate-->
+
+import spaceship_shooting from "./img/spaceship_shooting.webm";
+
+<div style={{ textAlign: 'center' }}>
+  <video
+    autoPlay
+    loop
+    controls
+    muted
+    playsInline
+    preload="metadata"
+    poster="/img/spaceship_shooting_poster.png"
+    aria-label="Spaceship shooting demo"
+    style={{ maxWidth: '100%', height: 'auto', maxHeight: '480px', display: 'block', margin: '0 auto' }}
+  >
+    <source src={spaceship_shooting} type="video/webm" />
+  </video>
+</div>
+
+
+## What landed in Milestone 3
+
+Short version: game systems, a component model for game objects, a projectile pool for shooting, and axis‑aligned bounding box (AABB) level bounds for simple collision and containment.
+
+I decided to keep the implementation small and pragmatic. Nothing over‑engineered, just clean primitives that make the next iterations easier to build.
+
+### Game Systems
+
+A tiny system layer now orchestrates update steps and lifecycles for subsystems like the physics and collision step, the game object update step and any gameplay systems I plan to add later (spawning, AI, audio, etc.). The idea is to avoid ad‑hoc update calls scattered across the codebase and instead have a clear place each frame where systems run in a deterministic order.
+
+This also makes testing and replaying input simpler because systems operate on snapshots and command buffers rather than being driven by side‑effects in input handlers.
+
+### Composition over Inheritance (The Gang of Four was right)
+
+It became obvious early after milestone 2 that OOP inheritance was getting brittle. For Milestone 3 I added a small component model: lightweight components attach to `GameObject`s (or entities) and expose behaviour such as movement, weapon emitters, or renderables.
+
+This lets me compose behavior at runtime: instead of creating a new subclass for every combination (PlayerShipWithLaserAndShield), I attach a `LevelBoundsBehavior` component and a `Shooting` component to the same object, cutting down code duplication and speed up experimentation.
+
+```cpp
+auto shipGameObject = std::make_unique<helios::engine::game::GameObject>();
+shipGameObject->add<helios::engine::game::components::scene::SceneNodeComponent>(spaceshipSceneNode);
+shipGameObject->add<helios::engine::game::components::input::TwinStickInputComponent>();
+shipGameObject->add<helios::engine::game::components::physics::Move2DComponent>();
+shipGameObject->add<helios::engine::game::components::physics::TransformComponent>();
+shipGameObject->add<helios::engine::game::components::physics::ScaleComponent>(
+    SPACESHIP_SIZE, SPACESHIP_SIZE, 0.0f, helios::core::units::Unit::Meter);
+shipGameObject->add<helios::engine::game::components::gameplay::Aim2DComponent>();
+shipGameObject->add<helios::engine::game::components::gameplay::ShootComponent>();
+shipGameObject->add<helios::engine::game::components::physics::LevelBoundsBehaviorComponent>();
+shipGameObject->add<helios::engine::game::components::physics::AabbColliderComponent>();
+
+//...
+
+gameWorld.add<helios::engine::game::systems::physics::ScaleSystem>();
+gameWorld.add<helios::engine::game::systems::physics::Move2DSystem>();
+gameWorld.add<helios::engine::game::systems::scene::SceneSyncSystem>(scene.get());
+gameWorld.add<helios::engine::game::systems::physics::BoundsUpdateSystem>();
+gameWorld.add<helios::engine::game::systems::physics::LevelBoundsBehaviorSystem>();
+gameWorld.add<helios::engine::game::systems::post::TransformClearSystem>();
+gameWorld.add<helios::engine::game::systems::post::ScaleClearSystem>();
+
+```
+
+Practical note: components live alongside the existing scene graph and play nicely with the `GameWorld`/`GameObject` container I had in place, the integration is intentionally minimal and explicit. However, there is a tight coupling to the `SceneGraph` as an authoritative source of transforms for game objects with visual representation, which keeps things simple for now. This i definitely an area to revisit later as the framework matures.
+
+### Shooting: Projectile Pool
+
+Shooting is now implemented using a simple object pool of projectiles. The pool recycles projectile objects instead of allocating/freeing them every time you fire. For the small demos this eliminates frame spikes and is simpler than introducing a full allocator or rendering instancing right away.
+
+Instancing is already on my roadmap and I can't wait to see how the performance gains will impact the render time.
+
+### AABB Level Bounds - keep things inside the playground
+
+I added a basic axis‑aligned bounding box behavior for level bounds. It does two things: Preventing player objects from leaving the designed area, and giving projectiles a simple rule for when they should be recycled (leave the AABB => return to pool).
+
+This keeps the demo predictable and lets me tune gameplay without surprises from objects drifting out of the level boundaries (i.e., the world :) ).
+
+
+
+Happy holidays 🎄 and thanks for following along!
+
+<SocialLinks />
