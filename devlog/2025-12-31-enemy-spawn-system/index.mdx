@@ -1,0 +1,41 @@
+---
+title: "New Year’s Eve, New Spawn System"
+description: "Milestone 4 of helios focuses on making gameplay composition easier: a component-based system, game systems for runtime orchestration, an object pool for projectiles for efficient shooting, and simple AABB level-bound collision. Includes demo video and notes on camera/scene-node changes."
+date: "2025-12-31"
+slug: "/devlog/2025-12-31-enemy-spawn-system/"
+tags: [devlog, helios, milestone3, game-systems, components, projectile-pool, enemy-spawn, aabb, gameplay]
+keywords: [cpp, game framework, components, projectile, pooling, aabb, camera, scene graph, indiedev, spaceship, input, spawn-system]
+authors: [thorstensuckow]
+seo_title: "New Year’s Eve, New Spawn System"
+seo_description: "Helios Milestone 3 introduces a component-based approach and game systems for composing behaviors, projectile pooling for efficient shooting, and AABB level bounds collision. View demo and developer notes."
+canonical_url: "https://garagecraft.games/devlog/2025-12-31-enemy-spawn-system/"
+---
+
+import {SocialLinks} from "../../src/components/SocialLinks";
+
+Wrapping up the year with GameObject pooling and a SpawnSystem based on conditions and strategies. On to collision detection! 🕹️ 👾
+
+
+<!--truncate-->
+
+import enemy_spawn from "./img/enemy_spawn.webm";
+
+<div style={{ textAlign: 'center' }}>
+  <video
+    autoPlay
+    loop
+    controls
+    muted
+    playsInline
+    preload="metadata"
+    poster="/img/enemy_spawn.png"
+    aria-label="Enemy Spawn demo"
+    style={{ maxWidth: '100%', height: 'auto', maxHeight: '480px', display: 'block', margin: '0 auto' }}
+  >
+    <source src={enemy_spawn} type="video/webm" />
+  </video>
+</div>
+
+Wishing you a smooth start into the new year!
+
+<SocialLinks />
