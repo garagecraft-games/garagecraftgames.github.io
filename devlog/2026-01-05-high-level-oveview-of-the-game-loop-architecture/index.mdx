@@ -1,0 +1,162 @@
+---
+title: "helios - A High-Level Overview of the Game Loop Architecture"
+description: "A deep dive into the architectural separation of concerns in helios. This post outlines how deterministic world mutations are handled via bare-metal Commands and Managers, while decoupled communication relies on a mix of double-buffered and immediate Event Buses to ensure both thread safety and low-latency feedback."
+date: "2026-01-05"
+slug: "/2026-01-05-high-level-overview-of-the-game-loop-architecture/"
+tags: [devlog, helios, architecture, game-loop, events, commands, double-buffering, data-oriented-design]
+keywords: [cpp, game engine, architecture, command pattern, event bus, immediate mode, batch processing, determinism, frame lifecycle]
+authors: [thorstensuckow]
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+Over the past few weeks, I’ve been busy refining the helios GameLoop to enable player interactions with various GameObjects. This included, in particular, controlling the player ship, spawning enemies, and - the holy grail of every game - the collision system.
+
+<!--truncate-->
+
+It quickly became apparent that a purely object-oriented approach was too brittle and inflexible, leaving me no choice but to read up on a more versatile approach: the component-based system. For me, as an OOP scholar, this meant a paradigm shift in how I design software - but it was worth it.
+
+ And I’ve come to feel strongly that academic teaching places far too much emphasis on OOP.
+
+Even though I am only scratching the surface of proper ECS in this prototype phase, I am very satisfied with the result. However, the problem remained of how to communicate and process cross-frame actions - who orchestrates the spawning? What is a spawn, anyway? Is it an Event? Is it a Command?
+
+Based on the collision system, I had to turn the architectural screw a little further - resulting in the following design, which I will be pouring into the framework over the coming weeks.
+
+## High-Level Overview of the Game Loop Architecture
+
+<Tabs>
+    <TabItem value="[english]">
+
+
+   helios distinguishes between **Commands** (world-mutating operations) and **Events** (signals/facts).
+   Commands exist to mutate the world state _deterministically_. Events exist to decouple systems: they either express a request/intent (e.g. SpawnRequest) or a fact (e.g. `SolidCollisionEvent`, `TriggerCollisionEvent`, `SpawnedEvent`).
+
+   ## Commands and CommandBuffer
+   Participating systems can write Commands into the CommandBuffer in frame $N$.
+   At the beginning of each frame $N+1$, the CommandBuffer is flushed, which commits the Commands - i.e. their `execute()` method is invoked. This method contains the logic that mutates the world state (e.g. spawning, despawning, health changes, component changes). Commands are ``bare metal`` and therefore the lowest level in the game-loop layer, i.e. no further preparation of a Command is required. The system should therefore also be able to commit Commands coming directly from a developer console into the GameWorld (optionally delegating them to their respective managers - see below).
+
+   ## Events and double-buffered EventBus
+   In addition, systems can emit Events in frame $N$, e.g. **request events** - events that intend to mutate the world state - or plain signals such as `SolidCollisionEvent`, from which world-mutating Commands (despawn) can be derived.
+   The EventBus is double-buffered (`helios.core.data.TypeIndexedDoubleBuffer`): events are written into the write buffer in frame $N$ and become visible in the read buffer only after a buffer swap (`swapBuffers()`) at the beginning of frame $N+1$.
+
+   At the beginning of frame $N+1$, events are dispatched from the read buffer. As mentioned above, request events can be translated into Commands and written into the CommandBuffer.
+
+   This yields the following order at the beginning of frame $N+1$:
+
+   ```cpp
+   EventBus.swapBuffers()
+
+   EventBus.dispatch() // Events from which Commands may be generated
+
+   CommandBuffer.flush() // Commit - mutates the world state,
+                         // optional manager-based command processing
+   ```
+
+   ### Optional manager-based command processing
+   Instead of having each Command fully implement the mutation logic in `execute()`, the CommandBuffer can additionally hold registered managers. In this model, `execute()` primarily performs a registering/planning step, and the managers then process their work as a coordinated batch.
+
+   Example:
+
+   ```cpp
+   CommandBuffer::flush() {
+       for (auto& cmd : commands)
+           cmd->execute();   // in execute e.g.:
+                             // spawnManager->enqueue(position, enemyType);
+
+       for (auto& mgr : managers)
+           mgr->process();   // the spawnManager processes the spawn list
+   }
+   ```
+
+   This model allows Commands to be bundled, sorted, and processed deterministically (e.g. handle all spawns first, then all despawns).
+
+   ## Immediate Events (single-buffered)
+   For time-critical feedback that does not mutate the world state (particle effects, audio feedback), there is a separate **ImmediateBus** (single-buffered).
+   Immediate events should be processed within the same frame without additional double-buffer latency. A suitable dispatch point is after `CommandBuffer.flush()`, so that feedback can observe the world that was committed at the beginning of the frame in a consistent state. This mitigates latency (e.g. ~16ms at 60fps) and allows feedback to be triggered in the same frame as a specific event, which improves the overall user experience ("game feel").
+
+   Overall, the frame-begin order becomes:
+
+   ```cpp
+   EventBus.swapBuffers() // input
+   EventBus.dispatch()
+
+   CommandBuffer.flush() // mutation
+
+   ImmediateBus.dispatch() // signals
+
+   // gameplay systems updating physics
+   Move2DSystem.update();
+   ...
+   ```
+    </TabItem>
+    <TabItem value="[deutsch]">
+
+
+    helios unterscheidet zwischen **Commands** (weltverändernde Mutationen) und **Events** (Signale/Fakten).
+    Commands dienen dazu, den Weltzustand _deterministisch_ zu verändern. Events dienen dazu, Systeme zu entkoppeln: Sie drücken entweder einen Request/Intent (z. B. SpawnRequest) oder ein Fakt (z. B. `SolidCollisionEvent`, `TriggerCollisionEvent`, `SpawnedEvent`) aus.
+
+    ## Commands und CommandBuffer
+    Teilnehmende Systeme können beliebig Commands in Frame $N$ in den CommandBuffer schreiben.
+    Zu Beginn jedes Frames $N+1$ wird der CommandBuffer geflusht, wodurch die Commands committed werden  - es wird deren `execute()`-Methode aufgerufen. Die Methode enthält die Logik, die den Weltzustand mutiert (z. B. Spawning, Despawning, Health-Änderungen, Component-Änderungen). Commands sind``bare metal`` und damit die niedrigste Ebene in der GameLoop-Schicht, d.h., es ist keine weitere Aufbereitung eines Commands mehr nötig. Das System sollte also auch in der Lage sein, Commands von einer Entwickler-Console direkt in die GameWorld zu übertragen (ggf. an ihre entsprechenden Manager - s.u.).
+
+    ## Events und Double-Buffered EventBus
+    Zusätzlich können Systeme in Frame $N$ Events erzeugen, z. B. **Request Events** - solche bspw. die beabsichtigen, einen den Weltzusatend zu mutieren, oder auch einfach nur Signale, wie bspw. `SolidCollisionEvent`, aus der weltzustandmutierende Commands (despawn) abgeleitet werden.
+    Der EventBus ist double-buffered (`helios.core.data.TypeIndexedDoubleBuffer`): Events werden in Frame $N$ in den Write-Buffer geschrieben und sind erst nach einem Buffer-Swap (`swapBuffers()`) zu Beginn von Frame $N+1$ im Read-Buffer sichtbar.
+
+    Zu Beginn von Frame N+1 werden die Events aus dem Read-Buffer dispatcht; wie oben bereits erwähnt, können dabei aus Request-Events wiederum Commands generiert und in den CommandBuffer geschrieben werden.
+
+    Daraus ergibt sich zu Beginn von Frame $N+1$ die Reihenfolge:
+
+    ```cpp
+    EventBus.swapBuffers()
+
+    EventBus.dispatch() // Events, aus denen ggf. wiederum Commands erzeugt werden
+
+    CommandBuffer.flush() // Commit - mutiert den Weltzustand,
+                          // optionale Manager-basierte Command-Verarbeitung
+    ```
+
+    ### Optionale Manager-basierte Command-Verarbeitung
+    Statt dass jeder Command die Logik einer Mutation vollständig in `execute()` implementiert, kann der CommandBuffer zusätzlich registrierte Manager besitzen. In diesem Modell führen Commands in `execute()` primär eine registrierende/planende Aktion aus, und die Manager führen anschließend ihre Arbeit koordiniert als Batch aus.
+
+    Beispiel:
+
+    ```cpp
+    CommandBuffer::flush() {
+        for (auto& cmd : commands)
+            cmd->execute();   // in execute bspw.:
+                              // spawnManager->enqueue(position, enemyType);
+
+        for (auto& mgr : managers)
+            mgr->process();   // der spawnManager arbeitet die SpawnListe ab
+    }
+    ```
+
+    Dieses Modell erlaubt es, Commands zu bündeln, zu sortieren und deterministisch abzuarbeiten (z. B. alle Spawns zusammen, dann alle Despawns).
+
+    ## Immediate Events (Single-Buffered)
+
+    Für zeitkritisches Feedback, das nicht den Weltzustand verändert (Partikeleffekte, Audio-Feedback) existiert ein separater **ImmediateBus** (single-buffered).
+    Immediate-Events sollen im selben Frame ohne zusätzliche Double-Buffer-Latenz verarbeitet werden. Ein geeigneter Dispatch-Punkt ist nach dem `CommandBuffer.flush()`, damit das Feedback die zu Beginn dieses Frames committete Welt konsistent sehen kann. Hierdurch kann Latenz mitigiert werden (bspw. 16ms bei 60fps) und Feedback kann noch im selben Frame zu einem bestimmten Ereignis gegeben werden, was das "Game Feel" verbessern kann.
+
+    Insgesamt ergibt sich damit zu Frame-Beginn:
+
+    ```cpp
+    EventBus.swapBuffers() // input
+    EventBus.dispatch()
+
+    CommandBuffer.flush() // Mutation
+
+    ImmediateBus.dispatch() // Signale
+
+    // gameplay systeme zur aktualisierung der physik
+    Move2DSystem.update();
+    ...
+    ```
+
+    </TabItem>
+</Tabs>
+
