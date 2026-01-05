@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -44,13 +46,23 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+    stylesheets: [
+        {
+            href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+            type: 'text/css',
+            integrity:
+                'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+            crossorigin: 'anonymous',
+        },
+],
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -58,6 +70,8 @@ const config = {
               'https://github.com/garagecraft-games/garagecraftgames.github.io/tree/main/',
         },
         blog: {
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
           showReadingTime: true,
@@ -90,6 +104,8 @@ const config = {
         /**
          * Required for any multi-instance plugin
          */
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
         id: 'devlog',
         blogSidebarTitle: 'All posts',
         blogSidebarCount: 'ALL',
@@ -101,7 +117,7 @@ const config = {
         /**
          * Path to data on filesystem relative to site dir.
          */
-        path: './devlog',
+        path: './devlog'
       },
     ],
   ],
