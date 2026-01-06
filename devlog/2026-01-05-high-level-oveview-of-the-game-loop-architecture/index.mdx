@@ -46,30 +46,37 @@ Based on the collision system, I had to turn the architectural screw a little fu
 
    This yields the following order at the beginning of frame $N+1$:
 
-   ```cpp
-   EventBus.swapBuffers()
+    ```cpp
+    EventBus.swapBuffers;()
 
-   EventBus.dispatch() // Events from which Commands may be generated
+    EventBus.dispatch(); // Events from which Commands may be
+                        // generated
 
-   CommandBuffer.flush() // Commit - mutates the world state,
-                         // optional manager-based command processing
-   ```
+    CommandBuffer.flush(); // Commit - mutates the world state,
+
+    ManagerRepository.flush(); // optional manager-based command
+                              // processing
+    ```
 
    ### Optional manager-based command processing
-   Instead of having each Command fully implement the mutation logic in `execute()`, the CommandBuffer can additionally hold registered managers. In this model, `execute()` primarily performs a registering/planning step, and the managers then process their work as a coordinated batch.
+
+   Instead of having each Command fully implement the mutation logic in `execute()`, the GameLoop is aware of additional, registered managers. In this model, `execute()` primarily performs a registering/planning step, and the managers then process their work as a coordinated batch.
 
    Example:
 
-   ```cpp
-   CommandBuffer::flush() {
-       for (auto& cmd : commands)
-           cmd->execute();   // in execute e.g.:
-                             // spawnManager->enqueue(position, enemyType);
+    ```cpp
+    CommandBuffer::flush() {
+        for (auto& cmd : commands)
+            cmd->execute();   // in execute e.g.:
+                              // spawnManager->enqueue(position, enemyType);
+    }
 
-       for (auto& mgr : managers)
-           mgr->process();   // the spawnManager processes the spawn list
-   }
-   ```
+    ManagerRepository::flush() {
+        for (auto& mgr : managers)
+            mgr->process();   // the spawnManager processes commands,
+                              // e.g. the spawn list
+    }
+    ```
 
    This model allows Commands to be bundled, sorted, and processed deterministically (e.g. handle all spawns first, then all despawns).
 
@@ -79,18 +86,20 @@ Based on the collision system, I had to turn the architectural screw a little fu
 
    Overall, the frame-begin order becomes:
 
-   ```cpp
-   EventBus.swapBuffers() // input
-   EventBus.dispatch()
+    ```cpp
+    EventBus.swapBuffers() // input
+    EventBus.dispatch()
 
-   CommandBuffer.flush() // mutation
+    CommandBuffer.flush(); // mutation
 
-   ImmediateBus.dispatch() // signals
+    ManagerRepository.flush(); // orchestrating
 
-   // gameplay systems updating physics
-   Move2DSystem.update();
-   ...
-   ```
+    ImmediateBus.dispatch() // signals
+
+    // gameplay systems updating physics
+    Move2DSystem.update();
+    ...
+    ```
     </TabItem>
     <TabItem value="[deutsch]">
 
@@ -111,27 +120,33 @@ Based on the collision system, I had to turn the architectural screw a little fu
     Daraus ergibt sich zu Beginn von Frame $N+1$ die Reihenfolge:
 
     ```cpp
-    EventBus.swapBuffers()
+    EventBus.swapBuffers;()
 
-    EventBus.dispatch() // Events, aus denen ggf. wiederum Commands erzeugt werden
+    EventBus.dispatch(); // Events from which Commands may be
+                        // generated
 
-    CommandBuffer.flush() // Commit - mutiert den Weltzustand,
-                          // optionale Manager-basierte Command-Verarbeitung
+    CommandBuffer.flush(); // Commit - mutates the world state,
+
+    ManagerRepository.flush(); // optional manager-based command
+                              // processing
     ```
 
     ### Optionale Manager-basierte Command-Verarbeitung
-    Statt dass jeder Command die Logik einer Mutation vollständig in `execute()` implementiert, kann der CommandBuffer zusätzlich registrierte Manager besitzen. In diesem Modell führen Commands in `execute()` primär eine registrierende/planende Aktion aus, und die Manager führen anschließend ihre Arbeit koordiniert als Batch aus.
+    Statt dass jeder Command die Logik einer Mutation vollständig in `execute()` implementiert, verfügt die GameLoop über ein ManagerRepository, in dem verschiedene Manager die Ausführung von Commands orchestrieren. In diesem Modell führen Commands in `execute()` primär eine registrierende/planende Aktion aus, und die Manager führen anschließend ihre Arbeit koordiniert als Batch aus.
 
     Beispiel:
 
     ```cpp
     CommandBuffer::flush() {
         for (auto& cmd : commands)
-            cmd->execute();   // in execute bspw.:
+            cmd->execute();   // in execute e.g.:
                               // spawnManager->enqueue(position, enemyType);
+    }
 
+    ManagerRepository::flush() {
         for (auto& mgr : managers)
-            mgr->process();   // der spawnManager arbeitet die SpawnListe ab
+            mgr->process();   // the spawnManager processes commands,
+                              // e.g. the spawn list
     }
     ```
 
@@ -148,11 +163,13 @@ Based on the collision system, I had to turn the architectural screw a little fu
     EventBus.swapBuffers() // input
     EventBus.dispatch()
 
-    CommandBuffer.flush() // Mutation
+    CommandBuffer.flush(); // mutation
 
-    ImmediateBus.dispatch() // Signale
+    ManagerRepository.flush(); // orchestrating
 
-    // gameplay systeme zur aktualisierung der physik
+    ImmediateBus.dispatch() // signals
+
+    // gameplay systems updating physics
     Move2DSystem.update();
     ...
     ```
