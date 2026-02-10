@@ -1,0 +1,248 @@
+---
+title: "Phase/Pass Architecture: Evolution of the Game Loop"
+description: "A follow-up to the game loop architecture post, introducing the refined Phase/Pass structure. This post explores how helios now organizes the game loop into phases with granular passes, enabling fine-grained control over event propagation and command execution timing."
+date: "2026-02-10"
+slug: "/2026-02-10-phase-pass-architecture/"
+tags: [devlog, helios, architecture, game-loop, events, commands, phase-pass, double-buffering, data-oriented-design]
+keywords: [cpp, game engine, architecture, command pattern, event bus, phase, pass, commit point, determinism, frame lifecycle]
+authors: [thorstensuckow]
+---
+
+
+In my [previous post](/devlog/2026-01-05-high-level-overview-of-the-game-loop-architecture/), I outlined the high-level separation between Commands and Events in helios, along with the basic double-buffered EventBus and CommandBuffer concepts. Since then, I've iterated significantly on the architecture, and I'm excited to share what has emerged: A **Phase/Pass structure** that provides much finer control over when events become visible and when commands execute.
+
+<!--truncate-->
+
+The original design worked well for simple scenarios, but as I added more systems, like spawn scheduling, collision response and scene synchronization, I ran into timing issues: Events pushed in one system weren't visible to systems that needed to react within the same logical block of processing. So I broke the monolithic frame into hierarchical units.
+
+## From Flat to Hierarchical: The Phase/Pass Model
+
+The original architecture treated the frame as a sequence of steps:
+
+```cpp
+// Old approach
+EventBus.swapBuffers();
+EventBus.dispatch();
+CommandBuffer.flush();
+ManagerRepository.flush();
+ImmediateBus.dispatch();
+// ... systems update ...
+```
+
+This worked well in simple scenarios, but forced all events to wait until the next frame to be readable. That did not work, especially for systems that needed to communicate in the same logical phase. The new game loop architecture introduces a two-level hierarchy:
+
+## Phases and Passes
+
+The game loop is now organized into **Phases** and **Passes**:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                            FRAME                                    │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  PRE PHASE ──────────────────────────────────────────────────────   │
+│    Pass 1 (Input) ──> Pass 2 (Commit) ──> Pass 3                    │
+│                            │                                        │
+│                     [Pass Commit Point]                             │
+│  ────────────────────────────────────────────────── Phase Commit    │
+│                                                                     │
+│  MAIN PHASE ─────────────────────────────────────────────────────   │
+│    Pass 1 (Gameplay) ──> Pass 2 (Collision) ──> Pass 3 (AI)         │
+│  ────────────────────────────────────────────────── Phase Commit    │
+│                                                                     │
+│  POST PHASE ─────────────────────────────────────────────────────   │
+│    Pass 1 (Scene Sync) ──> Pass 2 (Cleanup)                         │
+│  ────────────────────────────────────────────────── Phase Commit    │
+│                                                                     │
+│                          RENDER                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+**Phases** are divided into three major segments **Pre**, **Main**, **Post**) with distinct responsibilities.
+After each phase, a **Phase Commit** occurs: phase events become readable, pass events are cleared, commands are flushed, and managers process their queues.
+
+**Passes** are sub-units within phases. A pass can optionally have a **Commit Point**, making pass-level events readable in subsequent passes of the same phase.
+
+## Three Event Buses - Three Scopes
+
+The single EventBus has evolved into three distinct buses, each with a different visibility scope:
+
+| Event Bus | Push Method | Read Method | Visibility |
+|-----------|-------------|-------------|------------|
+| **Pass** | `pushPass<E>()` | `readPass<E>()` | Subsequent passes (same phase) |
+| **Phase** | `pushPhase<E>()` | `readPhase<E>()` | Next phase |
+| **Frame** | `pushFrame<E>()` | `readFrame<E>()` | Next frame |
+
+All buses remain double-buffered, but the **swap timing** is now tied to the appropriate commit point (manual for passes, automatic for phases and frames).
+
+### Why Three Buses?
+
+Consider collision detection and response:
+
+```
+MAIN PHASE
+┌─────────────────────────────────────────────────────────────────────┐
+│ Pass 1: GridCollisionDetectionSystem                                │
+│   → Detects projectile-enemy collision                              │
+│   → pushPass<TriggerCollisionEvent>(...)                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ [Pass Commit Point]                                                 │
+│   → Pass events become readable                                     │
+├─────────────────────────────────────────────────────────────────────┤
+│ Pass 2: ProjectileCollisionSystem                                   │
+│   → for (auto& evt : readPass<TriggerCollisionEvent>())             │
+│   → Pushes DespawnCommand for projectile                            │
+│   → Pushes DamageCommand for enemy                                  │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+With `pushPass()`, the collision event is visible **within the same phase**. We do not need to wait for the next frame. Instead, it's scoped to the phase, so it doesn't pollute other phases and allows for generating commands that can be executed in the next phase: `pushPhase()` enables cross-phase communication (e.g., Pre phase schedules spawns, Main phase reads spawn confirmations), and `pushFrame()` handles true cross-frame scenarios like audio triggers.
+
+## Fine-Grained Control with Commoit-Points
+
+The key innovation is the **Commit Point**. A pass can declare a commit point, which triggers:
+
+1. Pass event bus swap → events become readable in the same phase
+2. (Optionally) Structural commit → commands execute immediately (→ Managers in next pass process Commands)
+
+```cpp
+gameLoop.phase(PhaseType::Pre)
+    .addPass()
+    .addSystem<TwinStickInputSystem>(*playerGameObject)
+    .addCommitPoint(CommitPoint::Structural)  // Move-Commands execute HERE
+
+    .addPass()
+    .addSystem<GameObjectSpawnSystem>(spawnSchedulers)
+    .addCommitPoint(CommitPoint::Structural)  // New entities active, pass to CommandBuffer
+                                              // so the underlying SpawnManager can create them
+
+    .addPass()
+    .addSystem<Move2DSystem>();  // Operates on ALL entities
+```
+
+The `CommitPoint::Structural` variant flushes the CommandBuffer at that point, enabling newly spawned entities to participate in subsequent passes within the same phase.
+
+## The Refined Phase Commit
+
+At each phase boundary, the following sequence occurs:
+
+```cpp
+// After each phase completes
+phaseEventBus.swapBuffers();    // Phase events become readable
+passEventBus.clearAll();         // Pass events are cleared
+commandBuffer.flush();           // Commands execute (mutations)
+gameWorld.flushManagers();       // Managers process queued requests
+
+// Additionally, at the end of Post phase:
+frameEventBus.swapBuffers();     // Frame events readable in next frame
+```
+
+This is the evolved version of the original `flush()` sequence, now contextualized within phases.
+
+## Complete Frame Execution
+
+Here's how a complete frame flows:
+
+```cpp
+for (phase : {Pre, Main, Post}) {
+
+    for (pass : phase.passes()) {
+        for (system : pass.systems()) {
+            system.update(updateContext);
+            // Systems can:
+            // - pushPass<E>() for same-phase communication
+            // - pushPhase<E>() for next-phase communication
+            // - pushFrame<E>() for next-frame communication
+            // - readPass<E>() for events from previous passes
+            // - readPhase<E>() for events from previous phase
+            // - readFrame<E>() for events from previous frame
+        }
+
+        if (pass.commitPoint() == CommitPoint::PassEvents) {
+            passEventBus.swapBuffers();  // Pass events readable
+        }
+
+        if (pass.commitPoint() == CommitPoint::Structural) {
+            passEventBus.swapBuffers();
+            commandBuffer.flush();        // Immediate mutation
+            gameWorld.flushManagers();
+        }
+    }
+
+    // Phase Commit
+    phaseEventBus.swapBuffers();    // Phase events readable
+    passEventBus.clearAll();         // Clear pass events
+    commandBuffer.flush();           // Execute commands
+    gameWorld.flushManagers();       // Process manager queues
+
+    if (phase == Post) {
+        frameEventBus.swapBuffers(); // Frame events readable next frame
+    }
+}
+
+render();
+```
+
+## Practical Example: Spawning a Projectile
+
+Let's trace through shooting a projectile:
+
+```
+Frame N
+═══════════════════════════════════════════════════════════════════════
+
+PRE PHASE
+┌─────────────────────────────────────────────────────────────────────┐
+│ Pass 1: TwinStickInputSystem                                        │
+│   → Player presses fire button                                      │
+│   → Pushes ShootCommand to CommandBuffer                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ [Commit Point: Structural]                                          │
+│   → CommandBuffer.flush() executes ShootCommand                     │
+│   → SpawnManager creates projectile from pool                       │
+├─────────────────────────────────────────────────────────────────────┤
+│ Pass 2: GameObjectSpawnSystem                                       │
+│   → Evaluates spawn rules, schedules enemy spawns                   │
+├─────────────────────────────────────────────────────────────────────┤
+│ [Commit Point: Structural]                                          │
+│   → New enemies spawned and activated                               │
+├─────────────────────────────────────────────────────────────────────┤
+│ Pass 3: Move2DSystem, SteeringSystem                                │
+│   → All entities (including new projectile) move                    │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+The projectile exists and moves **in the same frame** it was spawned. In the original architecture, it would have been invisible until frame N+1.
+
+## Key Improvements Over the Original Design
+
+| Aspect | Original | Phase/Pass |
+|--------|----------|------------|
+| Event visibility | Next frame only | Same phase (pass) or next phase |
+| Command execution | Once per frame | At commit points + phase boundaries |
+| Structural changes | Wait for next frame | Immediate within phase |
+| Event scope | Global | Pass / Phase / Frame |
+| Complexity | Simple | More setup, more control |
+
+## When to Use What
+
+| Scenario | Use |
+|----------|-----|
+| Collision → Damage response | `pushPass()` + Commit Point |
+| Spawn request → Spawn confirmation | `pushPhase()` |
+| Audio trigger for next frame | `pushFrame()` |
+| Immediate entity creation | `addCommitPoint(CommitPoint::Structural)` |
+
+
+## Related works
+Of ourse, this Phase/Pass architecture didn’t appear out of thin air. It’s shaped by scheduling and deferred commit patterns that have proven themselves in other ECS-driven runtimes. Unity DOTS, for example, structures execution into system groups and uses explicit EntityCommandBuffer playback points to apply structural changes at well-defined times ([Unity Entities: ECB playback](https://docs.unity3d.com/Packages/com.unity.entities@6.5/manual/systems-entity-command-buffers.html)). Bevy follows a similar philosophy with schedules and an explicit `ApplyDeferred` barrier that tells the executor when to apply buffered commands (like `Commands`) ([Bevy: ApplyDeferred](https://docs.rs/bevy/latest/bevy/ecs/schedule/struct.ApplyDeferred.html)). Flecs takes yet another angle on the same idea: Systems often run in a "readonly" mode where structural changes are deferred and later merged, preserving iteration safety and keeping mutation timing explicit ([Flecs: Systems / readonly & deferred ops](https://www.flecs.dev/flecs/md_docs_2Manual.html#deferred-operations)). helios leans into this family of approaches, but makes the commit semantics first-class: Pass/phase/frame scopes are explicit APIs, and commit points turn "when does this become visible?" from an implicit convention into a rule you can point at in code.
+
+
+## Looking Forward
+
+The Phase/Pass architecture has proven flexible enough to handle increasingly complex game logic while maintaining determinism. The explicit commit points make it clear when state changes occur, which aids debugging and reasoning about system interactions.
+
+I have already started to migrate the underlying systems to a real ECS architecture. The next step is to seal development on the current game demo and start working on the follow up to [the paper on the prototype](https://garagecraft.games/devlog/2025/11/10/helios-design-and-prototypical-implementation-of-a-cpp-game-framework).
+
+
+
