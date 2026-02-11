@@ -29,7 +29,9 @@ ImmediateBus.dispatch();
 // ... systems update ...
 ```
 
-This worked well in simple scenarios, but forced all events to wait until the next frame to be readable. That did not work, especially for systems that needed to communicate in the same logical phase. The new game loop architecture introduces a two-level hierarchy:
+This worked well in simple scenarios, but forced all events to wait until the next frame to be readable - obviously, this approach was rather suboptimal for systems that needed to communicate in the same logical phase.
+
+The new game loop architecture introduces a two-level hierarchy:
 
 ## Phases and Passes
 
