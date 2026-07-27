@@ -133,6 +133,7 @@ const config = {
         },
         items: [
           {to: '/helios', label: 'helios', position: 'left'},
+          {to: '/helios-ascending', label: 'helios ascending', position: 'left'},
           {to: '/devlog', label: 'devlog', position: 'left'},
           {
             href: 'https://github.com/garagecraft-games',
